@@ -1,8 +1,5 @@
 #! /usr/bin/env python
 
-# defined delays
-read_delay = 1
-write_delay = 1
 
 actors = dict({})
 actor_times = dict({})
@@ -33,7 +30,7 @@ def find_writer(dst_actor,dst_port,channels):
 		if (dst_actor == attrs["dstActor"] and dst_port == attrs['dstPort']):
 			return (attrs['srcActor'],attrs['srcPort'])
 	for channel, attrs in channels.iteritems():
-		print attrs["dstActor"]+' '+attrs['dstPort']
+		print (attrs["dstActor"]+' '+attrs['dstPort'])
 	return ('no writer '+dst_actor+' '+dst_port,'error')
 	
 
@@ -43,7 +40,7 @@ def find_reader(src_actor,src_port,channels):
 			return (attrs['dstActor'],attrs['dstPort'])
 	return ('no reader','error')
 
-def transform(a_, at_, c_, cs_):
+def transform(a_, at_, c_, cs_, read_delay, write_delay):
 	# global actors, actor_times, channels, channel_sizes, new_actors, new_actor_times, new_channels, new_channel_sizes
 	actors = dict(a_)
 	actor_times = dict(at_)
@@ -87,8 +84,6 @@ def transform(a_, at_, c_, cs_):
 
 	### set the sequence order
 	for actor, ports in a_.iteritems():
-		incount = 0
-		outcount = 0
 		for name,port in ports.iteritems():
 			if port.get('id',-2)==-2:
 				# print 'some ports have missing ids'

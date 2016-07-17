@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/python
 
 import sys
 import xml.parsers.expat
@@ -7,10 +7,10 @@ import sdftransformer
 import sdfwriter
 
 
-def transform(fileName):
+def transform(infileName,outfileName,read_delay,write_delay):
 	### open file to read ###
-	print ("Loading ---> " + fileName)
-	f = open(fileName, "r")
+	print ("Loading ---> " + infileName)
+	f = open(infileName, "r")
 
 	### setup the parser ###
 	parser = xml.parsers.expat.ParserCreate()
@@ -22,10 +22,10 @@ def transform(fileName):
 	f.close()
 
 	print ("Transforming")
-	(actors, actor_times, channels, channel_sizes)=sdftransformer.transform(sdfparser.actors, sdfparser.actor_times, sdfparser.channels, sdfparser.channel_sizes)
+	(actors, actor_times, channels, channel_sizes)=sdftransformer.transform(sdfparser.actors, sdfparser.actor_times, sdfparser.channels, sdfparser.channel_sizes,read_delay,write_delay)
 
-	print ("Writing output file ---> transformed_" + fileName)
-	sdfwriter.write_graph_to_file("transformed_"+fileName, actors, actor_times, channels, channel_sizes)
+	print ("Writing output file ---> " + outfileName)
+	sdfwriter.write_graph_to_file(outfileName, actors, actor_times, channels, channel_sizes)
 
 	print ("Success")
 
@@ -45,7 +45,7 @@ def main():
 		print ("WARNING: You are running:\nPython: " + sys.version)
 		print ("It could still work...")
 
-	transform(sys.argv[1])
+	transform(sys.argv[1],("transformed_"+sys.argv[1]),0,0)
 
 
 if __name__ == '__main__': main()
