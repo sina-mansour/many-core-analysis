@@ -1,7 +1,34 @@
 #include "scorer.h"
 
+// 'a_d' is:
+// Ascending sorter for consumption
+// Descending sorter for production
+
+
 Scorer::Scorer()
 {
+    consUD = 1;
+    prodUD = 1;
+}
+
+Scorer::Scorer(string mode)
+{
+    if (mode == "a_d") {
+        consUD = 1;
+        prodUD = -1;
+    }
+    if (mode == "a_a") {
+        consUD = 1;
+        prodUD = 1;
+    }
+    if (mode == "d_d") {
+        consUD = -1;
+        prodUD = -1;
+    }
+    if (mode == "d_a") {
+        consUD = -1;
+        prodUD = 1;
+    }
 }
 
 void Scorer::simpleGraphScore(Graph *graph)
@@ -38,16 +65,17 @@ void Scorer::simplePortScore(Port *port)
     int inRate, outRate;
     Channel* tmpC;
     tmpC = port->getChannel();
+
     inRate = tmpC->getSrcPort()->getRate();
     outRate = tmpC->getDstPort()->getRate();
 
     if (port->getType().compare("in") == 0 && outRate!=0)
     {
-        score = inRate / outRate;
+        score = (double) inRate / outRate * consUD; //consumption score
     }
     else if (port->getType().compare("out") == 0 && inRate!=0)
     {
-        score = outRate / inRate;
+        score = (double) outRate / inRate * prodUD; //production score
     }
     else
     {
@@ -283,30 +311,6 @@ void Scorer::matrixGraphScore(Graph *graph)
     startNode = graph->getIthActor(startNodeIndex);
     finishNode = graph->getIthActor(finishNodeIndex);
 
-//    for (int i=0; i<actorCount; i++)
-//    {
-//        Actor* tmpA;
-//        tmpA = graph->getIthActor(i);
-//        if (tmpA->isStart())
-//        {
-//            startNode = tmpA;
-//            startNodeIndex = i;
-//            break;
-//        }
-//    }
-
-//    for (int i=0; i<actorCount; i++)
-//    {
-//        Actor* tmpA;
-//        tmpA = graph->getIthActor(i);
-//        if (tmpA->isFinish())
-//        {
-//            finishNode = tmpA;
-//            finishNodeIndex = i;
-//            break;
-//        }
-//    }
-
 
     for (int i=0; i<actorCount; i++)
     {
@@ -329,9 +333,25 @@ void Scorer::matrixGraphScore(Graph *graph)
                         break;
                     }
                 }
-                double valueResult;
-                valueResult = calculateValueResult(inverseInPortsMatrix,inPortsMatrix,inMatrixDet,otherEndIndex,startNodeIndex,i,actorCount);
-                inPort->setScore(valueResult);
+        double valueResult;
+        for (int j=0; j<actorCount; j++)
+        {
+           Actor* tmpB;
+           tmpB = graph->getIthActor(j);
+           if (tmpB->isStart())
+           {
+               startNode = tmpB;
+               startNodeIndex = j;
+            valueResult += calculateValueResult(inverseInPortsMatrix,inPortsMatrix,inMatrixDet,otherEndIndex,startNodeIndex,i,actorCount);
+          }
+           if(j==actorCount-1 && startNode == NULL)
+           {
+            startNodeIndex = 0;
+            startNode = graph->getIthActor(startNodeIndex);
+            valueResult = calculateValueResult(inverseInPortsMatrix,inPortsMatrix,inMatrixDet,otherEndIndex,startNodeIndex,i,actorCount);
+           }
+         }
+                 inPort->setScore(valueResult * consUD); //consumption score
             }
             else
             {
@@ -347,8 +367,24 @@ void Scorer::matrixGraphScore(Graph *graph)
                     }
                 }
                 double valueResult;
-                valueResult = calculateValueResult(inverseOutPortsMatrix,outPortsMatrix,outMatrixDet,otherEndIndex,finishNodeIndex,i,actorCount);
-                outPort->setScore(valueResult);
+           for (int j=0; j<actorCount; j++)
+           {
+           Actor* tmpB;
+           tmpB = graph->getIthActor(j);
+           if (tmpB->isFinish())
+           {
+               finishNode = tmpB;
+               finishNodeIndex = j;
+               valueResult += calculateValueResult(inverseOutPortsMatrix,outPortsMatrix,outMatrixDet,otherEndIndex,finishNodeIndex,i,actorCount);
+           }
+           if(j==actorCount-1 && finishNode == NULL)
+           {
+                finishNodeIndex = graph->getActorCount()-1;
+            finishNode = graph->getIthActor(finishNodeIndex);
+               valueResult = calculateValueResult(inverseOutPortsMatrix,outPortsMatrix,outMatrixDet,otherEndIndex,finishNodeIndex,i,actorCount);
+           }
+           }
+                outPort->setScore(valueResult * prodUD); //production score
             }
         }
     }
@@ -441,7 +477,7 @@ double Scorer::calculateValueResult(double** inverse ,double **matrix, double de
     double valueResult = 0;
     valueResult += matrix[index][node];
     double cofac = calculateCofactorDeterminant(inverse,matSize,endPoint,node);
-	if(cofac<0 && (node+endPoint)%2==0)
+    if(cofac<0 && (node+endPoint)%2==0)
     valueResult /= det;
     valueResult *= cofac;
     if ((node+endPoint)%2==1)
@@ -723,6 +759,7 @@ void Scorer::combinedGraphScore(Graph *graph)
     inMatrixDet = calculateDeterminant(inverseInPortsMatrix,actorCount);
     outMatrixDet = calculateDeterminant(inverseOutPortsMatrix,actorCount);
 
+
     Actor* startNode = NULL;
     Actor* finishNode = NULL;
     int startNodeIndex = 0;
@@ -730,8 +767,8 @@ void Scorer::combinedGraphScore(Graph *graph)
 
 //    set start and finish node
 
-    startNode = graph->getIthActor(startNodeIndex);
-    finishNode = graph->getIthActor(finishNodeIndex);
+//    startNode = graph->getIthActor(startNodeIndex);
+//    finishNode = graph->getIthActor(finishNodeIndex);
 
 //    for (int i=0; i<actorCount; i++)
 //    {
@@ -758,6 +795,7 @@ void Scorer::combinedGraphScore(Graph *graph)
 //    }
 
 
+
     for (int i=0; i<actorCount; i++)
     {
         Actor* tmpA;
@@ -779,9 +817,31 @@ void Scorer::combinedGraphScore(Graph *graph)
                         break;
                     }
                 }
-                double valueResult;
-                valueResult = calculateValueResult(inverseInPortsMatrix,inPortsMatrix,inMatrixDet,otherEndIndex,startNodeIndex,i,actorCount);
-                inPort->setScore(valueResult);
+        double valueResult;
+        for (int j=0; j<actorCount; j++)
+        {
+           Actor* tmpB;
+           tmpB = graph->getIthActor(j);
+           if (tmpB->isStart())
+           {
+               startNode = tmpB;
+               startNodeIndex = j;
+            valueResult += calculateCombinedValueResult(inverseInPortsMatrix,inPortsMatrix,inMatrixDet,otherEndIndex,startNodeIndex,i,actorCount);
+          }
+           if(j==actorCount-1 && startNode == NULL)
+           {
+            startNodeIndex = 0;
+            startNode = graph->getIthActor(startNodeIndex);
+            valueResult = calculateCombinedValueResult(inverseInPortsMatrix,inPortsMatrix,inMatrixDet,otherEndIndex,startNodeIndex,i,actorCount);
+           }
+         }
+            int inRate, outRate;
+            Channel* tmpC;
+            tmpC = inPort->getChannel();
+            inRate = tmpC->getSrcPort()->getRate();
+            outRate = tmpC->getDstPort()->getRate();
+         valueResult = inRate / outRate * valueResult;
+                 inPort->setScore(valueResult * consUD); //consumption score
             }
             else
             {
@@ -797,8 +857,30 @@ void Scorer::combinedGraphScore(Graph *graph)
                     }
                 }
                 double valueResult;
-                valueResult = calculateValueResult(inverseOutPortsMatrix,outPortsMatrix,outMatrixDet,otherEndIndex,finishNodeIndex,i,actorCount);
-                outPort->setScore(valueResult);
+           for (int j=0; j<actorCount; j++)
+           {
+           Actor* tmpB;
+           tmpB = graph->getIthActor(j);
+           if (tmpB->isFinish())
+           {
+               finishNode = tmpB;
+               finishNodeIndex = j;
+               valueResult += calculateCombinedValueResult(inverseOutPortsMatrix,outPortsMatrix,outMatrixDet,otherEndIndex,finishNodeIndex,i,actorCount);
+           }
+           if(j==actorCount-1 && finishNode == NULL)
+           {
+                finishNodeIndex = graph->getActorCount()-1;
+            finishNode = graph->getIthActor(finishNodeIndex);
+               valueResult = calculateCombinedValueResult(inverseOutPortsMatrix,outPortsMatrix,outMatrixDet,otherEndIndex,finishNodeIndex,i,actorCount);
+           }
+           }
+            int inRate, outRate;
+            Channel* tmpC;
+            tmpC = outPort->getChannel();
+            inRate = tmpC->getSrcPort()->getRate();
+            outRate = tmpC->getDstPort()->getRate();
+        valueResult = outRate / inRate * valueResult;
+                outPort->setScore(valueResult * prodUD); //production score
             }
         }
     }
@@ -819,16 +901,16 @@ void Scorer::combinedGraphScore(Graph *graph)
 double Scorer::calculateCombinedValueResult(double** inverse ,double **matrix, double det, int node, int endPoint, int index, int matSize)
 {
     double valueResult = 0;
-    valueResult -= log(matrix[index][node]);
+    valueResult += matrix[index][node];
     double cofac = calculateCofactorDeterminant(inverse,matSize,endPoint,node);
-	if(cofac<0 && (node+endPoint)%2==0)
+    if(cofac<0 && (node+endPoint)%2==0)
     valueResult /= det;
     valueResult *= cofac;
     if ((node+endPoint)%2==1)
     {
         valueResult *=-1;
     }
-    valueResult = log(valueResult);
+    valueResult = log(valueResult) ;
 
     return valueResult;
 }

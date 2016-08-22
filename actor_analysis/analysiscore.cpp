@@ -74,7 +74,7 @@ bool AnalysisCore::generateUnsortedOutput(string fName, string inp, string outp)
     input.open((inPath + "/" + fileName + ".xml"), ios::in);
 
 //    string unsortedSortedOutFileName1 = outPath + "/" + fileName + "_unsorted_sorted.xml";
-    string unsortedSortedOutFileName1 = outPath + "/" + outp + "_" + fileName + ".xml";
+    string unsortedSortedOutFileName1 = outPath + "/" + fileName + "_" + outp + ".xml";
 
     ofstream unsortedSortedGraph1;
     unsortedSortedGraph1.open(unsortedSortedOutFileName1, ios::out);
@@ -101,12 +101,12 @@ bool AnalysisCore::generateUnsortedOutput(string fName, string inp, string outp)
     return true;
 }
 
-bool AnalysisCore::generateSimpleSortedOutput(string fName, string inp, string outp)
+bool AnalysisCore::generateSimpleSortedOutput(string fName, string inp, string outp, string mode)
 {
 
     cout << "simple sorting algorithm:\n";
 
-    scorer = new Scorer();
+    scorer = new Scorer(mode);
     scorer->simpleGraphScore(graph);
     delete scorer;
     cout << "scoring finished successfully.\n";
@@ -149,7 +149,7 @@ bool AnalysisCore::generateSimpleSortedOutput(string fName, string inp, string o
     input.open((inPath + "/" + fileName + ".xml"), ios::in);
 
 //    string simpleSortedOutFileName1 = outPath + "/" + fileName + "_simple_sorted.xml";
-    string simpleSortedOutFileName1 = outPath + "/" + outp + "_" + fileName + ".xml";
+    string simpleSortedOutFileName1 = outPath + "/" + fileName + "_" + outp + ".xml";
 
     ofstream simpleSortedGraph1;
     simpleSortedGraph1.open(simpleSortedOutFileName1, ios::out);
@@ -175,11 +175,11 @@ bool AnalysisCore::generateSimpleSortedOutput(string fName, string inp, string o
     return true;
 }
 
-bool AnalysisCore::generateMatrixSortedOutput(string fName, string inp, string outp)
+bool AnalysisCore::generateMatrixSortedOutput(string fName, string inp, string outp, string mode)
 {
     cout << "matrix sorting algorithm:\n";
 
-    scorer = new Scorer();
+    scorer = new Scorer(mode);
     scorer->matrixGraphScore(graph);
     delete scorer;
     cout << "scoring finished successfully.\n";
@@ -221,7 +221,7 @@ bool AnalysisCore::generateMatrixSortedOutput(string fName, string inp, string o
     input.open((inPath + "/" + fileName + ".xml"), ios::in);
 
 //    string matrixSortedOutFileName1 = outPath + "/" + fileName + "_matrix_sorted.xml";
-    string matrixSortedOutFileName1 = outPath + "/" + outp + "_" + fileName + ".xml";
+    string matrixSortedOutFileName1 = outPath + "/" + fileName + "_" + outp + ".xml";
 
     ofstream matrixSortedGraph1;
     matrixSortedGraph1.open(matrixSortedOutFileName1, ios::out);
@@ -248,11 +248,11 @@ bool AnalysisCore::generateMatrixSortedOutput(string fName, string inp, string o
 }
 
 //**
-bool AnalysisCore::generateCombinedSortedOutput(string fName, string inp, string outp)
+bool AnalysisCore::generateCombinedSortedOutput(string fName, string inp, string outp, string mode)
 {
     cout << "combined sorting algorithm:\n";
 
-    scorer = new Scorer();
+    scorer = new Scorer(mode);
     scorer->combinedGraphScore(graph);
     delete scorer;
     cout << "scoring finished successfully.\n";
@@ -294,7 +294,7 @@ bool AnalysisCore::generateCombinedSortedOutput(string fName, string inp, string
     input.open((inPath + "/" + fileName + ".xml"), ios::in);
 
 //    string combinedSortedOutFileName1 = outPath + "/" + fileName + "_combined_sorted.xml";
-    string combinedSortedOutFileName1 = outPath + "/" + outp + "_" + fileName + ".xml";
+    string combinedSortedOutFileName1 = outPath + "/" + fileName + "_" + outp + ".xml";
 
     ofstream combinedSortedGraph1;
     combinedSortedGraph1.open(combinedSortedOutFileName1, ios::out);
@@ -368,7 +368,7 @@ bool AnalysisCore::generateRandomSortedOutput(int randCount, string fName, strin
     input.open((inPath + "/" + fileName + ".xml"), ios::in);
 
 //    string randomSortedOutFileName1 = outPath + "/" + fileName + "_random_sorted_" + to_string(randCount) + ".xml";
-    string randomSortedOutFileName1 = outPath + "/" + outp + "_" + fileName + ".xml";
+    string randomSortedOutFileName1 = outPath + "/" + fileName + "_" + outp + ".xml";
 
     ofstream randomSortedGraph1;
     randomSortedGraph1.open(randomSortedOutFileName1, ios::out);

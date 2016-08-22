@@ -7,8 +7,11 @@ using namespace std;
 
 class Scorer
 {
+private:
+    int consUD, prodUD;
 public:
     Scorer();
+    Scorer(string mode);
     void simpleGraphScore(Graph* graph);
     void simpleActorScore(Actor* actor);
     void simplePortScore(Port* port);

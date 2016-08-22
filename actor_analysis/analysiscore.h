@@ -20,9 +20,9 @@ public:
     ~AnalysisCore();
 
     bool generateUnsortedOutput(string fName, string inp, string outp);
-    bool generateSimpleSortedOutput(string fName, string inp, string outp);
-    bool generateMatrixSortedOutput(string fName, string inp, string outp);
-    bool generateCombinedSortedOutput(string fName, string inp, string outp);
+    bool generateSimpleSortedOutput(string fName, string inp, string outp, string mode);
+    bool generateMatrixSortedOutput(string fName, string inp, string outp, string mode);
+    bool generateCombinedSortedOutput(string fName, string inp, string outp, string mode);
     bool generateRandomSortedOutput(int randCount, string fName, string inp, string outp);
 
 };

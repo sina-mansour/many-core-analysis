@@ -32,29 +32,29 @@ void Output::parseXml1(ifstream* inFile, Graph* inGraph, ofstream& outFile)
 
 
 
-	    while (!(inFile->eof()))
+        while (!(inFile->eof()))
 
         {
 
-	        getline(*inFile, line);
+            getline(*inFile, line);
 
-	        if(line.find("<actor ") != string::npos)
+            if(line.find("<actor ") != string::npos)
 
             {
 
                 Actor* tmpA;
 
-	            word = "noname";
+                word = "noname";
 
-	            if(line.find("name=") != string::npos)
+                if(line.find("name=") != string::npos)
 
-	            {
+                {
 
-	                word = line.substr(line.find("name=")+6);
+                    word = line.substr(line.find("name=")+6);
 
-	                word = word.substr(0 ,  word.find(DELIMETER));
+                    word = word.substr(0 ,  word.find(DELIMETER));
 
-	            }
+                }
 
                 outFile<<line<<endl;
 
@@ -78,7 +78,7 @@ void Output::parseXml1(ifstream* inFile, Graph* inGraph, ofstream& outFile)
 
                     if (tmpP->getPid()=="pIn" || tmpP->getPid()=="pOut"){
 
-						id=-1;
+                        id=-1;
 
                     }
 
@@ -88,7 +88,7 @@ void Output::parseXml1(ifstream* inFile, Graph* inGraph, ofstream& outFile)
 
                         wCount++;
 
-					}
+                    }
 
                    else if (tmpP->getType()=="in"){
 
@@ -96,11 +96,11 @@ void Output::parseXml1(ifstream* inFile, Graph* inGraph, ofstream& outFile)
 
                         rCount++;
 
-					}
+                    }
 
-                    outFile << "            <port type='"<<tmpP->getType()<<"' name='"<<tmpP->getPid()
+                    outFile << "            <port type=\""<<tmpP->getType()<<"\" name=\""<<tmpP->getPid()
 
-					<<"' rate='"<<tmpP->getRate()<<"' id='"<<id<<"'/>"<< endl;
+                    <<"\" rate=\""<<tmpP->getRate()<<"\" id=\""<<id<<"\"/>"<< endl;
 
                 }
 
@@ -109,14 +109,14 @@ void Output::parseXml1(ifstream* inFile, Graph* inGraph, ofstream& outFile)
             else if(line.find("<port ") != string::npos)
 
             {
-
+/*
                 if(line.find("pOut") != string::npos || line.find("pIn") != string::npos)
                 {
                     line.erase (line.end()-2,line.end());
 
-                    outFile<<line<<" id='-1'/>\n";;
+                    outFile<<line<<" id=\"-1\"/>\n";;
                 }
-
+*/
             }
 
             else
@@ -129,7 +129,7 @@ void Output::parseXml1(ifstream* inFile, Graph* inGraph, ofstream& outFile)
 
         }
 
-	}
+    }
 
 }
 
@@ -191,7 +191,7 @@ void Output::generate(Graph *graph, ofstream& outFile)
 
             outFile << pCount << endl;
 
-	outFile<<"\n"<<tmpA->getName()<<"\n";
+    outFile<<"\n"<<tmpA->getName()<<"\n";
 
             for (int j=0; j<pCount; j++)
 

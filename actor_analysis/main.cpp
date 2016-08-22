@@ -33,11 +33,20 @@ void runBenchmark(string fileDir, string outP, int random_times)
 
     analyser->generateUnsortedOutput(fileName, inP, "unsorted");
 
-    analyser->generateSimpleSortedOutput(fileName, inP, "simple");
+    analyser->generateSimpleSortedOutput(fileName, inP, "simple_a_a", "a_a");
+    analyser->generateSimpleSortedOutput(fileName, inP, "simple_a_d", "a_d");
+    analyser->generateSimpleSortedOutput(fileName, inP, "simple_d_a", "d_a");
+    analyser->generateSimpleSortedOutput(fileName, inP, "simple_d_d", "d_d");
 
-    analyser->generateMatrixSortedOutput(fileName, inP, "matrix");
+    analyser->generateMatrixSortedOutput(fileName, inP, "matrix_a_a", "a_a");
+    analyser->generateMatrixSortedOutput(fileName, inP, "matrix_a_d", "a_d");
+    analyser->generateMatrixSortedOutput(fileName, inP, "matrix_d_a", "d_a");
+    analyser->generateMatrixSortedOutput(fileName, inP, "matrix_d_d", "d_d");
 
-    analyser->generateCombinedSortedOutput(fileName, inP, "combined");
+    analyser->generateCombinedSortedOutput(fileName, inP, "combined_a_a", "a_a");
+    analyser->generateCombinedSortedOutput(fileName, inP, "combined_a_d", "a_d");
+    analyser->generateCombinedSortedOutput(fileName, inP, "combined_d_a", "d_a");
+    analyser->generateCombinedSortedOutput(fileName, inP, "combined_d_d", "d_d");
         
     for (int i=1; i<=random_times; i++)
     {
