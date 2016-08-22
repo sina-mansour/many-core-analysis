@@ -12,6 +12,13 @@ def transform(infileName,outfileName,read_delay,write_delay):
 	print ("Loading ---> " + infileName)
 	f = open(infileName, "r")
 
+	### Initialize data structures ###
+	sdfparser.actors = dict({})
+	sdfparser.actor_times = dict({})
+	sdfparser.channels = dict({})
+	sdfparser.channel_sizes = dict({})
+	sdfparser.ports = dict({})
+
 	### setup the parser ###
 	parser = xml.parsers.expat.ParserCreate()
 	parser.StartElementHandler = sdfparser.start_element
