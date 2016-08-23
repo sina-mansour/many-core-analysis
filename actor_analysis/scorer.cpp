@@ -1,5 +1,7 @@
 #include "scorer.h"
 
+#define NORMALIZE 1.0e5
+
 // 'a_d' is:
 // Ascending sorter for consumption
 // Descending sorter for production
@@ -179,7 +181,7 @@ void Scorer::matrixGraphScore(Graph *graph)
 
                 value *= -1;
 
-                value = exp(value);
+                value = exp(value/NORMALIZE);
 
                 inPortsMatrix[i][j] = value;
             }
@@ -263,7 +265,7 @@ void Scorer::matrixGraphScore(Graph *graph)
 
                 value *= -1;
 
-                value = exp(value);
+                value = exp(value/NORMALIZE);
 
                 outPortsMatrix[i][j] = value;
             }
@@ -637,7 +639,7 @@ void Scorer::combinedGraphScore(Graph *graph)
 
                 value *= -1;
 
-                value = exp(value);
+                value = exp(value/NORMALIZE);
 
                 inPortsMatrix[i][j] = value;
             }
@@ -721,7 +723,7 @@ void Scorer::combinedGraphScore(Graph *graph)
 
                 value *= -1;
 
-                value = exp(value);
+                value = exp(value/NORMALIZE);
 
                 outPortsMatrix[i][j] = value;
             }
