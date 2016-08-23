@@ -74,8 +74,43 @@ class csvHandler(xml.sax.ContentHandler):
             self.write_out()
 
     def write_out(self):
-    	buf_sz = str(self.real_sz) if (self.real_sz != 0) else ('#'+str(self.calculated_sz))
+        buf_sz = str(self.real_sz) if (self.real_sz != 0) else ('#'+str(self.calculated_sz))
         self.out.write(str(self.thr) + "#" + buf_sz + ',')
+
+
+class finalcsvHandler(xml.sax.ContentHandler):
+    def __init__(self, csvFile):
+        self.out = csvFile
+        self.thr = 0
+        self.reported_sz = 0
+        self.calculated_sz = 0
+        self.real_sz = 0
+        self.extra_sz = 0
+        self.channel = ''
+        self.ch_sz = 0
+
+    def startElement(self, name, attrs):
+        if name == 'distributionsSet':
+            self.thr = float(attrs['thr'])
+            self.reported_sz = int(attrs['sz'])
+            self.real_sz = 0
+            self.extra_sz = 0
+        elif name == 'ch':
+            self.channel = (attrs['name'])
+            self.ch_sz = int(attrs['sz'])
+            self.calculated_sz += self.ch_sz
+            if ('__link_to__' in self.channel):
+                self.real_sz += self.ch_sz
+            else:
+                self.extra_sz += self.ch_sz
+
+    def endElement(self, name):
+        if name == 'storageThroughputTradeOffs':
+            self.write_out()
+
+    def write_out(self):
+        buf_sz = str(self.real_sz) if (self.real_sz != 0) else (''+str(self.calculated_sz))
+        self.out.write(str(self.thr) + "," + buf_sz + ',')
 
 
 def parse_buffer(xml_file, out_file):
@@ -103,7 +138,7 @@ def parse_buffer_to_csv(xml_file, csv_file):
     outfile = open(csv_file, 'a')
     outfile.write(xml_file[xml_file.rfind('/')+1:xml_file.find('.')]+',')
 
-    buf = csvHandler(outfile)
+    buf = finalcsvHandler(outfile)
     parser = xml.sax.parse(open(xml_file, 'r'), buf)
     # xml.sax.parse(open(xml_file, 'r'), buf)
 

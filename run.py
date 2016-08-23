@@ -232,7 +232,7 @@ def run_all(inputs_path, output_path, temp_path, random_times, read_delay, write
     python_xmls = [xml for xml in python_xmls if xml not in bad_xmls]
 
     with open(connect_path(output_path,'results.csv'), 'w') as csvfile:
-        csvfile.write('benchmark_algorithm,throughput#buffersize tuples,\n')
+        csvfile.write('benchmark_algorithm,throughput,buffersize,\n')
 
     ### run sdf3analysis-sdf (--algo buffersize) on all xmls ###
     print_lock = Lock()
