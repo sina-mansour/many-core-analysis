@@ -4,6 +4,7 @@ import sys
 import xml.parsers.expat
 import sdfparser
 import sdftransformer
+import sdfmodify
 import sdfwriter
 
 
@@ -30,6 +31,35 @@ def transform(infileName,outfileName,read_delay,write_delay):
 
 	print ("Transforming")
 	(actors, actor_times, channels, channel_sizes)=sdftransformer.transform(sdfparser.actors, sdfparser.actor_times, sdfparser.channels, sdfparser.channel_sizes,read_delay,write_delay)
+
+	print ("Writing output file ---> " + outfileName)
+	sdfwriter.write_graph_to_file(outfileName, actors, actor_times, channels, channel_sizes)
+
+	print ("Success")
+
+def modify(infileName,outfileName,read_delay,write_delay):
+	### open file to read ###
+	print ("Loading ---> " + infileName)
+	f = open(infileName, "r")
+
+	### Initialize data structures ###
+	sdfparser.actors = dict({})
+	sdfparser.actor_times = dict({})
+	sdfparser.channels = dict({})
+	sdfparser.channel_sizes = dict({})
+	sdfparser.ports = dict({})
+
+	### setup the parser ###
+	parser = xml.parsers.expat.ParserCreate()
+	parser.StartElementHandler = sdfparser.start_element
+	parser.EndElementHandler = sdfparser.end_element
+
+	print ("Parsing")
+	parser.ParseFile(f)
+	f.close()
+
+	print ("midifying")
+	(actors, actor_times, channels, channel_sizes)=sdfmodify.modify(sdfparser.actors, sdfparser.actor_times, sdfparser.channels, sdfparser.channel_sizes,read_delay,write_delay)
 
 	print ("Writing output file ---> " + outfileName)
 	sdfwriter.write_graph_to_file(outfileName, actors, actor_times, channels, channel_sizes)

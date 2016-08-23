@@ -220,9 +220,12 @@ def run_all(inputs_path, output_path, temp_path, random_times, read_delay, write
 
     for xml in python_xmls:
         try:
+            transform.modify(connect_path(temp_path, xml), connect_path(
+                temp_path, xml[:-4]+'_modified.xml'), read_delay, write_delay)
             transform.transform(connect_path(temp_path, xml), connect_path(
                 temp_path, xml[:-4]+'_transformed.xml'), read_delay, write_delay)
         except Exception as e:
+            print e
             bad_xmls.append(xml)
             continue
 
@@ -240,15 +243,23 @@ def run_all(inputs_path, output_path, temp_path, random_times, read_delay, write
         sdf_childs[xml].start()
 
     for xml in python_xmls:
-        sdf_childs[xml] = Process(target=sdf_child, args=(
+        # modified xml
+        sdf_childs[xml+'_modified'] = Process(target=sdf_child, args=(
+            xml[:-4]+'_modified.xml', sdf_analysis, output_path, temp_path, print_lock,))
+        sdf_childs[xml+'_modified'].start()
+        # transformed xml
+        sdf_childs[xml+'_transformed'] = Process(target=sdf_child, args=(
             xml[:-4]+'_transformed.xml', sdf_analysis, output_path, temp_path, print_lock,))
-        sdf_childs[xml].start()
+        sdf_childs[xml+'_transformed'].start()
 
     for xml in input_xmls:
         sdf_childs[xml].join()
 
     for xml in python_xmls:
-        sdf_childs[xml].join()
+        # modified xml
+        sdf_childs[xml+'_modified'].join()
+        # transformed xml
+        sdf_childs[xml+'_transformed'].join()
 
     # ### run buffer analysis code (parse_buffer.py) for all outputs ###
     # for xml in (input_xmls + ['transformed_'+xml for xml in python_xmls]):
