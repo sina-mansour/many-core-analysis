@@ -180,7 +180,6 @@ def run_all(inputs_path, output_path, temp_path, random_times, read_delay, write
 
     ### clear temp path ###
     subprocess.call('rm ' + connect_path(temp_path, '*'), shell=True)
-    # run_cmd('rm '+connect_path(temp_path,'*'))
 
     ### clear output path ###
     subprocess.call('rm ' + connect_path(output_path, '*'), shell=True)
@@ -197,22 +196,13 @@ def run_all(inputs_path, output_path, temp_path, random_times, read_delay, write
         random_times)] + [connect_path(inputs_path, x) for x in input_xmls]
     subprocess.call(args, shell=False)
 
+    suffixes = ['_matrix_d_d','_simple_a_d',]
+
     ### run graph transforming module (transform.py) for all generated xmls ###
     python_xmls = []
     for xml in input_xmls:
-        python_xmls.append(xml[:-4]+'_unsorted.xml')
-        python_xmls.append(xml[:-4]+'_combined_a_a.xml')
-        python_xmls.append(xml[:-4]+'_combined_a_d.xml')
-        python_xmls.append(xml[:-4]+'_combined_d_a.xml')
-        python_xmls.append(xml[:-4]+'_combined_d_d.xml')
-        python_xmls.append(xml[:-4]+'_matrix_a_a.xml')
-        python_xmls.append(xml[:-4]+'_matrix_a_d.xml')
-        python_xmls.append(xml[:-4]+'_matrix_d_a.xml')
-        python_xmls.append(xml[:-4]+'_matrix_d_d.xml')
-        python_xmls.append(xml[:-4]+'_simple_a_a.xml')
-        python_xmls.append(xml[:-4]+'_simple_a_d.xml')
-        python_xmls.append(xml[:-4]+'_simple_d_a.xml')
-        python_xmls.append(xml[:-4]+'_simple_d_d.xml')
+        for suf in suffixes:
+            python_xmls.append(xml[:-4]+suf+'.xml')
         for i in range(random_times):
             python_xmls.append(xml[:-4]+'_random_' + str(i + 1) + '.xml')
 
@@ -260,13 +250,6 @@ def run_all(inputs_path, output_path, temp_path, random_times, read_delay, write
         sdf_childs[xml+'_modified'].join()
         # transformed xml
         sdf_childs[xml+'_transformed'].join()
-
-    # ### run buffer analysis code (parse_buffer.py) for all outputs ###
-    # for xml in (input_xmls + ['transformed_'+xml for xml in python_xmls]):
-    #   parse_buffer.parse_buffer(connect_path(output_path,(xml[:-3]+'res')), connect_path(output_path,(xml[:-3]+'buf')))
-
-
-# create csv file for all results
 
 
 def main():
