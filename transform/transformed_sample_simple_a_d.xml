@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<sdf3 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" type="sdf" xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+<applicationGraph name='transformed_sample_simple_a_d_xml4streamit'>
+	<sdf name="xml4streamit" type="mainGraph">
+		<actor name="Z_reader_1" type="a">
+			<port rate="1" type="out" name="pOut" />
+			<port rate="1" type="in" name="pRead" />
+			<port rate="50" type="in" name="pBackward" />
+			<port rate="1" type="in" name="pIn" />
+			<port rate="50" type="out" name="pForward" />
+		</actor>
+		<actor name="Y_reader_0" type="a">
+			<port rate="1" type="out" name="pOut" />
+			<port rate="1" type="in" name="pRead" />
+			<port rate="10" type="in" name="pBackward" />
+			<port rate="1" type="in" name="pIn" />
+			<port rate="10" type="out" name="pForward" />
+		</actor>
+		<actor name="main_actor_from__X_writer_1__to__X_writer_0" type="a">
+			<port rate="1" type="out" name="pOut" />
+			<port rate="200" type="in" name="pBackward" />
+			<port rate="1" type="in" name="pIn" />
+			<port rate="200" type="out" name="pForward" />
+		</actor>
+		<actor name="X_writer_1" type="a">
+			<port rate="1" type="out" name="pOut" />
+			<port rate="10" type="in" name="pBackward" />
+			<port rate="1" type="out" name="pWrite" />
+			<port rate="1" type="in" name="pIn" />
+			<port rate="10" type="out" name="pForward" />
+		</actor>
+		<actor name="X_writer_0" type="a">
+			<port rate="1" type="out" name="pOut" />
+			<port rate="20" type="in" name="pBackward" />
+			<port rate="1" type="out" name="pWrite" />
+			<port rate="1" type="in" name="pIn" />
+			<port rate="20" type="out" name="pForward" />
+		</actor>
+		<actor name="main_actor_from__Z_reader_1__to__Z_reader_0" type="a">
+			<port rate="1" type="out" name="pOut" />
+			<port rate="1000" type="in" name="pBackward" />
+			<port rate="1" type="in" name="pIn" />
+			<port rate="1000" type="out" name="pForward" />
+		</actor>
+		<actor name="sync_from__X_writer_0__to__X_writer_1" type="a">
+			<port rate="1" type="out" name="pOut" />
+			<port rate="200" type="in" name="pBackward" />
+			<port rate="1" type="in" name="pIn" />
+			<port rate="200" type="out" name="pForward" />
+		</actor>
+		<actor name="main_actor_from__Y_reader_0__to__Y_writer_0" type="a">
+			<port rate="1" type="out" name="pOut" />
+			<port rate="500" type="in" name="pBackward" />
+			<port rate="1" type="in" name="pIn" />
+			<port rate="500" type="out" name="pForward" />
+		</actor>
+		<actor name="sync_from__Y_writer_0__to__Y_reader_0" type="a">
+			<port rate="1" type="out" name="pOut" />
+			<port rate="500" type="in" name="pBackward" />
+			<port rate="1" type="in" name="pIn" />
+			<port rate="500" type="out" name="pForward" />
+		</actor>
+		<actor name="Z_reader_0" type="a">
+			<port rate="1" type="out" name="pOut" />
+			<port rate="1" type="in" name="pRead" />
+			<port rate="20" type="in" name="pBackward" />
+			<port rate="1" type="in" name="pIn" />
+			<port rate="20" type="out" name="pForward" />
+		</actor>
+		<actor name="sync_from__Z_reader_0__to__Z_reader_1" type="a">
+			<port rate="1" type="out" name="pOut" />
+			<port rate="1000" type="in" name="pBackward" />
+			<port rate="1" type="in" name="pIn" />
+			<port rate="1000" type="out" name="pForward" />
+		</actor>
+		<actor name="Y_writer_0" type="a">
+			<port rate="1" type="out" name="pOut" />
+			<port rate="50" type="in" name="pBackward" />
+			<port rate="1" type="out" name="pWrite" />
+			<port rate="1" type="in" name="pIn" />
+			<port rate="50" type="out" name="pForward" />
+		</actor>
+		<channel dstActor="Y_reader_0" dstPort="pRead" srcPort="pWrite" name="X_writer_1__link_to__Y_reader_0" srcActor="X_writer_1" />
+		<channel dstActor="main_actor_from__Z_reader_1__to__Z_reader_0" dstPort="pBackward" srcPort="pForward" name="Z_reader_1__to__main_actor_from__Z_reader_1__to__Z_reader_0" srcActor="Z_reader_1" />
+		<channel name="main_actor_from__Z_reader_1__to__Z_reader_0__to__Z_reader_0" srcPort="pForward" initialTokens="1000" dstActor="Z_reader_0" dstPort="pBackward" srcActor="main_actor_from__Z_reader_1__to__Z_reader_0" />
+		<channel name="sync_from__Y_writer_0__to__Y_reader_0__to__Y_reader_0" srcPort="pForward" initialTokens="500" dstActor="Y_reader_0" dstPort="pBackward" srcActor="sync_from__Y_writer_0__to__Y_reader_0" />
+		<channel name="X_writer_0_self" srcPort="pOut" initialTokens="1" dstActor="X_writer_0" dstPort="pIn" srcActor="X_writer_0" />
+		<channel name="X_writer_1_self" srcPort="pOut" initialTokens="1" dstActor="X_writer_1" dstPort="pIn" srcActor="X_writer_1" />
+		<channel name="Z_reader_0_self" srcPort="pOut" initialTokens="1" dstActor="Z_reader_0" dstPort="pIn" srcActor="Z_reader_0" />
+		<channel name="X_writer_1__to__main_actor_from__X_writer_1__to__X_writer_0" srcPort="pForward" initialTokens="200" dstActor="main_actor_from__X_writer_1__to__X_writer_0" dstPort="pBackward" srcActor="X_writer_1" />
+		<channel name="Z_reader_1_self" srcPort="pOut" initialTokens="1" dstActor="Z_reader_1" dstPort="pIn" srcActor="Z_reader_1" />
+		<channel name="Y_reader_0_self" srcPort="pOut" initialTokens="1" dstActor="Y_reader_0" dstPort="pIn" srcActor="Y_reader_0" />
+		<channel dstActor="sync_from__X_writer_0__to__X_writer_1" dstPort="pBackward" srcPort="pForward" name="X_writer_0__to__sync_from__X_writer_0__to__X_writer_1" srcActor="X_writer_0" />
+		<channel name="Y_writer_0_self" srcPort="pOut" initialTokens="1" dstActor="Y_writer_0" dstPort="pIn" srcActor="Y_writer_0" />
+		<channel dstActor="X_writer_0" dstPort="pBackward" srcPort="pForward" name="main_actor_from__X_writer_1__to__X_writer_0__to__X_writer_0" srcActor="main_actor_from__X_writer_1__to__X_writer_0" />
+		<channel name="main_actor_from__Z_reader_1__to__Z_reader_0_self" srcPort="pOut" initialTokens="1" dstActor="main_actor_from__Z_reader_1__to__Z_reader_0" dstPort="pIn" srcActor="main_actor_from__Z_reader_1__to__Z_reader_0" />
+		<channel name="main_actor_from__Y_reader_0__to__Y_writer_0_self" srcPort="pOut" initialTokens="1" dstActor="main_actor_from__Y_reader_0__to__Y_writer_0" dstPort="pIn" srcActor="main_actor_from__Y_reader_0__to__Y_writer_0" />
+		<channel dstActor="Z_reader_1" dstPort="pRead" srcPort="pWrite" name="Y_writer_0__link_to__Z_reader_1" srcActor="Y_writer_0" />
+		<channel dstActor="X_writer_1" dstPort="pBackward" srcPort="pForward" name="sync_from__X_writer_0__to__X_writer_1__to__X_writer_1" srcActor="sync_from__X_writer_0__to__X_writer_1" />
+		<channel name="sync_from__Z_reader_0__to__Z_reader_1_self" srcPort="pOut" initialTokens="1" dstActor="sync_from__Z_reader_0__to__Z_reader_1" dstPort="pIn" srcActor="sync_from__Z_reader_0__to__Z_reader_1" />
+		<channel dstActor="Y_writer_0" dstPort="pBackward" srcPort="pForward" name="main_actor_from__Y_reader_0__to__Y_writer_0__to__Y_writer_0" srcActor="main_actor_from__Y_reader_0__to__Y_writer_0" />
+		<channel dstActor="sync_from__Z_reader_0__to__Z_reader_1" dstPort="pBackward" srcPort="pForward" name="Z_reader_0__to__sync_from__Z_reader_0__to__Z_reader_1" srcActor="Z_reader_0" />
+		<channel name="main_actor_from__X_writer_1__to__X_writer_0_self" srcPort="pOut" initialTokens="1" dstActor="main_actor_from__X_writer_1__to__X_writer_0" dstPort="pIn" srcActor="main_actor_from__X_writer_1__to__X_writer_0" />
+		<channel dstActor="Z_reader_0" dstPort="pRead" srcPort="pWrite" name="X_writer_0__link_to__Z_reader_0" srcActor="X_writer_0" />
+		<channel dstActor="main_actor_from__Y_reader_0__to__Y_writer_0" dstPort="pBackward" srcPort="pForward" name="Y_reader_0__to__main_actor_from__Y_reader_0__to__Y_writer_0" srcActor="Y_reader_0" />
+		<channel name="sync_from__X_writer_0__to__X_writer_1_self" srcPort="pOut" initialTokens="1" dstActor="sync_from__X_writer_0__to__X_writer_1" dstPort="pIn" srcActor="sync_from__X_writer_0__to__X_writer_1" />
+		<channel name="sync_from__Y_writer_0__to__Y_reader_0_self" srcPort="pOut" initialTokens="1" dstActor="sync_from__Y_writer_0__to__Y_reader_0" dstPort="pIn" srcActor="sync_from__Y_writer_0__to__Y_reader_0" />
+		<channel dstActor="Z_reader_1" dstPort="pBackward" srcPort="pForward" name="sync_from__Z_reader_0__to__Z_reader_1__to__Z_reader_1" srcActor="sync_from__Z_reader_0__to__Z_reader_1" />
+		<channel dstActor="sync_from__Y_writer_0__to__Y_reader_0" dstPort="pBackward" srcPort="pForward" name="Y_writer_0__to__sync_from__Y_writer_0__to__Y_reader_0" srcActor="Y_writer_0" />
+	</sdf>
+	<sdfProperties>
+		<actorProperties actor="Z_reader_1">
+			<processor type="arm" default="true">
+				<executionTime time="0" />
+				<memory>
+					<stateSize max="316352"/>
+				</memory>
+			</processor>
+		</actorProperties>
+		<actorProperties actor="Y_reader_0">
+			<processor type="arm" default="true">
+				<executionTime time="0" />
+				<memory>
+					<stateSize max="316352"/>
+				</memory>
+			</processor>
+		</actorProperties>
+		<actorProperties actor="main_actor_from__X_writer_1__to__X_writer_0">
+			<processor type="arm" default="true">
+				<executionTime time="100" />
+				<memory>
+					<stateSize max="316352"/>
+				</memory>
+			</processor>
+		</actorProperties>
+		<actorProperties actor="X_writer_1">
+			<processor type="arm" default="true">
+				<executionTime time="0" />
+				<memory>
+					<stateSize max="316352"/>
+				</memory>
+			</processor>
+		</actorProperties>
+		<actorProperties actor="X_writer_0">
+			<processor type="arm" default="true">
+				<executionTime time="0" />
+				<memory>
+					<stateSize max="316352"/>
+				</memory>
+			</processor>
+		</actorProperties>
+		<actorProperties actor="main_actor_from__Z_reader_1__to__Z_reader_0">
+			<processor type="arm" default="true">
+				<executionTime time="200" />
+				<memory>
+					<stateSize max="316352"/>
+				</memory>
+			</processor>
+		</actorProperties>
+		<actorProperties actor="sync_from__X_writer_0__to__X_writer_1">
+			<processor type="arm" default="true">
+				<executionTime time="0" />
+				<memory>
+					<stateSize max="316352"/>
+				</memory>
+			</processor>
+		</actorProperties>
+		<actorProperties actor="main_actor_from__Y_reader_0__to__Y_writer_0">
+			<processor type="arm" default="true">
+				<executionTime time="300" />
+				<memory>
+					<stateSize max="316352"/>
+				</memory>
+			</processor>
+		</actorProperties>
+		<actorProperties actor="sync_from__Y_writer_0__to__Y_reader_0">
+			<processor type="arm" default="true">
+				<executionTime time="0" />
+				<memory>
+					<stateSize max="316352"/>
+				</memory>
+			</processor>
+		</actorProperties>
+		<actorProperties actor="Z_reader_0">
+			<processor type="arm" default="true">
+				<executionTime time="0" />
+				<memory>
+					<stateSize max="316352"/>
+				</memory>
+			</processor>
+		</actorProperties>
+		<actorProperties actor="sync_from__Z_reader_0__to__Z_reader_1">
+			<processor type="arm" default="true">
+				<executionTime time="0" />
+				<memory>
+					<stateSize max="316352"/>
+				</memory>
+			</processor>
+		</actorProperties>
+		<actorProperties actor="Y_writer_0">
+			<processor type="arm" default="true">
+				<executionTime time="0" />
+				<memory>
+					<stateSize max="316352"/>
+				</memory>
+			</processor>
+		</actorProperties>
+		<channelProperties channel="X_writer_1__link_to__Y_reader_0">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="Z_reader_1__to__main_actor_from__Z_reader_1__to__Z_reader_0">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="main_actor_from__Z_reader_1__to__Z_reader_0__to__Z_reader_0">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="sync_from__Y_writer_0__to__Y_reader_0__to__Y_reader_0">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="X_writer_0_self">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="X_writer_1_self">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="Z_reader_0_self">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="X_writer_1__to__main_actor_from__X_writer_1__to__X_writer_0">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="Z_reader_1_self">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="Y_reader_0_self">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="X_writer_0__to__sync_from__X_writer_0__to__X_writer_1">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="Y_writer_0_self">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="main_actor_from__X_writer_1__to__X_writer_0__to__X_writer_0">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="main_actor_from__Z_reader_1__to__Z_reader_0_self">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="main_actor_from__Y_reader_0__to__Y_writer_0_self">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="Y_writer_0__link_to__Z_reader_1">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="sync_from__X_writer_0__to__X_writer_1__to__X_writer_1">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="sync_from__Z_reader_0__to__Z_reader_1_self">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="main_actor_from__Y_reader_0__to__Y_writer_0__to__Y_writer_0">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="Z_reader_0__to__sync_from__Z_reader_0__to__Z_reader_1">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="main_actor_from__X_writer_1__to__X_writer_0_self">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="X_writer_0__link_to__Z_reader_0">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="Y_reader_0__to__main_actor_from__Y_reader_0__to__Y_writer_0">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="sync_from__X_writer_0__to__X_writer_1_self">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="sync_from__Y_writer_0__to__Y_reader_0_self">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="sync_from__Z_reader_0__to__Z_reader_1__to__Z_reader_1">
+			<tokenSize sz="304128" />
+		</channelProperties>
+		<channelProperties channel="Y_writer_0__to__sync_from__Y_writer_0__to__Y_reader_0">
+			<tokenSize sz="304128" />
+		</channelProperties>
+	<graphProperties>
+		<timeConstraints>
+			<throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	</graphProperties>
+	</sdfProperties>
+</applicationGraph>
+</sdf3>

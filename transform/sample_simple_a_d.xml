@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="xml4streamit">
+    <sdf name="xml4streamit" type="mainGraph">
+      <actor name="X" type="a">
+            <port type="out" name="XtoZ" rate="10" id="0"/>
+            <port type="out" name="XtoY" rate="20" id="1"/>
+      </actor>
+      <actor name="Y" type="a">
+            <port type="in" name="YfromX" rate="50" id="0"/>
+            <port type="out" name="YtoZ" rate="10" id="0"/>
+      </actor>
+      <actor name="Z" type="a">
+            <port type="in" name="ZfromX" rate="50" id="0"/>
+            <port type="in" name="ZfromY" rate="20" id="1"/>
+      </actor>
+      <channel name="XY" srcActor="X" srcPort="XtoY" dstActor="Y" dstPort="YfromX"/>
+      <channel name="YZ" srcActor="Y" srcPort="YtoZ" dstActor="Z" dstPort="ZfromY"/>
+      <channel name="XZ" srcActor="X" srcPort="XtoZ" dstActor="Z" dstPort="ZfromX"/>
+      <channel name="selfX" srcActor="X" srcPort="pOut" dstActor="X" dstPort="pIn" initialTokens="1"/>
+      <channel name="selfY" srcActor="Y" srcPort="pOut" dstActor="Y" dstPort="pIn" initialTokens="1"/>
+      <channel name="selfZ" srcActor="Z" srcPort="pOut" dstActor="Z" dstPort="pIn" initialTokens="1"/>
+    </sdf>
+    <sdfProperties>
+        <actorProperties actor="X">
+            <processor type="arm" default="true">
+                <executionTime time="100"/>
+                <memory>
+                    <stateSize max="316352"/>
+                </memory>
+            </processor>
+        </actorProperties>
+          <actorProperties actor="Y">
+            <processor type="arm" default="true">
+                <executionTime time="300"/>
+                <memory>
+                    <stateSize max="316352"/>
+                </memory>
+            </processor>
+        </actorProperties>
+        <actorProperties actor="Z">
+            <processor type="arm" default="true">
+                <executionTime time="200"/>
+                <memory>
+                    <stateSize max="316352"/>
+                </memory>
+            </processor>
+        </actorProperties>
+        <channelProperties channel="XY">
+            <tokenSize sz="304128"/>
+        </channelProperties>
+        <channelProperties channel="YZ">
+            <tokenSize sz="304128"/>
+        </channelProperties>
+        <channelProperties channel="XZ">
+            <tokenSize sz="304128"/>
+        </channelProperties>
+        <channelProperties channel="selfX">
+            <tokenSize sz="304128"/>
+        </channelProperties>
+        <channelProperties channel="selfY">
+            <tokenSize sz="304128"/>
+        </channelProperties>
+        <channelProperties channel="selfZ">
+            <tokenSize sz="304128"/>
+        </channelProperties>
+      <graphProperties>
+        <timeConstraints>
+          <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+        </timeConstraints>
+      </graphProperties>
+    </sdfProperties>
+  </applicationGraph>
+</sdf3>
+

@@ -205,7 +205,9 @@ def transform(a_, at_, c_, cs_, read_delay, write_delay):
 						new_channel_sizes[channel_name]=maxsize
 
 						new_actors[sync_name]=sync_ports
-						new_actor_times[sync_name]=str(int(actor_times[actor])-(read_delay*port_count['readers'])-(write_delay*port_count['writers']))
+						subtraction = (read_delay * sum(i for i in [port_rate('in',counter,actors[actor]) for counter in range(port_count['readers'])]) +
+										write_delay * sum(i for i in [port_rate('out',counter,actors[actor]) for counter in range(port_count['writers'])]))
+						new_actor_times[sync_name]=str(int(actor_times[actor])-subtraction)
 						#############################
 					else:
 						### should be looping to the last reader ###
@@ -236,7 +238,9 @@ def transform(a_, at_, c_, cs_, read_delay, write_delay):
 						new_channel_sizes[channel_name]=maxsize
 
 						new_actors[sync_name]=sync_ports
-						new_actor_times[sync_name]=str(int(actor_times[actor])-(read_delay*port_count['readers'])-(write_delay*port_count['writers']))
+						subtraction = (read_delay * sum(i for i in [port_rate('in',counter,actors[actor]) for counter in range(port_count['readers'])]) +
+										write_delay * sum(i for i in [port_rate('out',counter,actors[actor]) for counter in range(port_count['writers'])]))
+						new_actor_times[sync_name]=str(int(actor_times[actor])-subtraction)
 				else:
 					### should be looping back to previous reader ###
 					back_loop_actor = actor + "_reader_" + str(count-1)
@@ -356,7 +360,9 @@ def transform(a_, at_, c_, cs_, read_delay, write_delay):
 						new_channel_sizes[channel_name]=maxsize
 
 						new_actors[sync_name]=sync_ports
-						new_actor_times[sync_name]=str(int(actor_times[actor])-(read_delay*port_count['readers'])-(write_delay*port_count['writers']))
+						subtraction = (read_delay * sum(i for i in [port_rate('in',counter,actors[actor]) for counter in range(port_count['readers'])]) +
+										write_delay * sum(i for i in [port_rate('out',counter,actors[actor]) for counter in range(port_count['writers'])]))
+						new_actor_times[sync_name]=str(int(actor_times[actor])-subtraction)
 
 					### in case there are no readers ###
 					elif port_count['writers'] == 1 :
@@ -390,7 +396,9 @@ def transform(a_, at_, c_, cs_, read_delay, write_delay):
 						new_channel_sizes[channel_name]=maxsize
 
 						new_actors[sync_name]=sync_ports
-						new_actor_times[sync_name]=str(int(actor_times[actor])-(read_delay*port_count['readers'])-(write_delay*port_count['writers']))
+						subtraction = (read_delay * sum(i for i in [port_rate('in',counter,actors[actor]) for counter in range(port_count['readers'])]) +
+										write_delay * sum(i for i in [port_rate('out',counter,actors[actor]) for counter in range(port_count['writers'])]))
+						new_actor_times[sync_name]=str(int(actor_times[actor])-subtraction)
 						#############################
 					else:
 						### should be looping to the last writer ###
@@ -421,7 +429,9 @@ def transform(a_, at_, c_, cs_, read_delay, write_delay):
 						new_channel_sizes[channel_name]=maxsize
 
 						new_actors[sync_name]=sync_ports
-						new_actor_times[sync_name]=str(int(actor_times[actor])-(read_delay*port_count['readers'])-(write_delay*port_count['writers']))
+						subtraction = (read_delay * sum(i for i in [port_rate('in',counter,actors[actor]) for counter in range(port_count['readers'])]) +
+										write_delay * sum(i for i in [port_rate('out',counter,actors[actor]) for counter in range(port_count['writers'])]))
+						new_actor_times[sync_name]=str(int(actor_times[actor])-subtraction)
 				else:
 					### should be looping back to previous writer ###
 					back_loop_actor = actor + "_writer_" + str(count-1)

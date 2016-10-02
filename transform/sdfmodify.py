@@ -104,7 +104,7 @@ def modify(a_, at_, c_, cs_, read_delay, write_delay):
 				new_actor = actor + "_reader_" + str(count)
 
 				###calculating exec time ###
-				exectime = read_delay
+				exectime = read_delay * port_rate('in',count,actors[actor])
 
 				new_actor_times[new_actor]=str(exectime)
 
@@ -173,7 +173,9 @@ def modify(a_, at_, c_, cs_, read_delay, write_delay):
 						new_channel_sizes[channel_name]=maxsize
 
 						new_actors[sync_name]=sync_ports
-						new_actor_times[sync_name]=str(int(actor_times[actor])-(read_delay*port_count['readers'])-(write_delay*port_count['writers']))
+						subtraction = (read_delay * sum(i for i in [port_rate('in',count,actors[actor]) for count in range(port_count['readers'])]) +
+										write_delay * sum(i for i in [port_rate('out',count,actors[actor]) for count in range(port_count['writers'])]))
+						new_actor_times[sync_name]=str(int(actor_times[actor])-subtraction)
 						#############################
 					else:
 						### should be looping to the last reader ###
@@ -203,7 +205,9 @@ def modify(a_, at_, c_, cs_, read_delay, write_delay):
 						new_channel_sizes[channel_name]=maxsize
 
 						new_actors[sync_name]=sync_ports
-						new_actor_times[sync_name]=str(int(actor_times[actor])-(read_delay*port_count['readers'])-(write_delay*port_count['writers']))
+						subtraction = (read_delay * sum(i for i in [port_rate('in',count,actors[actor]) for count in range(port_count['readers'])]) +
+										write_delay * sum(i for i in [port_rate('out',count,actors[actor]) for count in range(port_count['writers'])]))
+						new_actor_times[sync_name]=str(int(actor_times[actor])-subtraction)
 				else:
 					### should be looping back to previous reader ###
 					back_loop_actor = actor + "_reader_" + str(count-1)
@@ -227,7 +231,7 @@ def modify(a_, at_, c_, cs_, read_delay, write_delay):
 				new_actor = actor + "_writer_" + str(count)
 
 				###calculating exec time ###
-				exectime = write_delay
+				exectime = write_delay * port_rate('out',count,actors[actor])
 
 				new_actor_times[new_actor]=str(exectime)
 
@@ -274,7 +278,9 @@ def modify(a_, at_, c_, cs_, read_delay, write_delay):
 						new_channel_sizes[channel_name]=maxsize
 
 						new_actors[sync_name]=sync_ports
-						new_actor_times[sync_name]=str(int(actor_times[actor])-(read_delay*port_count['readers'])-(write_delay*port_count['writers']))
+						subtraction = (read_delay * sum(i for i in [port_rate('in',count,actors[actor]) for count in range(port_count['readers'])]) +
+										write_delay * sum(i for i in [port_rate('out',count,actors[actor]) for count in range(port_count['writers'])]))
+						new_actor_times[sync_name]=str(int(actor_times[actor])-subtraction)
 
 					### in case there are no readers ###
 					elif port_count['writers'] == 1 :
@@ -305,7 +311,9 @@ def modify(a_, at_, c_, cs_, read_delay, write_delay):
 						new_channel_sizes[channel_name]=maxsize
 
 						new_actors[sync_name]=sync_ports
-						new_actor_times[sync_name]=str(int(actor_times[actor])-(read_delay*port_count['readers'])-(write_delay*port_count['writers']))
+						subtraction = (read_delay * sum(i for i in [port_rate('in',count,actors[actor]) for count in range(port_count['readers'])]) +
+										write_delay * sum(i for i in [port_rate('out',count,actors[actor]) for count in range(port_count['writers'])]))
+						new_actor_times[sync_name]=str(int(actor_times[actor])-subtraction)
 						#############################
 					else:
 						### should be looping to the last writer ###
@@ -335,7 +343,9 @@ def modify(a_, at_, c_, cs_, read_delay, write_delay):
 						new_channel_sizes[channel_name]=maxsize
 
 						new_actors[sync_name]=sync_ports
-						new_actor_times[sync_name]=str(int(actor_times[actor])-(read_delay*port_count['readers'])-(write_delay*port_count['writers']))
+						subtraction = (read_delay * sum(i for i in [port_rate('in',count,actors[actor]) for count in range(port_count['readers'])]) +
+										write_delay * sum(i for i in [port_rate('out',count,actors[actor]) for count in range(port_count['writers'])]))
+						new_actor_times[sync_name]=str(int(actor_times[actor])-subtraction)
 				else:
 					### should be looping back to previous writer ###
 					back_loop_actor = actor + "_writer_" + str(count-1)
