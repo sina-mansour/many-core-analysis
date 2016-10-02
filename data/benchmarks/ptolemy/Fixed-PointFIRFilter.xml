@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="Fixed-PointFIRFilter">
+	<sdf name="Fixed-PointFIRFilter" type="Fixed-PointFIRFilter">
+	  <actor name="1_Impulse" type="1_Impulse">
+		<port name="p_out1" type="out" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="2_DoubleToFix" type="2_DoubleToFix">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="3_FIRFixedPonit" type="3_FIRFixedPonit">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="4_FIRDoublePrecision" type="4_FIRDoublePrecision">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="5_FIRQuantizedCoefficients" type="5_FIRQuantizedCoefficients">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="6_FixToDouble" type="6_FixToDouble">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="7_Spectrum1" type="7_Spectrum1">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="8_Spectrum2" type="8_Spectrum2">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="9_Spectrum3" type="9_Spectrum3">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="10_Plot" type="10_Plot">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <channel name="channel_1_2" srcActor="1_Impulse" srcPort="p_out1" dstActor="2_DoubleToFix" dstPort="p_in1"/>
+	  <channel name="channel_1_4" srcActor="1_Impulse" srcPort="p_out2" dstActor="4_FIRDoublePrecision" dstPort="p_in1"/>
+	  <channel name="channel_1_5" srcActor="1_Impulse" srcPort="p_out3" dstActor="5_FIRQuantizedCoefficients" dstPort="p_in1"/>
+	  <channel name="channel_2_3" srcActor="2_DoubleToFix" srcPort="p_out2" dstActor="3_FIRFixedPonit" dstPort="p_in1"/>
+	  <channel name="channel_3_6" srcActor="3_FIRFixedPonit" srcPort="p_out2" dstActor="6_FixToDouble" dstPort="p_in1"/>
+	  <channel name="channel_4_8" srcActor="4_FIRDoublePrecision" srcPort="p_out2" dstActor="8_Spectrum2" dstPort="p_in1"/>
+	  <channel name="channel_5_9" srcActor="5_FIRQuantizedCoefficients" srcPort="p_out2" dstActor="9_Spectrum3" dstPort="p_in1"/>
+	  <channel name="channel_6_7" srcActor="6_FixToDouble" srcPort="p_out2" dstActor="7_Spectrum1" dstPort="p_in1"/>
+	  <channel name="channel_7_10" srcActor="7_Spectrum1" srcPort="p_out2" dstActor="10_Plot" dstPort="p_in1"/>
+	  <channel name="channel_8_10" srcActor="8_Spectrum2" srcPort="p_out2" dstActor="10_Plot" dstPort="p_in2"/>
+	  <channel name="channel_9_10" srcActor="9_Spectrum3" srcPort="p_out2" dstActor="10_Plot" dstPort="p_in3"/>
+	  <channel name="self_loop_of_1_Impulse" srcActor="1_Impulse" srcPort="pOut" dstActor="1_Impulse" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_2_DoubleToFix" srcActor="2_DoubleToFix" srcPort="pOut" dstActor="2_DoubleToFix" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_3_FIRFixedPonit" srcActor="3_FIRFixedPonit" srcPort="pOut" dstActor="3_FIRFixedPonit" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_4_FIRDoublePrecision" srcActor="4_FIRDoublePrecision" srcPort="pOut" dstActor="4_FIRDoublePrecision" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_5_FIRQuantizedCoefficients" srcActor="5_FIRQuantizedCoefficients" srcPort="pOut" dstActor="5_FIRQuantizedCoefficients" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_6_FixToDouble" srcActor="6_FixToDouble" srcPort="pOut" dstActor="6_FixToDouble" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_7_Spectrum1" srcActor="7_Spectrum1" srcPort="pOut" dstActor="7_Spectrum1" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_8_Spectrum2" srcActor="8_Spectrum2" srcPort="pOut" dstActor="8_Spectrum2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_9_Spectrum3" srcActor="9_Spectrum3" srcPort="pOut" dstActor="9_Spectrum3" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_10_Plot" srcActor="10_Plot" srcPort="pOut" dstActor="10_Plot" dstPort="pIn" initialTokens="1"/>
+	</sdf>
+	<sdfProperties>
+	  <actorProperties actor="1_Impulse">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="2_DoubleToFix">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="3_FIRFixedPonit">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="4_FIRDoublePrecision">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="5_FIRQuantizedCoefficients">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="6_FixToDouble">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="7_Spectrum1">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="8_Spectrum2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="9_Spectrum3">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="10_Plot">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <channelProperties channel="channel_1_2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_1_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_1_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_9">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_7">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_7_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_8_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_9_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_1_Impulse">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_2_DoubleToFix">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_3_FIRFixedPonit">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_4_FIRDoublePrecision">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_5_FIRQuantizedCoefficients">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_6_FixToDouble">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_7_Spectrum1">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_8_Spectrum2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_9_Spectrum3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_10_Plot">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <graphProperties>
+		<timeConstraints>
+		  <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	  </graphProperties>
+	</sdfProperties>
+  </applicationGraph>
+</sdf3>

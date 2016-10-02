@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="h263encoder">
+	<sdf name="h263encoder" type="h263encoder">
+	  <actor name="1_motion_estimation" type="1_motion_estimation">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="99"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="2_mb_encoding" type="2_mb_encoding">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="3_vlc" type="3_vlc">
+		<port name="p_in1" type="in" rate="99"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="4_mb_decoding" type="4_mb_decoding">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="5_motion_compensation" type="5_motion_compensation">
+		<port name="p_out1" type="out" rate="1"/>
+		<port name="p_in2" type="in" rate="99"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <channel name="channel_5_1" srcActor="5_motion_compensation" srcPort="p_out1" dstActor="1_motion_estimation" dstPort="p_in1" initialTokens="1"/>
+	  <channel name="channel_1_2" srcActor="1_motion_estimation" srcPort="p_out2" dstActor="2_mb_encoding" dstPort="p_in1"/>
+	  <channel name="channel_2_3" srcActor="2_mb_encoding" srcPort="p_out2" dstActor="3_vlc" dstPort="p_in1"/>
+	  <channel name="channel_2_4" srcActor="2_mb_encoding" srcPort="p_out3" dstActor="4_mb_decoding" dstPort="p_in1" initialTokens="1"/>
+	  <channel name="channel_4_5" srcActor="4_mb_decoding" srcPort="p_out2" dstActor="5_motion_compensation" dstPort="p_in2"/>
+	  <channel name="self_loop_of_1_motion_estimation" srcActor="1_motion_estimation" srcPort="pOut" dstActor="1_motion_estimation" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_2_mb_encoding" srcActor="2_mb_encoding" srcPort="pOut" dstActor="2_mb_encoding" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_3_vlc" srcActor="3_vlc" srcPort="pOut" dstActor="3_vlc" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_4_mb_decoding" srcActor="4_mb_decoding" srcPort="pOut" dstActor="4_mb_decoding" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_5_motion_compensation" srcActor="5_motion_compensation" srcPort="pOut" dstActor="5_motion_compensation" dstPort="pIn" initialTokens="1"/>
+	</sdf>
+	<sdfProperties>
+	  <actorProperties actor="1_motion_estimation">
+		<processor type="arm" default="true">
+		  <executionTime time="382419"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="2_mb_encoding">
+		<processor type="arm" default="true">
+		  <executionTime time="8409"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="3_vlc">
+		<processor type="arm" default="true">
+		  <executionTime time="26018"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="4_mb_decoding">
+		<processor type="arm" default="true">
+		  <executionTime time="6264"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="5_motion_compensation">
+		<processor type="arm" default="true">
+		  <executionTime time="11356"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <channelProperties channel="channel_5_1">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_1_2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_1_motion_estimation">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_2_mb_encoding">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_3_vlc">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_4_mb_decoding">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_5_motion_compensation">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <graphProperties>
+		<timeConstraints>
+		  <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	  </graphProperties>
+	</sdfProperties>
+  </applicationGraph>
+</sdf3>

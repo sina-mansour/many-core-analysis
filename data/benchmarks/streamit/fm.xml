@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="fm">
+	<sdf name="fm" type="fm">
+	  <actor name="1_FileReader__2_82" type="1_FileReader__2_82">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="2_LowPassFilter__16_84" type="2_LowPassFilter__16_84">
+		<port name="p_in1" type="in" rate="5"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="3_FMDemodulator__24_85" type="3_FMDemodulator__24_85">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="4_DUPLICATE(1,1,1,1,1,1)" type="4_DUPLICATE(1,1,1,1,1,1)">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port name="p_out4" type="out" rate="1"/>
+		<port name="p_out5" type="out" rate="1"/>
+		<port name="p_out6" type="out" rate="1"/>
+		<port name="p_out7" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="5_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1)" type="5_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1)">
+		<port name="p_out1" type="out" rate="6"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port name="p_in4" type="in" rate="1"/>
+		<port name="p_in5" type="in" rate="1"/>
+		<port name="p_in6" type="in" rate="1"/>
+		<port name="p_in7" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="6_DUPLICATE(1,1)" type="6_DUPLICATE(1,1)">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="7_WEIGHTED_ROUND_ROBIN(1,1)" type="7_WEIGHTED_ROUND_ROBIN(1,1)">
+		<port name="p_out1" type="out" rate="2"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="8_LowPassFilter__38_90" type="8_LowPassFilter__38_90">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="9_LowPassFilter__52_91" type="9_LowPassFilter__52_91">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="10_Subtracter__55_92" type="10_Subtracter__55_92">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="11_Amplify__59_93" type="11_Amplify__59_93">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="12_DUPLICATE(1,1)" type="12_DUPLICATE(1,1)">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="13_WEIGHTED_ROUND_ROBIN(1,1)" type="13_WEIGHTED_ROUND_ROBIN(1,1)">
+		<port name="p_out1" type="out" rate="2"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="14_LowPassFilter__73_97" type="14_LowPassFilter__73_97">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="15_LowPassFilter__87_98" type="15_LowPassFilter__87_98">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="16_Subtracter__90_99" type="16_Subtracter__90_99">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="17_Amplify__94_100" type="17_Amplify__94_100">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="18_DUPLICATE(1,1)" type="18_DUPLICATE(1,1)">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="19_WEIGHTED_ROUND_ROBIN(1,1)" type="19_WEIGHTED_ROUND_ROBIN(1,1)">
+		<port name="p_out1" type="out" rate="2"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="20_LowPassFilter__108_104" type="20_LowPassFilter__108_104">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="21_LowPassFilter__122_105" type="21_LowPassFilter__122_105">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="22_Subtracter__125_106" type="22_Subtracter__125_106">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="23_Amplify__129_107" type="23_Amplify__129_107">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="24_DUPLICATE(1,1)" type="24_DUPLICATE(1,1)">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="25_WEIGHTED_ROUND_ROBIN(1,1)" type="25_WEIGHTED_ROUND_ROBIN(1,1)">
+		<port name="p_out1" type="out" rate="2"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="26_LowPassFilter__143_111" type="26_LowPassFilter__143_111">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="27_LowPassFilter__157_112" type="27_LowPassFilter__157_112">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="28_Subtracter__160_113" type="28_Subtracter__160_113">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="29_Amplify__164_114" type="29_Amplify__164_114">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="30_DUPLICATE(1,1)" type="30_DUPLICATE(1,1)">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="31_WEIGHTED_ROUND_ROBIN(1,1)" type="31_WEIGHTED_ROUND_ROBIN(1,1)">
+		<port name="p_out1" type="out" rate="2"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="32_LowPassFilter__178_118" type="32_LowPassFilter__178_118">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="33_LowPassFilter__192_119" type="33_LowPassFilter__192_119">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="34_Subtracter__195_120" type="34_Subtracter__195_120">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="35_Amplify__199_121" type="35_Amplify__199_121">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="36_DUPLICATE(1,1)" type="36_DUPLICATE(1,1)">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="37_WEIGHTED_ROUND_ROBIN(1,1)" type="37_WEIGHTED_ROUND_ROBIN(1,1)">
+		<port name="p_out1" type="out" rate="2"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="38_LowPassFilter__213_125" type="38_LowPassFilter__213_125">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="39_LowPassFilter__227_126" type="39_LowPassFilter__227_126">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="40_Subtracter__230_127" type="40_Subtracter__230_127">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="41_Amplify__234_128" type="41_Amplify__234_128">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="42_Adder__240_129" type="42_Adder__240_129">
+		<port name="p_in1" type="in" rate="6"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="43_FileWriter__243_130" type="43_FileWriter__243_130">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <channel name="channel_1_2" srcActor="1_FileReader__2_82" srcPort="p_out1" dstActor="2_LowPassFilter__16_84" dstPort="p_in1"/>
+	  <channel name="channel_2_3" srcActor="2_LowPassFilter__16_84" srcPort="p_out2" dstActor="3_FMDemodulator__24_85" dstPort="p_in1"/>
+	  <channel name="channel_3_4" srcActor="3_FMDemodulator__24_85" srcPort="p_out2" dstActor="4_DUPLICATE(1,1,1,1,1,1)" dstPort="p_in1"/>
+	  <channel name="channel_4_6" srcActor="4_DUPLICATE(1,1,1,1,1,1)" srcPort="p_out2" dstActor="6_DUPLICATE(1,1)" dstPort="p_in1"/>
+	  <channel name="channel_4_12" srcActor="4_DUPLICATE(1,1,1,1,1,1)" srcPort="p_out3" dstActor="12_DUPLICATE(1,1)" dstPort="p_in1"/>
+	  <channel name="channel_4_18" srcActor="4_DUPLICATE(1,1,1,1,1,1)" srcPort="p_out4" dstActor="18_DUPLICATE(1,1)" dstPort="p_in1"/>
+	  <channel name="channel_4_24" srcActor="4_DUPLICATE(1,1,1,1,1,1)" srcPort="p_out5" dstActor="24_DUPLICATE(1,1)" dstPort="p_in1"/>
+	  <channel name="channel_4_30" srcActor="4_DUPLICATE(1,1,1,1,1,1)" srcPort="p_out6" dstActor="30_DUPLICATE(1,1)" dstPort="p_in1"/>
+	  <channel name="channel_4_36" srcActor="4_DUPLICATE(1,1,1,1,1,1)" srcPort="p_out7" dstActor="36_DUPLICATE(1,1)" dstPort="p_in1"/>
+	  <channel name="channel_5_42" srcActor="5_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1)" srcPort="p_out1" dstActor="42_Adder__240_129" dstPort="p_in1"/>
+	  <channel name="channel_6_8" srcActor="6_DUPLICATE(1,1)" srcPort="p_out2" dstActor="8_LowPassFilter__38_90" dstPort="p_in1"/>
+	  <channel name="channel_6_9" srcActor="6_DUPLICATE(1,1)" srcPort="p_out3" dstActor="9_LowPassFilter__52_91" dstPort="p_in1"/>
+	  <channel name="channel_7_10" srcActor="7_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="p_out1" dstActor="10_Subtracter__55_92" dstPort="p_in1"/>
+	  <channel name="channel_8_7" srcActor="8_LowPassFilter__38_90" srcPort="p_out2" dstActor="7_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in2"/>
+	  <channel name="channel_9_7" srcActor="9_LowPassFilter__52_91" srcPort="p_out2" dstActor="7_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in3"/>
+	  <channel name="channel_10_11" srcActor="10_Subtracter__55_92" srcPort="p_out2" dstActor="11_Amplify__59_93" dstPort="p_in1"/>
+	  <channel name="channel_11_5" srcActor="11_Amplify__59_93" srcPort="p_out2" dstActor="5_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1)" dstPort="p_in2"/>
+	  <channel name="channel_12_14" srcActor="12_DUPLICATE(1,1)" srcPort="p_out2" dstActor="14_LowPassFilter__73_97" dstPort="p_in1"/>
+	  <channel name="channel_12_15" srcActor="12_DUPLICATE(1,1)" srcPort="p_out3" dstActor="15_LowPassFilter__87_98" dstPort="p_in1"/>
+	  <channel name="channel_13_16" srcActor="13_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="p_out1" dstActor="16_Subtracter__90_99" dstPort="p_in1"/>
+	  <channel name="channel_14_13" srcActor="14_LowPassFilter__73_97" srcPort="p_out2" dstActor="13_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in2"/>
+	  <channel name="channel_15_13" srcActor="15_LowPassFilter__87_98" srcPort="p_out2" dstActor="13_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in3"/>
+	  <channel name="channel_16_17" srcActor="16_Subtracter__90_99" srcPort="p_out2" dstActor="17_Amplify__94_100" dstPort="p_in1"/>
+	  <channel name="channel_17_5" srcActor="17_Amplify__94_100" srcPort="p_out2" dstActor="5_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1)" dstPort="p_in3"/>
+	  <channel name="channel_18_20" srcActor="18_DUPLICATE(1,1)" srcPort="p_out2" dstActor="20_LowPassFilter__108_104" dstPort="p_in1"/>
+	  <channel name="channel_18_21" srcActor="18_DUPLICATE(1,1)" srcPort="p_out3" dstActor="21_LowPassFilter__122_105" dstPort="p_in1"/>
+	  <channel name="channel_19_22" srcActor="19_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="p_out1" dstActor="22_Subtracter__125_106" dstPort="p_in1"/>
+	  <channel name="channel_20_19" srcActor="20_LowPassFilter__108_104" srcPort="p_out2" dstActor="19_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in2"/>
+	  <channel name="channel_21_19" srcActor="21_LowPassFilter__122_105" srcPort="p_out2" dstActor="19_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in3"/>
+	  <channel name="channel_22_23" srcActor="22_Subtracter__125_106" srcPort="p_out2" dstActor="23_Amplify__129_107" dstPort="p_in1"/>
+	  <channel name="channel_23_5" srcActor="23_Amplify__129_107" srcPort="p_out2" dstActor="5_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1)" dstPort="p_in4"/>
+	  <channel name="channel_24_26" srcActor="24_DUPLICATE(1,1)" srcPort="p_out2" dstActor="26_LowPassFilter__143_111" dstPort="p_in1"/>
+	  <channel name="channel_24_27" srcActor="24_DUPLICATE(1,1)" srcPort="p_out3" dstActor="27_LowPassFilter__157_112" dstPort="p_in1"/>
+	  <channel name="channel_25_28" srcActor="25_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="p_out1" dstActor="28_Subtracter__160_113" dstPort="p_in1"/>
+	  <channel name="channel_26_25" srcActor="26_LowPassFilter__143_111" srcPort="p_out2" dstActor="25_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in2"/>
+	  <channel name="channel_27_25" srcActor="27_LowPassFilter__157_112" srcPort="p_out2" dstActor="25_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in3"/>
+	  <channel name="channel_28_29" srcActor="28_Subtracter__160_113" srcPort="p_out2" dstActor="29_Amplify__164_114" dstPort="p_in1"/>
+	  <channel name="channel_29_5" srcActor="29_Amplify__164_114" srcPort="p_out2" dstActor="5_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1)" dstPort="p_in5"/>
+	  <channel name="channel_30_32" srcActor="30_DUPLICATE(1,1)" srcPort="p_out2" dstActor="32_LowPassFilter__178_118" dstPort="p_in1"/>
+	  <channel name="channel_30_33" srcActor="30_DUPLICATE(1,1)" srcPort="p_out3" dstActor="33_LowPassFilter__192_119" dstPort="p_in1"/>
+	  <channel name="channel_31_34" srcActor="31_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="p_out1" dstActor="34_Subtracter__195_120" dstPort="p_in1"/>
+	  <channel name="channel_32_31" srcActor="32_LowPassFilter__178_118" srcPort="p_out2" dstActor="31_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in2"/>
+	  <channel name="channel_33_31" srcActor="33_LowPassFilter__192_119" srcPort="p_out2" dstActor="31_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in3"/>
+	  <channel name="channel_34_35" srcActor="34_Subtracter__195_120" srcPort="p_out2" dstActor="35_Amplify__199_121" dstPort="p_in1"/>
+	  <channel name="channel_35_5" srcActor="35_Amplify__199_121" srcPort="p_out2" dstActor="5_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1)" dstPort="p_in6"/>
+	  <channel name="channel_36_38" srcActor="36_DUPLICATE(1,1)" srcPort="p_out2" dstActor="38_LowPassFilter__213_125" dstPort="p_in1"/>
+	  <channel name="channel_36_39" srcActor="36_DUPLICATE(1,1)" srcPort="p_out3" dstActor="39_LowPassFilter__227_126" dstPort="p_in1"/>
+	  <channel name="channel_37_40" srcActor="37_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="p_out1" dstActor="40_Subtracter__230_127" dstPort="p_in1"/>
+	  <channel name="channel_38_37" srcActor="38_LowPassFilter__213_125" srcPort="p_out2" dstActor="37_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in2"/>
+	  <channel name="channel_39_37" srcActor="39_LowPassFilter__227_126" srcPort="p_out2" dstActor="37_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in3"/>
+	  <channel name="channel_40_41" srcActor="40_Subtracter__230_127" srcPort="p_out2" dstActor="41_Amplify__234_128" dstPort="p_in1"/>
+	  <channel name="channel_41_5" srcActor="41_Amplify__234_128" srcPort="p_out2" dstActor="5_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1)" dstPort="p_in7"/>
+	  <channel name="channel_42_43" srcActor="42_Adder__240_129" srcPort="p_out2" dstActor="43_FileWriter__243_130" dstPort="p_in1"/>
+	  <channel name="self_loop_of_1_FileReader__2_82" srcActor="1_FileReader__2_82" srcPort="pOut" dstActor="1_FileReader__2_82" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_2_LowPassFilter__16_84" srcActor="2_LowPassFilter__16_84" srcPort="pOut" dstActor="2_LowPassFilter__16_84" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_3_FMDemodulator__24_85" srcActor="3_FMDemodulator__24_85" srcPort="pOut" dstActor="3_FMDemodulator__24_85" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_4_DUPLICATE(1,1,1,1,1,1)" srcActor="4_DUPLICATE(1,1,1,1,1,1)" srcPort="pOut" dstActor="4_DUPLICATE(1,1,1,1,1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_5_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1)" srcActor="5_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1)" srcPort="pOut" dstActor="5_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_6_DUPLICATE(1,1)" srcActor="6_DUPLICATE(1,1)" srcPort="pOut" dstActor="6_DUPLICATE(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_7_WEIGHTED_ROUND_ROBIN(1,1)" srcActor="7_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="pOut" dstActor="7_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_8_LowPassFilter__38_90" srcActor="8_LowPassFilter__38_90" srcPort="pOut" dstActor="8_LowPassFilter__38_90" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_9_LowPassFilter__52_91" srcActor="9_LowPassFilter__52_91" srcPort="pOut" dstActor="9_LowPassFilter__52_91" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_10_Subtracter__55_92" srcActor="10_Subtracter__55_92" srcPort="pOut" dstActor="10_Subtracter__55_92" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_11_Amplify__59_93" srcActor="11_Amplify__59_93" srcPort="pOut" dstActor="11_Amplify__59_93" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_12_DUPLICATE(1,1)" srcActor="12_DUPLICATE(1,1)" srcPort="pOut" dstActor="12_DUPLICATE(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_13_WEIGHTED_ROUND_ROBIN(1,1)" srcActor="13_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="pOut" dstActor="13_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_14_LowPassFilter__73_97" srcActor="14_LowPassFilter__73_97" srcPort="pOut" dstActor="14_LowPassFilter__73_97" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_15_LowPassFilter__87_98" srcActor="15_LowPassFilter__87_98" srcPort="pOut" dstActor="15_LowPassFilter__87_98" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_16_Subtracter__90_99" srcActor="16_Subtracter__90_99" srcPort="pOut" dstActor="16_Subtracter__90_99" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_17_Amplify__94_100" srcActor="17_Amplify__94_100" srcPort="pOut" dstActor="17_Amplify__94_100" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_18_DUPLICATE(1,1)" srcActor="18_DUPLICATE(1,1)" srcPort="pOut" dstActor="18_DUPLICATE(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_19_WEIGHTED_ROUND_ROBIN(1,1)" srcActor="19_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="pOut" dstActor="19_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_20_LowPassFilter__108_104" srcActor="20_LowPassFilter__108_104" srcPort="pOut" dstActor="20_LowPassFilter__108_104" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_21_LowPassFilter__122_105" srcActor="21_LowPassFilter__122_105" srcPort="pOut" dstActor="21_LowPassFilter__122_105" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_22_Subtracter__125_106" srcActor="22_Subtracter__125_106" srcPort="pOut" dstActor="22_Subtracter__125_106" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_23_Amplify__129_107" srcActor="23_Amplify__129_107" srcPort="pOut" dstActor="23_Amplify__129_107" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_24_DUPLICATE(1,1)" srcActor="24_DUPLICATE(1,1)" srcPort="pOut" dstActor="24_DUPLICATE(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_25_WEIGHTED_ROUND_ROBIN(1,1)" srcActor="25_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="pOut" dstActor="25_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_26_LowPassFilter__143_111" srcActor="26_LowPassFilter__143_111" srcPort="pOut" dstActor="26_LowPassFilter__143_111" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_27_LowPassFilter__157_112" srcActor="27_LowPassFilter__157_112" srcPort="pOut" dstActor="27_LowPassFilter__157_112" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_28_Subtracter__160_113" srcActor="28_Subtracter__160_113" srcPort="pOut" dstActor="28_Subtracter__160_113" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_29_Amplify__164_114" srcActor="29_Amplify__164_114" srcPort="pOut" dstActor="29_Amplify__164_114" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_30_DUPLICATE(1,1)" srcActor="30_DUPLICATE(1,1)" srcPort="pOut" dstActor="30_DUPLICATE(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_31_WEIGHTED_ROUND_ROBIN(1,1)" srcActor="31_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="pOut" dstActor="31_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_32_LowPassFilter__178_118" srcActor="32_LowPassFilter__178_118" srcPort="pOut" dstActor="32_LowPassFilter__178_118" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_33_LowPassFilter__192_119" srcActor="33_LowPassFilter__192_119" srcPort="pOut" dstActor="33_LowPassFilter__192_119" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_34_Subtracter__195_120" srcActor="34_Subtracter__195_120" srcPort="pOut" dstActor="34_Subtracter__195_120" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_35_Amplify__199_121" srcActor="35_Amplify__199_121" srcPort="pOut" dstActor="35_Amplify__199_121" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_36_DUPLICATE(1,1)" srcActor="36_DUPLICATE(1,1)" srcPort="pOut" dstActor="36_DUPLICATE(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_37_WEIGHTED_ROUND_ROBIN(1,1)" srcActor="37_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="pOut" dstActor="37_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_38_LowPassFilter__213_125" srcActor="38_LowPassFilter__213_125" srcPort="pOut" dstActor="38_LowPassFilter__213_125" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_39_LowPassFilter__227_126" srcActor="39_LowPassFilter__227_126" srcPort="pOut" dstActor="39_LowPassFilter__227_126" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_40_Subtracter__230_127" srcActor="40_Subtracter__230_127" srcPort="pOut" dstActor="40_Subtracter__230_127" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_41_Amplify__234_128" srcActor="41_Amplify__234_128" srcPort="pOut" dstActor="41_Amplify__234_128" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_42_Adder__240_129" srcActor="42_Adder__240_129" srcPort="pOut" dstActor="42_Adder__240_129" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_43_FileWriter__243_130" srcActor="43_FileWriter__243_130" srcPort="pOut" dstActor="43_FileWriter__243_130" dstPort="pIn" initialTokens="1"/>
+	</sdf>
+	<sdfProperties>
+	  <actorProperties actor="1_FileReader__2_82">
+		<processor type="arm" default="true">
+		  <executionTime time="0"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="2_LowPassFilter__16_84">
+		<processor type="arm" default="true">
+		  <executionTime time="1434"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="3_FMDemodulator__24_85">
+		<processor type="arm" default="true">
+		  <executionTime time="221"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="4_DUPLICATE(1,1,1,1,1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="21"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="5_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="36"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="6_DUPLICATE(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="9"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="7_WEIGHTED_ROUND_ROBIN(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="8_LowPassFilter__38_90">
+		<processor type="arm" default="true">
+		  <executionTime time="1414"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="9_LowPassFilter__52_91">
+		<processor type="arm" default="true">
+		  <executionTime time="1414"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="10_Subtracter__55_92">
+		<processor type="arm" default="true">
+		  <executionTime time="17"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="11_Amplify__59_93">
+		<processor type="arm" default="true">
+		  <executionTime time="8"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="12_DUPLICATE(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="9"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="13_WEIGHTED_ROUND_ROBIN(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="14_LowPassFilter__73_97">
+		<processor type="arm" default="true">
+		  <executionTime time="1414"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="15_LowPassFilter__87_98">
+		<processor type="arm" default="true">
+		  <executionTime time="1414"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="16_Subtracter__90_99">
+		<processor type="arm" default="true">
+		  <executionTime time="17"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="17_Amplify__94_100">
+		<processor type="arm" default="true">
+		  <executionTime time="8"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="18_DUPLICATE(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="9"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="19_WEIGHTED_ROUND_ROBIN(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="20_LowPassFilter__108_104">
+		<processor type="arm" default="true">
+		  <executionTime time="1414"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="21_LowPassFilter__122_105">
+		<processor type="arm" default="true">
+		  <executionTime time="1414"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="22_Subtracter__125_106">
+		<processor type="arm" default="true">
+		  <executionTime time="17"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="23_Amplify__129_107">
+		<processor type="arm" default="true">
+		  <executionTime time="8"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="24_DUPLICATE(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="9"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="25_WEIGHTED_ROUND_ROBIN(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="26_LowPassFilter__143_111">
+		<processor type="arm" default="true">
+		  <executionTime time="1414"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="27_LowPassFilter__157_112">
+		<processor type="arm" default="true">
+		  <executionTime time="1414"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="28_Subtracter__160_113">
+		<processor type="arm" default="true">
+		  <executionTime time="17"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="29_Amplify__164_114">
+		<processor type="arm" default="true">
+		  <executionTime time="8"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="30_DUPLICATE(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="9"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="31_WEIGHTED_ROUND_ROBIN(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="32_LowPassFilter__178_118">
+		<processor type="arm" default="true">
+		  <executionTime time="1414"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="33_LowPassFilter__192_119">
+		<processor type="arm" default="true">
+		  <executionTime time="1414"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="34_Subtracter__195_120">
+		<processor type="arm" default="true">
+		  <executionTime time="17"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="35_Amplify__199_121">
+		<processor type="arm" default="true">
+		  <executionTime time="8"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="36_DUPLICATE(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="9"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="37_WEIGHTED_ROUND_ROBIN(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="38_LowPassFilter__213_125">
+		<processor type="arm" default="true">
+		  <executionTime time="1414"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="39_LowPassFilter__227_126">
+		<processor type="arm" default="true">
+		  <executionTime time="1414"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="40_Subtracter__230_127">
+		<processor type="arm" default="true">
+		  <executionTime time="17"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="41_Amplify__234_128">
+		<processor type="arm" default="true">
+		  <executionTime time="8"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="42_Adder__240_129">
+		<processor type="arm" default="true">
+		  <executionTime time="45"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="43_FileWriter__243_130">
+		<processor type="arm" default="true">
+		  <executionTime time="0"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <channelProperties channel="channel_1_2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_12">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_18">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_24">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_30">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_36">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_42">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_9">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_7_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_8_7">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_9_7">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_10_11">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_11_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_12_14">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_12_15">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_13_16">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_14_13">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_15_13">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_16_17">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_17_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_18_20">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_18_21">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_19_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_20_19">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_19">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_22_23">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_23_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_24_26">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_24_27">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_25_28">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_26_25">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_27_25">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_28_29">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_29_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_30_32">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_30_33">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_31_34">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_32_31">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_33_31">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_34_35">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_35_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_36_38">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_36_39">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_37_40">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_38_37">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_39_37">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_40_41">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_41_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_42_43">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_1_FileReader__2_82">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_2_LowPassFilter__16_84">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_3_FMDemodulator__24_85">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_4_DUPLICATE(1,1,1,1,1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_5_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_6_DUPLICATE(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_7_WEIGHTED_ROUND_ROBIN(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_8_LowPassFilter__38_90">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_9_LowPassFilter__52_91">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_10_Subtracter__55_92">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_11_Amplify__59_93">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_12_DUPLICATE(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_13_WEIGHTED_ROUND_ROBIN(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_14_LowPassFilter__73_97">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_15_LowPassFilter__87_98">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_16_Subtracter__90_99">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_17_Amplify__94_100">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_18_DUPLICATE(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_19_WEIGHTED_ROUND_ROBIN(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_20_LowPassFilter__108_104">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_21_LowPassFilter__122_105">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_22_Subtracter__125_106">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_23_Amplify__129_107">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_24_DUPLICATE(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_25_WEIGHTED_ROUND_ROBIN(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_26_LowPassFilter__143_111">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_27_LowPassFilter__157_112">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_28_Subtracter__160_113">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_29_Amplify__164_114">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_30_DUPLICATE(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_31_WEIGHTED_ROUND_ROBIN(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_32_LowPassFilter__178_118">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_33_LowPassFilter__192_119">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_34_Subtracter__195_120">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_35_Amplify__199_121">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_36_DUPLICATE(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_37_WEIGHTED_ROUND_ROBIN(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_38_LowPassFilter__213_125">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_39_LowPassFilter__227_126">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_40_Subtracter__230_127">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_41_Amplify__234_128">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_42_Adder__240_129">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_43_FileWriter__243_130">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <graphProperties>
+		<timeConstraints>
+		  <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	  </graphProperties>
+	</sdfProperties>
+  </applicationGraph>
+</sdf3>

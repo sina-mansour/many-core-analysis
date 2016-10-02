@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="mp3decoder_GP">
+	<sdf name="mp3decoder_GP" type="mp3decoder_GP">
+	  <actor name="1_huffman" type="1_huffman">
+		<port name="p_out1" type="out" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="2_req0" type="2_req0">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="3_reorder0" type="3_reorder0">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="4_req1" type="4_req1">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="5_reorder1" type="5_reorder1">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="6_stereo" type="6_stereo">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port name="p_out4" type="out" rate="1"/>
+		<port name="p_in5" type="in" rate="1"/>
+		<port name="p_in6" type="in" rate="1"/>
+		<port name="p_out7" type="out" rate="1"/>
+		<port name="p_out8" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="7_aliasreduct0" type="7_aliasreduct0">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="8_IMDCT0" type="8_IMDCT0">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="9_freqinv0" type="9_freqinv0">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="10_synth0" type="10_synth0">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="11_aliasreduct1" type="11_aliasreduct1">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="12_IMDCT1" type="12_IMDCT1">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="13_freqinv1" type="13_freqinv1">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="14_synth1" type="14_synth1">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <channel name="channel_1_2" srcActor="1_huffman" srcPort="p_out1" dstActor="2_req0" dstPort="p_in1"/>
+	  <channel name="channel_1_4" srcActor="1_huffman" srcPort="p_out2" dstActor="4_req1" dstPort="p_in1"/>
+	  <channel name="channel_2_3" srcActor="2_req0" srcPort="p_out2" dstActor="3_reorder0" dstPort="p_in1"/>
+	  <channel name="channel_4_5" srcActor="4_req1" srcPort="p_out2" dstActor="5_reorder1" dstPort="p_in1"/>
+	  <channel name="channel_3_6" srcActor="3_reorder0" srcPort="p_out2" dstActor="6_stereo" dstPort="p_in1"/>
+	  <channel name="channel_5_6" srcActor="5_reorder1" srcPort="p_out2" dstActor="6_stereo" dstPort="p_in2"/>
+	  <channel name="channel_6_7" srcActor="6_stereo" srcPort="p_out3" dstActor="7_aliasreduct0" dstPort="p_in1"/>
+	  <channel name="channel_6_11" srcActor="6_stereo" srcPort="p_out4" dstActor="11_aliasreduct1" dstPort="p_in1"/>
+	  <channel name="channel_7_8" srcActor="7_aliasreduct0" srcPort="p_out2" dstActor="8_IMDCT0" dstPort="p_in1"/>
+	  <channel name="channel_11_12" srcActor="11_aliasreduct1" srcPort="p_out2" dstActor="12_IMDCT1" dstPort="p_in1"/>
+	  <channel name="channel_8_9" srcActor="8_IMDCT0" srcPort="p_out2" dstActor="9_freqinv0" dstPort="p_in1"/>
+	  <channel name="channel_12_13" srcActor="12_IMDCT1" srcPort="p_out2" dstActor="13_freqinv1" dstPort="p_in1"/>
+	  <channel name="channel_9_10" srcActor="9_freqinv0" srcPort="p_out2" dstActor="10_synth0" dstPort="p_in1"/>
+	  <channel name="channel_13_14" srcActor="13_freqinv1" srcPort="p_out2" dstActor="14_synth1" dstPort="p_in1"/>
+	  <channel name="channel_2_6" srcActor="2_req0" srcPort="p_out3" dstActor="6_stereo" dstPort="p_in5"/>
+	  <channel name="channel_4_6" srcActor="4_req1" srcPort="p_out3" dstActor="6_stereo" dstPort="p_in6"/>
+	  <channel name="channel_6_8" srcActor="6_stereo" srcPort="p_out7" dstActor="8_IMDCT0" dstPort="p_in3"/>
+	  <channel name="channel_6_12" srcActor="6_stereo" srcPort="p_out8" dstActor="12_IMDCT1" dstPort="p_in3"/>
+	  <channel name="self_loop_of_1_huffman" srcActor="1_huffman" srcPort="pOut" dstActor="1_huffman" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_2_req0" srcActor="2_req0" srcPort="pOut" dstActor="2_req0" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_3_reorder0" srcActor="3_reorder0" srcPort="pOut" dstActor="3_reorder0" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_4_req1" srcActor="4_req1" srcPort="pOut" dstActor="4_req1" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_5_reorder1" srcActor="5_reorder1" srcPort="pOut" dstActor="5_reorder1" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_6_stereo" srcActor="6_stereo" srcPort="pOut" dstActor="6_stereo" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_7_aliasreduct0" srcActor="7_aliasreduct0" srcPort="pOut" dstActor="7_aliasreduct0" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_8_IMDCT0" srcActor="8_IMDCT0" srcPort="pOut" dstActor="8_IMDCT0" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_9_freqinv0" srcActor="9_freqinv0" srcPort="pOut" dstActor="9_freqinv0" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_10_synth0" srcActor="10_synth0" srcPort="pOut" dstActor="10_synth0" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_11_aliasreduct1" srcActor="11_aliasreduct1" srcPort="pOut" dstActor="11_aliasreduct1" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_12_IMDCT1" srcActor="12_IMDCT1" srcPort="pOut" dstActor="12_IMDCT1" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_13_freqinv1" srcActor="13_freqinv1" srcPort="pOut" dstActor="13_freqinv1" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_14_synth1" srcActor="14_synth1" srcPort="pOut" dstActor="14_synth1" dstPort="pIn" initialTokens="1"/>
+	</sdf>
+	<sdfProperties>
+	  <actorProperties actor="1_huffman">
+		<processor type="arm" default="true">
+		  <executionTime time="236070"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="2_req0">
+		<processor type="arm" default="true">
+		  <executionTime time="139325"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="3_reorder0">
+		<processor type="arm" default="true">
+		  <executionTime time="69385"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="4_req1">
+		<processor type="arm" default="true">
+		  <executionTime time="139325"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="5_reorder1">
+		<processor type="arm" default="true">
+		  <executionTime time="69385"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="6_stereo">
+		<processor type="arm" default="true">
+		  <executionTime time="73618"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="7_aliasreduct0">
+		<processor type="arm" default="true">
+		  <executionTime time="13088"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="8_IMDCT0">
+		<processor type="arm" default="true">
+		  <executionTime time="711744"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="9_freqinv0">
+		<processor type="arm" default="true">
+		  <executionTime time="157184"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="10_synth0">
+		<processor type="arm" default="true">
+		  <executionTime time="1866138"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="11_aliasreduct1">
+		<processor type="arm" default="true">
+		  <executionTime time="13088"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="12_IMDCT1">
+		<processor type="arm" default="true">
+		  <executionTime time="711744"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="13_freqinv1">
+		<processor type="arm" default="true">
+		  <executionTime time="157184"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="14_synth1">
+		<processor type="arm" default="true">
+		  <executionTime time="1866138"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <channelProperties channel="channel_1_2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_1_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_7">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_11">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_7_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_11_12">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_8_9">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_12_13">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_9_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_13_14">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_12">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_1_huffman">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_2_req0">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_3_reorder0">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_4_req1">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_5_reorder1">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_6_stereo">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_7_aliasreduct0">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_8_IMDCT0">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_9_freqinv0">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_10_synth0">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_11_aliasreduct1">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_12_IMDCT1">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_13_freqinv1">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_14_synth1">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <graphProperties>
+		<timeConstraints>
+		  <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	  </graphProperties>
+	</sdfProperties>
+  </applicationGraph>
+</sdf3>

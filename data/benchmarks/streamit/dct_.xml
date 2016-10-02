@@ -1,0 +1,1070 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="dct_">
+	<sdf name="dct_" type="dct_">
+	  <actor name="1_FileReader__2_41" type="1_FileReader__2_41">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="2_AnonFilter_a0__5_44" type="2_AnonFilter_a0__5_44">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" type="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port name="p_out4" type="out" rate="1"/>
+		<port name="p_out5" type="out" rate="1"/>
+		<port name="p_out6" type="out" rate="1"/>
+		<port name="p_out7" type="out" rate="1"/>
+		<port name="p_out8" type="out" rate="1"/>
+		<port name="p_out9" type="out" rate="1"/>
+		<port name="p_out10" type="out" rate="1"/>
+		<port name="p_out11" type="out" rate="1"/>
+		<port name="p_out12" type="out" rate="1"/>
+		<port name="p_out13" type="out" rate="1"/>
+		<port name="p_out14" type="out" rate="1"/>
+		<port name="p_out15" type="out" rate="1"/>
+		<port name="p_out16" type="out" rate="1"/>
+		<port name="p_out17" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" type="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)">
+		<port name="p_out1" type="out" rate="16"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port name="p_in4" type="in" rate="1"/>
+		<port name="p_in5" type="in" rate="1"/>
+		<port name="p_in6" type="in" rate="1"/>
+		<port name="p_in7" type="in" rate="1"/>
+		<port name="p_in8" type="in" rate="1"/>
+		<port name="p_in9" type="in" rate="1"/>
+		<port name="p_in10" type="in" rate="1"/>
+		<port name="p_in11" type="in" rate="1"/>
+		<port name="p_in12" type="in" rate="1"/>
+		<port name="p_in13" type="in" rate="1"/>
+		<port name="p_in14" type="in" rate="1"/>
+		<port name="p_in15" type="in" rate="1"/>
+		<port name="p_in16" type="in" rate="1"/>
+		<port name="p_in17" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="5_iDCT_1D_reference_fine__17_45" type="5_iDCT_1D_reference_fine__17_45">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="6_iDCT_1D_reference_fine__29_46" type="6_iDCT_1D_reference_fine__29_46">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="7_iDCT_1D_reference_fine__41_47" type="7_iDCT_1D_reference_fine__41_47">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="8_iDCT_1D_reference_fine__53_48" type="8_iDCT_1D_reference_fine__53_48">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="9_iDCT_1D_reference_fine__65_49" type="9_iDCT_1D_reference_fine__65_49">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="10_iDCT_1D_reference_fine__77_50" type="10_iDCT_1D_reference_fine__77_50">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="11_iDCT_1D_reference_fine__89_51" type="11_iDCT_1D_reference_fine__89_51">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="12_iDCT_1D_reference_fine__101_52" type="12_iDCT_1D_reference_fine__101_52">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="13_iDCT_1D_reference_fine__113_53" type="13_iDCT_1D_reference_fine__113_53">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="14_iDCT_1D_reference_fine__125_54" type="14_iDCT_1D_reference_fine__125_54">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="15_iDCT_1D_reference_fine__137_55" type="15_iDCT_1D_reference_fine__137_55">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="16_iDCT_1D_reference_fine__149_56" type="16_iDCT_1D_reference_fine__149_56">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="17_iDCT_1D_reference_fine__161_57" type="17_iDCT_1D_reference_fine__161_57">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="18_iDCT_1D_reference_fine__173_58" type="18_iDCT_1D_reference_fine__173_58">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="19_iDCT_1D_reference_fine__185_59" type="19_iDCT_1D_reference_fine__185_59">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="20_iDCT_1D_reference_fine__197_60" type="20_iDCT_1D_reference_fine__197_60">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" type="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)">
+		<port name="p_in1" type="in" rate="256"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port name="p_out3" type="out" rate="16"/>
+		<port name="p_out4" type="out" rate="16"/>
+		<port name="p_out5" type="out" rate="16"/>
+		<port name="p_out6" type="out" rate="16"/>
+		<port name="p_out7" type="out" rate="16"/>
+		<port name="p_out8" type="out" rate="16"/>
+		<port name="p_out9" type="out" rate="16"/>
+		<port name="p_out10" type="out" rate="16"/>
+		<port name="p_out11" type="out" rate="16"/>
+		<port name="p_out12" type="out" rate="16"/>
+		<port name="p_out13" type="out" rate="16"/>
+		<port name="p_out14" type="out" rate="16"/>
+		<port name="p_out15" type="out" rate="16"/>
+		<port name="p_out16" type="out" rate="16"/>
+		<port name="p_out17" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" type="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)">
+		<port name="p_out1" type="out" rate="256"/>
+		<port name="p_in2" type="in" rate="16"/>
+		<port name="p_in3" type="in" rate="16"/>
+		<port name="p_in4" type="in" rate="16"/>
+		<port name="p_in5" type="in" rate="16"/>
+		<port name="p_in6" type="in" rate="16"/>
+		<port name="p_in7" type="in" rate="16"/>
+		<port name="p_in8" type="in" rate="16"/>
+		<port name="p_in9" type="in" rate="16"/>
+		<port name="p_in10" type="in" rate="16"/>
+		<port name="p_in11" type="in" rate="16"/>
+		<port name="p_in12" type="in" rate="16"/>
+		<port name="p_in13" type="in" rate="16"/>
+		<port name="p_in14" type="in" rate="16"/>
+		<port name="p_in15" type="in" rate="16"/>
+		<port name="p_in16" type="in" rate="16"/>
+		<port name="p_in17" type="in" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="23_iDCT_1D_reference_fine__209_61" type="23_iDCT_1D_reference_fine__209_61">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="24_iDCT_1D_reference_fine__221_62" type="24_iDCT_1D_reference_fine__221_62">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="25_iDCT_1D_reference_fine__233_63" type="25_iDCT_1D_reference_fine__233_63">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="26_iDCT_1D_reference_fine__245_64" type="26_iDCT_1D_reference_fine__245_64">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="27_iDCT_1D_reference_fine__257_65" type="27_iDCT_1D_reference_fine__257_65">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="28_iDCT_1D_reference_fine__269_66" type="28_iDCT_1D_reference_fine__269_66">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="29_iDCT_1D_reference_fine__281_67" type="29_iDCT_1D_reference_fine__281_67">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="30_iDCT_1D_reference_fine__293_68" type="30_iDCT_1D_reference_fine__293_68">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="31_iDCT_1D_reference_fine__305_69" type="31_iDCT_1D_reference_fine__305_69">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="32_iDCT_1D_reference_fine__317_70" type="32_iDCT_1D_reference_fine__317_70">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="33_iDCT_1D_reference_fine__329_71" type="33_iDCT_1D_reference_fine__329_71">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="34_iDCT_1D_reference_fine__341_72" type="34_iDCT_1D_reference_fine__341_72">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="35_iDCT_1D_reference_fine__353_73" type="35_iDCT_1D_reference_fine__353_73">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="36_iDCT_1D_reference_fine__365_74" type="36_iDCT_1D_reference_fine__365_74">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="37_iDCT_1D_reference_fine__377_75" type="37_iDCT_1D_reference_fine__377_75">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="38_iDCT_1D_reference_fine__389_76" type="38_iDCT_1D_reference_fine__389_76">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="39_AnonFilter_a1__392_77" type="39_AnonFilter_a1__392_77">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="40_FileWriter__395_78" type="40_FileWriter__395_78">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <channel name="channel_1_2" srcActor="1_FileReader__2_41" srcPort="p_out1" dstActor="2_AnonFilter_a0__5_44" dstPort="p_in1"/>
+	  <channel name="channel_2_3" srcActor="2_AnonFilter_a0__5_44" srcPort="p_out2" dstActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="p_in1"/>
+	  <channel name="channel_3_5" srcActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="p_out2" dstActor="5_iDCT_1D_reference_fine__17_45" dstPort="p_in1"/>
+	  <channel name="channel_3_6" srcActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="p_out3" dstActor="6_iDCT_1D_reference_fine__29_46" dstPort="p_in1"/>
+	  <channel name="channel_3_7" srcActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="p_out4" dstActor="7_iDCT_1D_reference_fine__41_47" dstPort="p_in1"/>
+	  <channel name="channel_3_8" srcActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="p_out5" dstActor="8_iDCT_1D_reference_fine__53_48" dstPort="p_in1"/>
+	  <channel name="channel_3_9" srcActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="p_out6" dstActor="9_iDCT_1D_reference_fine__65_49" dstPort="p_in1"/>
+	  <channel name="channel_3_10" srcActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="p_out7" dstActor="10_iDCT_1D_reference_fine__77_50" dstPort="p_in1"/>
+	  <channel name="channel_3_11" srcActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="p_out8" dstActor="11_iDCT_1D_reference_fine__89_51" dstPort="p_in1"/>
+	  <channel name="channel_3_12" srcActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="p_out9" dstActor="12_iDCT_1D_reference_fine__101_52" dstPort="p_in1"/>
+	  <channel name="channel_3_13" srcActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="p_out10" dstActor="13_iDCT_1D_reference_fine__113_53" dstPort="p_in1"/>
+	  <channel name="channel_3_14" srcActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="p_out11" dstActor="14_iDCT_1D_reference_fine__125_54" dstPort="p_in1"/>
+	  <channel name="channel_3_15" srcActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="p_out12" dstActor="15_iDCT_1D_reference_fine__137_55" dstPort="p_in1"/>
+	  <channel name="channel_3_16" srcActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="p_out13" dstActor="16_iDCT_1D_reference_fine__149_56" dstPort="p_in1"/>
+	  <channel name="channel_3_17" srcActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="p_out14" dstActor="17_iDCT_1D_reference_fine__161_57" dstPort="p_in1"/>
+	  <channel name="channel_3_18" srcActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="p_out15" dstActor="18_iDCT_1D_reference_fine__173_58" dstPort="p_in1"/>
+	  <channel name="channel_3_19" srcActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="p_out16" dstActor="19_iDCT_1D_reference_fine__185_59" dstPort="p_in1"/>
+	  <channel name="channel_3_20" srcActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="p_out17" dstActor="20_iDCT_1D_reference_fine__197_60" dstPort="p_in1"/>
+	  <channel name="channel_4_21" srcActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="p_out1" dstActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="p_in1"/>
+	  <channel name="channel_5_4" srcActor="5_iDCT_1D_reference_fine__17_45" srcPort="p_out2" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="p_in2"/>
+	  <channel name="channel_6_4" srcActor="6_iDCT_1D_reference_fine__29_46" srcPort="p_out2" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="p_in3"/>
+	  <channel name="channel_7_4" srcActor="7_iDCT_1D_reference_fine__41_47" srcPort="p_out2" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="p_in4"/>
+	  <channel name="channel_8_4" srcActor="8_iDCT_1D_reference_fine__53_48" srcPort="p_out2" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="p_in5"/>
+	  <channel name="channel_9_4" srcActor="9_iDCT_1D_reference_fine__65_49" srcPort="p_out2" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="p_in6"/>
+	  <channel name="channel_10_4" srcActor="10_iDCT_1D_reference_fine__77_50" srcPort="p_out2" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="p_in7"/>
+	  <channel name="channel_11_4" srcActor="11_iDCT_1D_reference_fine__89_51" srcPort="p_out2" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="p_in8"/>
+	  <channel name="channel_12_4" srcActor="12_iDCT_1D_reference_fine__101_52" srcPort="p_out2" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="p_in9"/>
+	  <channel name="channel_13_4" srcActor="13_iDCT_1D_reference_fine__113_53" srcPort="p_out2" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="p_in10"/>
+	  <channel name="channel_14_4" srcActor="14_iDCT_1D_reference_fine__125_54" srcPort="p_out2" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="p_in11"/>
+	  <channel name="channel_15_4" srcActor="15_iDCT_1D_reference_fine__137_55" srcPort="p_out2" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="p_in12"/>
+	  <channel name="channel_16_4" srcActor="16_iDCT_1D_reference_fine__149_56" srcPort="p_out2" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="p_in13"/>
+	  <channel name="channel_17_4" srcActor="17_iDCT_1D_reference_fine__161_57" srcPort="p_out2" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="p_in14"/>
+	  <channel name="channel_18_4" srcActor="18_iDCT_1D_reference_fine__173_58" srcPort="p_out2" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="p_in15"/>
+	  <channel name="channel_19_4" srcActor="19_iDCT_1D_reference_fine__185_59" srcPort="p_out2" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="p_in16"/>
+	  <channel name="channel_20_4" srcActor="20_iDCT_1D_reference_fine__197_60" srcPort="p_out2" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="p_in17"/>
+	  <channel name="channel_21_23" srcActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="p_out2" dstActor="23_iDCT_1D_reference_fine__209_61" dstPort="p_in1"/>
+	  <channel name="channel_21_24" srcActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="p_out3" dstActor="24_iDCT_1D_reference_fine__221_62" dstPort="p_in1"/>
+	  <channel name="channel_21_25" srcActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="p_out4" dstActor="25_iDCT_1D_reference_fine__233_63" dstPort="p_in1"/>
+	  <channel name="channel_21_26" srcActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="p_out5" dstActor="26_iDCT_1D_reference_fine__245_64" dstPort="p_in1"/>
+	  <channel name="channel_21_27" srcActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="p_out6" dstActor="27_iDCT_1D_reference_fine__257_65" dstPort="p_in1"/>
+	  <channel name="channel_21_28" srcActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="p_out7" dstActor="28_iDCT_1D_reference_fine__269_66" dstPort="p_in1"/>
+	  <channel name="channel_21_29" srcActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="p_out8" dstActor="29_iDCT_1D_reference_fine__281_67" dstPort="p_in1"/>
+	  <channel name="channel_21_30" srcActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="p_out9" dstActor="30_iDCT_1D_reference_fine__293_68" dstPort="p_in1"/>
+	  <channel name="channel_21_31" srcActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="p_out10" dstActor="31_iDCT_1D_reference_fine__305_69" dstPort="p_in1"/>
+	  <channel name="channel_21_32" srcActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="p_out11" dstActor="32_iDCT_1D_reference_fine__317_70" dstPort="p_in1"/>
+	  <channel name="channel_21_33" srcActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="p_out12" dstActor="33_iDCT_1D_reference_fine__329_71" dstPort="p_in1"/>
+	  <channel name="channel_21_34" srcActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="p_out13" dstActor="34_iDCT_1D_reference_fine__341_72" dstPort="p_in1"/>
+	  <channel name="channel_21_35" srcActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="p_out14" dstActor="35_iDCT_1D_reference_fine__353_73" dstPort="p_in1"/>
+	  <channel name="channel_21_36" srcActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="p_out15" dstActor="36_iDCT_1D_reference_fine__365_74" dstPort="p_in1"/>
+	  <channel name="channel_21_37" srcActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="p_out16" dstActor="37_iDCT_1D_reference_fine__377_75" dstPort="p_in1"/>
+	  <channel name="channel_21_38" srcActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="p_out17" dstActor="38_iDCT_1D_reference_fine__389_76" dstPort="p_in1"/>
+	  <channel name="channel_22_39" srcActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="p_out1" dstActor="39_AnonFilter_a1__392_77" dstPort="p_in1"/>
+	  <channel name="channel_23_22" srcActor="23_iDCT_1D_reference_fine__209_61" srcPort="p_out2" dstActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="p_in2"/>
+	  <channel name="channel_24_22" srcActor="24_iDCT_1D_reference_fine__221_62" srcPort="p_out2" dstActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="p_in3"/>
+	  <channel name="channel_25_22" srcActor="25_iDCT_1D_reference_fine__233_63" srcPort="p_out2" dstActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="p_in4"/>
+	  <channel name="channel_26_22" srcActor="26_iDCT_1D_reference_fine__245_64" srcPort="p_out2" dstActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="p_in5"/>
+	  <channel name="channel_27_22" srcActor="27_iDCT_1D_reference_fine__257_65" srcPort="p_out2" dstActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="p_in6"/>
+	  <channel name="channel_28_22" srcActor="28_iDCT_1D_reference_fine__269_66" srcPort="p_out2" dstActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="p_in7"/>
+	  <channel name="channel_29_22" srcActor="29_iDCT_1D_reference_fine__281_67" srcPort="p_out2" dstActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="p_in8"/>
+	  <channel name="channel_30_22" srcActor="30_iDCT_1D_reference_fine__293_68" srcPort="p_out2" dstActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="p_in9"/>
+	  <channel name="channel_31_22" srcActor="31_iDCT_1D_reference_fine__305_69" srcPort="p_out2" dstActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="p_in10"/>
+	  <channel name="channel_32_22" srcActor="32_iDCT_1D_reference_fine__317_70" srcPort="p_out2" dstActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="p_in11"/>
+	  <channel name="channel_33_22" srcActor="33_iDCT_1D_reference_fine__329_71" srcPort="p_out2" dstActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="p_in12"/>
+	  <channel name="channel_34_22" srcActor="34_iDCT_1D_reference_fine__341_72" srcPort="p_out2" dstActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="p_in13"/>
+	  <channel name="channel_35_22" srcActor="35_iDCT_1D_reference_fine__353_73" srcPort="p_out2" dstActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="p_in14"/>
+	  <channel name="channel_36_22" srcActor="36_iDCT_1D_reference_fine__365_74" srcPort="p_out2" dstActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="p_in15"/>
+	  <channel name="channel_37_22" srcActor="37_iDCT_1D_reference_fine__377_75" srcPort="p_out2" dstActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="p_in16"/>
+	  <channel name="channel_38_22" srcActor="38_iDCT_1D_reference_fine__389_76" srcPort="p_out2" dstActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="p_in17"/>
+	  <channel name="channel_39_40" srcActor="39_AnonFilter_a1__392_77" srcPort="p_out2" dstActor="40_FileWriter__395_78" dstPort="p_in1"/>
+	  <channel name="self_loop_of_1_FileReader__2_41" srcActor="1_FileReader__2_41" srcPort="pOut" dstActor="1_FileReader__2_41" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_2_AnonFilter_a0__5_44" srcActor="2_AnonFilter_a0__5_44" srcPort="pOut" dstActor="2_AnonFilter_a0__5_44" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="pOut" dstActor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" srcPort="pOut" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_5_iDCT_1D_reference_fine__17_45" srcActor="5_iDCT_1D_reference_fine__17_45" srcPort="pOut" dstActor="5_iDCT_1D_reference_fine__17_45" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_6_iDCT_1D_reference_fine__29_46" srcActor="6_iDCT_1D_reference_fine__29_46" srcPort="pOut" dstActor="6_iDCT_1D_reference_fine__29_46" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_7_iDCT_1D_reference_fine__41_47" srcActor="7_iDCT_1D_reference_fine__41_47" srcPort="pOut" dstActor="7_iDCT_1D_reference_fine__41_47" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_8_iDCT_1D_reference_fine__53_48" srcActor="8_iDCT_1D_reference_fine__53_48" srcPort="pOut" dstActor="8_iDCT_1D_reference_fine__53_48" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_9_iDCT_1D_reference_fine__65_49" srcActor="9_iDCT_1D_reference_fine__65_49" srcPort="pOut" dstActor="9_iDCT_1D_reference_fine__65_49" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_10_iDCT_1D_reference_fine__77_50" srcActor="10_iDCT_1D_reference_fine__77_50" srcPort="pOut" dstActor="10_iDCT_1D_reference_fine__77_50" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_11_iDCT_1D_reference_fine__89_51" srcActor="11_iDCT_1D_reference_fine__89_51" srcPort="pOut" dstActor="11_iDCT_1D_reference_fine__89_51" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_12_iDCT_1D_reference_fine__101_52" srcActor="12_iDCT_1D_reference_fine__101_52" srcPort="pOut" dstActor="12_iDCT_1D_reference_fine__101_52" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_13_iDCT_1D_reference_fine__113_53" srcActor="13_iDCT_1D_reference_fine__113_53" srcPort="pOut" dstActor="13_iDCT_1D_reference_fine__113_53" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_14_iDCT_1D_reference_fine__125_54" srcActor="14_iDCT_1D_reference_fine__125_54" srcPort="pOut" dstActor="14_iDCT_1D_reference_fine__125_54" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_15_iDCT_1D_reference_fine__137_55" srcActor="15_iDCT_1D_reference_fine__137_55" srcPort="pOut" dstActor="15_iDCT_1D_reference_fine__137_55" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_16_iDCT_1D_reference_fine__149_56" srcActor="16_iDCT_1D_reference_fine__149_56" srcPort="pOut" dstActor="16_iDCT_1D_reference_fine__149_56" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_17_iDCT_1D_reference_fine__161_57" srcActor="17_iDCT_1D_reference_fine__161_57" srcPort="pOut" dstActor="17_iDCT_1D_reference_fine__161_57" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_18_iDCT_1D_reference_fine__173_58" srcActor="18_iDCT_1D_reference_fine__173_58" srcPort="pOut" dstActor="18_iDCT_1D_reference_fine__173_58" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_19_iDCT_1D_reference_fine__185_59" srcActor="19_iDCT_1D_reference_fine__185_59" srcPort="pOut" dstActor="19_iDCT_1D_reference_fine__185_59" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_20_iDCT_1D_reference_fine__197_60" srcActor="20_iDCT_1D_reference_fine__197_60" srcPort="pOut" dstActor="20_iDCT_1D_reference_fine__197_60" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="pOut" dstActor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" srcPort="pOut" dstActor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_23_iDCT_1D_reference_fine__209_61" srcActor="23_iDCT_1D_reference_fine__209_61" srcPort="pOut" dstActor="23_iDCT_1D_reference_fine__209_61" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_24_iDCT_1D_reference_fine__221_62" srcActor="24_iDCT_1D_reference_fine__221_62" srcPort="pOut" dstActor="24_iDCT_1D_reference_fine__221_62" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_25_iDCT_1D_reference_fine__233_63" srcActor="25_iDCT_1D_reference_fine__233_63" srcPort="pOut" dstActor="25_iDCT_1D_reference_fine__233_63" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_26_iDCT_1D_reference_fine__245_64" srcActor="26_iDCT_1D_reference_fine__245_64" srcPort="pOut" dstActor="26_iDCT_1D_reference_fine__245_64" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_27_iDCT_1D_reference_fine__257_65" srcActor="27_iDCT_1D_reference_fine__257_65" srcPort="pOut" dstActor="27_iDCT_1D_reference_fine__257_65" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_28_iDCT_1D_reference_fine__269_66" srcActor="28_iDCT_1D_reference_fine__269_66" srcPort="pOut" dstActor="28_iDCT_1D_reference_fine__269_66" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_29_iDCT_1D_reference_fine__281_67" srcActor="29_iDCT_1D_reference_fine__281_67" srcPort="pOut" dstActor="29_iDCT_1D_reference_fine__281_67" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_30_iDCT_1D_reference_fine__293_68" srcActor="30_iDCT_1D_reference_fine__293_68" srcPort="pOut" dstActor="30_iDCT_1D_reference_fine__293_68" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_31_iDCT_1D_reference_fine__305_69" srcActor="31_iDCT_1D_reference_fine__305_69" srcPort="pOut" dstActor="31_iDCT_1D_reference_fine__305_69" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_32_iDCT_1D_reference_fine__317_70" srcActor="32_iDCT_1D_reference_fine__317_70" srcPort="pOut" dstActor="32_iDCT_1D_reference_fine__317_70" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_33_iDCT_1D_reference_fine__329_71" srcActor="33_iDCT_1D_reference_fine__329_71" srcPort="pOut" dstActor="33_iDCT_1D_reference_fine__329_71" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_34_iDCT_1D_reference_fine__341_72" srcActor="34_iDCT_1D_reference_fine__341_72" srcPort="pOut" dstActor="34_iDCT_1D_reference_fine__341_72" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_35_iDCT_1D_reference_fine__353_73" srcActor="35_iDCT_1D_reference_fine__353_73" srcPort="pOut" dstActor="35_iDCT_1D_reference_fine__353_73" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_36_iDCT_1D_reference_fine__365_74" srcActor="36_iDCT_1D_reference_fine__365_74" srcPort="pOut" dstActor="36_iDCT_1D_reference_fine__365_74" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_37_iDCT_1D_reference_fine__377_75" srcActor="37_iDCT_1D_reference_fine__377_75" srcPort="pOut" dstActor="37_iDCT_1D_reference_fine__377_75" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_38_iDCT_1D_reference_fine__389_76" srcActor="38_iDCT_1D_reference_fine__389_76" srcPort="pOut" dstActor="38_iDCT_1D_reference_fine__389_76" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_39_AnonFilter_a1__392_77" srcActor="39_AnonFilter_a1__392_77" srcPort="pOut" dstActor="39_AnonFilter_a1__392_77" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_40_FileWriter__395_78" srcActor="40_FileWriter__395_78" srcPort="pOut" dstActor="40_FileWriter__395_78" dstPort="pIn" initialTokens="1"/>
+	</sdf>
+	<sdfProperties>
+	  <actorProperties actor="1_FileReader__2_41">
+		<processor type="arm" default="true">
+		  <executionTime time="0"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="2_AnonFilter_a0__5_44">
+		<processor type="arm" default="true">
+		  <executionTime time="6"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="96"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="96"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="5_iDCT_1D_reference_fine__17_45">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="6_iDCT_1D_reference_fine__29_46">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="7_iDCT_1D_reference_fine__41_47">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="8_iDCT_1D_reference_fine__53_48">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="9_iDCT_1D_reference_fine__65_49">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="10_iDCT_1D_reference_fine__77_50">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="11_iDCT_1D_reference_fine__89_51">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="12_iDCT_1D_reference_fine__101_52">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="13_iDCT_1D_reference_fine__113_53">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="14_iDCT_1D_reference_fine__125_54">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="15_iDCT_1D_reference_fine__137_55">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="16_iDCT_1D_reference_fine__149_56">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="17_iDCT_1D_reference_fine__161_57">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="18_iDCT_1D_reference_fine__173_58">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="19_iDCT_1D_reference_fine__185_59">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="20_iDCT_1D_reference_fine__197_60">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)">
+		<processor type="arm" default="true">
+		  <executionTime time="1536"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)">
+		<processor type="arm" default="true">
+		  <executionTime time="1536"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="23_iDCT_1D_reference_fine__209_61">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="24_iDCT_1D_reference_fine__221_62">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="25_iDCT_1D_reference_fine__233_63">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="26_iDCT_1D_reference_fine__245_64">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="27_iDCT_1D_reference_fine__257_65">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="28_iDCT_1D_reference_fine__269_66">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="29_iDCT_1D_reference_fine__281_67">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="30_iDCT_1D_reference_fine__293_68">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="31_iDCT_1D_reference_fine__305_69">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="32_iDCT_1D_reference_fine__317_70">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="33_iDCT_1D_reference_fine__329_71">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="34_iDCT_1D_reference_fine__341_72">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="35_iDCT_1D_reference_fine__353_73">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="36_iDCT_1D_reference_fine__365_74">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="37_iDCT_1D_reference_fine__377_75">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="38_iDCT_1D_reference_fine__389_76">
+		<processor type="arm" default="true">
+		  <executionTime time="2976"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="39_AnonFilter_a1__392_77">
+		<processor type="arm" default="true">
+		  <executionTime time="76"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="40_FileWriter__395_78">
+		<processor type="arm" default="true">
+		  <executionTime time="0"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <channelProperties channel="channel_1_2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_7">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_9">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_11">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_12">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_13">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_14">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_15">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_16">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_17">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_18">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_19">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_20">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_21">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_7_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_8_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_9_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_10_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_11_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_12_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_13_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_14_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_15_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_16_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_17_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_18_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_19_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_20_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_23">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_24">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_25">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_26">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_27">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_28">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_29">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_30">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_31">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_32">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_33">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_34">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_35">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_36">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_37">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_38">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_22_39">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_23_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_24_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_25_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_26_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_27_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_28_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_29_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_30_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_31_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_32_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_33_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_34_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_35_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_36_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_37_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_38_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_39_40">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_1_FileReader__2_41">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_2_AnonFilter_a0__5_44">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_3_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_4_WEIGHTED_ROUND_ROBIN(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_5_iDCT_1D_reference_fine__17_45">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_6_iDCT_1D_reference_fine__29_46">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_7_iDCT_1D_reference_fine__41_47">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_8_iDCT_1D_reference_fine__53_48">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_9_iDCT_1D_reference_fine__65_49">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_10_iDCT_1D_reference_fine__77_50">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_11_iDCT_1D_reference_fine__89_51">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_12_iDCT_1D_reference_fine__101_52">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_13_iDCT_1D_reference_fine__113_53">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_14_iDCT_1D_reference_fine__125_54">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_15_iDCT_1D_reference_fine__137_55">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_16_iDCT_1D_reference_fine__149_56">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_17_iDCT_1D_reference_fine__161_57">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_18_iDCT_1D_reference_fine__173_58">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_19_iDCT_1D_reference_fine__185_59">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_20_iDCT_1D_reference_fine__197_60">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_21_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_22_WEIGHTED_ROUND_ROBIN(16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_23_iDCT_1D_reference_fine__209_61">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_24_iDCT_1D_reference_fine__221_62">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_25_iDCT_1D_reference_fine__233_63">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_26_iDCT_1D_reference_fine__245_64">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_27_iDCT_1D_reference_fine__257_65">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_28_iDCT_1D_reference_fine__269_66">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_29_iDCT_1D_reference_fine__281_67">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_30_iDCT_1D_reference_fine__293_68">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_31_iDCT_1D_reference_fine__305_69">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_32_iDCT_1D_reference_fine__317_70">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_33_iDCT_1D_reference_fine__329_71">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_34_iDCT_1D_reference_fine__341_72">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_35_iDCT_1D_reference_fine__353_73">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_36_iDCT_1D_reference_fine__365_74">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_37_iDCT_1D_reference_fine__377_75">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_38_iDCT_1D_reference_fine__389_76">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_39_AnonFilter_a1__392_77">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_40_FileWriter__395_78">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <graphProperties>
+		<timeConstraints>
+		  <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	  </graphProperties>
+	</sdfProperties>
+  </applicationGraph>
+</sdf3>

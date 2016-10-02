@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="mp3playback">
+	<sdf name="mp3playback" type="mp3playback">
+	  <actor name="1_mp3" type="1_mp3">
+		<port name="p_out1" type="out" rate="1152"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="2_src" type="2_src">
+		<port name="p_in1" type="in" rate="480"/>
+		<port name="p_out2" type="out" rate="441"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="3_app" type="3_app">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="4_dac" type="4_dac">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <channel name="channel_1_2" srcActor="1_mp3" srcPort="p_out1" dstActor="2_src" dstPort="p_in1"/>
+	  <channel name="channel_2_3" srcActor="2_src" srcPort="p_out2" dstActor="3_app" dstPort="p_in1"/>
+	  <channel name="channel_3_4" srcActor="3_app" srcPort="p_out2" dstActor="4_dac" dstPort="p_in1"/>
+	  <channel name="channel_4_3" srcActor="4_dac" srcPort="p_out2" dstActor="3_app" dstPort="p_in3" initialTokens="2"/>
+	  <channel name="self_loop_of_1_mp3" srcActor="1_mp3" srcPort="pOut" dstActor="1_mp3" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_2_src" srcActor="2_src" srcPort="pOut" dstActor="2_src" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_3_app" srcActor="3_app" srcPort="pOut" dstActor="3_app" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_4_dac" srcActor="4_dac" srcPort="pOut" dstActor="4_dac" dstPort="pIn" initialTokens="1"/>
+	</sdf>
+	<sdfProperties>
+	  <actorProperties actor="1_mp3">
+		<processor type="arm" default="true">
+		  <executionTime time="7510"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="2_src">
+		<processor type="arm" default="true">
+		  <executionTime time="10000"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="3_app">
+		<processor type="arm" default="true">
+		  <executionTime time="22"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="4_dac">
+		<processor type="arm" default="true">
+		  <executionTime time="22"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <channelProperties channel="channel_1_2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_1_mp3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_2_src">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_3_app">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_4_dac">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <graphProperties>
+		<timeConstraints>
+		  <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	  </graphProperties>
+	</sdfProperties>
+  </applicationGraph>
+</sdf3>

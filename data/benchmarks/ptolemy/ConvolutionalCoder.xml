@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="ConvolutionalCoder">
+	<sdf name="ConvolutionalCoder" type="ConvolutionalCoder">
+	  <actor name="1_Const" type="1_Const">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="2_Scrambler" type="2_Scrambler">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="3_Bernoulli2" type="3_Bernoulli2">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="4_ConvolutionalCoder" type="4_ConvolutionalCoder">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="5_Bernoulli" type="5_Bernoulli">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="6_Const2" type="6_Const2">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="7_LogicFunction2" type="7_LogicFunction2">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="8_LogicFunction" type="8_LogicFunction">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="9_DeScrambler2" type="9_DeScrambler2">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="10_ViterbiDecoder" type="10_ViterbiDecoder">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="11_CountErrors" type="11_CountErrors">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port name="p_in4" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="12_Const3" type="12_Const3">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="13_DeScrambler" type="13_DeScrambler">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="14_ErrorsOnCodedChannel" type="14_ErrorsOnCodedChannel">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="15_ErrorRateOnCodedChannel" type="15_ErrorRateOnCodedChannel">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="16_CountError2" type="16_CountError2">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port name="p_out4" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="17_ErrorsOnUncodedChannel" type="17_ErrorsOnUncodedChannel">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="18_ErrorRateOnUncodedChannel" type="18_ErrorRateOnUncodedChannel">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <channel name="channel_1_2" srcActor="1_Const" srcPort="p_out1" dstActor="2_Scrambler" dstPort="p_in1"/>
+	  <channel name="channel_2_4" srcActor="2_Scrambler" srcPort="p_out2" dstActor="4_ConvolutionalCoder" dstPort="p_in1"/>
+	  <channel name="channel_2_7" srcActor="2_Scrambler" srcPort="p_out3" dstActor="7_LogicFunction2" dstPort="p_in1"/>
+	  <channel name="channel_3_7" srcActor="3_Bernoulli2" srcPort="p_out1" dstActor="7_LogicFunction2" dstPort="p_in2"/>
+	  <channel name="channel_4_8" srcActor="4_ConvolutionalCoder" srcPort="p_out2" dstActor="8_LogicFunction" dstPort="p_in1"/>
+	  <channel name="channel_5_8" srcActor="5_Bernoulli" srcPort="p_out1" dstActor="8_LogicFunction" dstPort="p_in2"/>
+	  <channel name="channel_6_11" srcActor="6_Const2" srcPort="p_out1" dstActor="11_CountErrors" dstPort="p_in1"/>
+	  <channel name="channel_7_9" srcActor="7_LogicFunction2" srcPort="p_out3" dstActor="9_DeScrambler2" dstPort="p_in1"/>
+	  <channel name="channel_8_10" srcActor="8_LogicFunction" srcPort="p_out3" dstActor="10_ViterbiDecoder" dstPort="p_in1"/>
+	  <channel name="channel_9_16" srcActor="9_DeScrambler2" srcPort="p_out2" dstActor="16_CountError2" dstPort="p_in1"/>
+	  <channel name="channel_10_13" srcActor="10_ViterbiDecoder" srcPort="p_out2" dstActor="13_DeScrambler" dstPort="p_in1"/>
+	  <channel name="channel_11_14" srcActor="11_CountErrors" srcPort="p_out2" dstActor="14_ErrorsOnCodedChannel" dstPort="p_in1"/>
+	  <channel name="channel_11_15" srcActor="11_CountErrors" srcPort="p_out3" dstActor="15_ErrorRateOnCodedChannel" dstPort="p_in1"/>
+	  <channel name="channel_12_16" srcActor="12_Const3" srcPort="p_out1" dstActor="16_CountError2" dstPort="p_in2"/>
+	  <channel name="channel_13_11" srcActor="13_DeScrambler" srcPort="p_out2" dstActor="11_CountErrors" dstPort="p_in4"/>
+	  <channel name="channel_16_17" srcActor="16_CountError2" srcPort="p_out3" dstActor="17_ErrorsOnUncodedChannel" dstPort="p_in1"/>
+	  <channel name="channel_16_18" srcActor="16_CountError2" srcPort="p_out4" dstActor="18_ErrorRateOnUncodedChannel" dstPort="p_in1"/>
+	  <channel name="self_loop_of_1_Const" srcActor="1_Const" srcPort="pOut" dstActor="1_Const" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_2_Scrambler" srcActor="2_Scrambler" srcPort="pOut" dstActor="2_Scrambler" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_3_Bernoulli2" srcActor="3_Bernoulli2" srcPort="pOut" dstActor="3_Bernoulli2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_4_ConvolutionalCoder" srcActor="4_ConvolutionalCoder" srcPort="pOut" dstActor="4_ConvolutionalCoder" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_5_Bernoulli" srcActor="5_Bernoulli" srcPort="pOut" dstActor="5_Bernoulli" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_6_Const2" srcActor="6_Const2" srcPort="pOut" dstActor="6_Const2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_7_LogicFunction2" srcActor="7_LogicFunction2" srcPort="pOut" dstActor="7_LogicFunction2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_8_LogicFunction" srcActor="8_LogicFunction" srcPort="pOut" dstActor="8_LogicFunction" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_9_DeScrambler2" srcActor="9_DeScrambler2" srcPort="pOut" dstActor="9_DeScrambler2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_10_ViterbiDecoder" srcActor="10_ViterbiDecoder" srcPort="pOut" dstActor="10_ViterbiDecoder" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_11_CountErrors" srcActor="11_CountErrors" srcPort="pOut" dstActor="11_CountErrors" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_12_Const3" srcActor="12_Const3" srcPort="pOut" dstActor="12_Const3" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_13_DeScrambler" srcActor="13_DeScrambler" srcPort="pOut" dstActor="13_DeScrambler" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_14_ErrorsOnCodedChannel" srcActor="14_ErrorsOnCodedChannel" srcPort="pOut" dstActor="14_ErrorsOnCodedChannel" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_15_ErrorRateOnCodedChannel" srcActor="15_ErrorRateOnCodedChannel" srcPort="pOut" dstActor="15_ErrorRateOnCodedChannel" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_16_CountError2" srcActor="16_CountError2" srcPort="pOut" dstActor="16_CountError2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_17_ErrorsOnUncodedChannel" srcActor="17_ErrorsOnUncodedChannel" srcPort="pOut" dstActor="17_ErrorsOnUncodedChannel" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_18_ErrorRateOnUncodedChannel" srcActor="18_ErrorRateOnUncodedChannel" srcPort="pOut" dstActor="18_ErrorRateOnUncodedChannel" dstPort="pIn" initialTokens="1"/>
+	</sdf>
+	<sdfProperties>
+	  <actorProperties actor="1_Const">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="2_Scrambler">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="3_Bernoulli2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="4_ConvolutionalCoder">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="5_Bernoulli">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="6_Const2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="7_LogicFunction2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="8_LogicFunction">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="9_DeScrambler2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="10_ViterbiDecoder">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="11_CountErrors">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="12_Const3">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="13_DeScrambler">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="14_ErrorsOnCodedChannel">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="15_ErrorRateOnCodedChannel">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="16_CountError2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="17_ErrorsOnUncodedChannel">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="18_ErrorRateOnUncodedChannel">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <channelProperties channel="channel_1_2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_7">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_7">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_11">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_7_9">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_8_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_9_16">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_10_13">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_11_14">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_11_15">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_12_16">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_13_11">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_16_17">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_16_18">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_1_Const">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_2_Scrambler">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_3_Bernoulli2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_4_ConvolutionalCoder">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_5_Bernoulli">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_6_Const2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_7_LogicFunction2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_8_LogicFunction">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_9_DeScrambler2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_10_ViterbiDecoder">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_11_CountErrors">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_12_Const3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_13_DeScrambler">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_14_ErrorsOnCodedChannel">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_15_ErrorRateOnCodedChannel">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_16_CountError2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_17_ErrorsOnUncodedChannel">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_18_ErrorRateOnUncodedChannel">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <graphProperties>
+		<timeConstraints>
+		  <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	  </graphProperties>
+	</sdfProperties>
+  </applicationGraph>
+</sdf3>

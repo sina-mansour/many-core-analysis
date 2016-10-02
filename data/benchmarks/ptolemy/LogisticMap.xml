@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="LogisticMap">
+	<sdf name="LogisticMap" type="LogisticMap">
+	  <actor name="1_SampleDelay" type="1_SampleDelay">
+		<port name="p_out1" type="out" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="2_SliderSource" type="2_SliderSource">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="3_Const2" type="3_Const2">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="4_Const" type="4_Const">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="5_Sleep" type="5_Sleep">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="6_MultiplyDivide2" type="6_MultiplyDivide2">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="7_AddSubtract" type="7_AddSubtract">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="8_SequenceScope" type="8_SequenceScope">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="9_MultiplyDivide" type="9_MultiplyDivide">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port name="p_out4" type="out" rate="1"/>
+		<port name="p_out5" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <channel name="channel_1_5" srcActor="1_SampleDelay" srcPort="p_out1" dstActor="5_Sleep" dstPort="p_in1" initialTokens="1"/>
+	  <channel name="channel_2_6" srcActor="2_SliderSource" srcPort="p_out1" dstActor="6_MultiplyDivide2" dstPort="p_in1"/>
+	  <channel name="channel_3_6" srcActor="3_Const2" srcPort="p_out1" dstActor="6_MultiplyDivide2" dstPort="p_in2"/>
+	  <channel name="channel_4_7" srcActor="4_Const" srcPort="p_out1" dstActor="7_AddSubtract" dstPort="p_in1"/>
+	  <channel name="channel_5_7" srcActor="5_Sleep" srcPort="p_out2" dstActor="7_AddSubtract" dstPort="p_in2"/>
+	  <channel name="channel_5_9" srcActor="5_Sleep" srcPort="p_out3" dstActor="9_MultiplyDivide" dstPort="p_in1"/>
+	  <channel name="channel_6_9" srcActor="6_MultiplyDivide2" srcPort="p_out3" dstActor="9_MultiplyDivide" dstPort="p_in2"/>
+	  <channel name="channel_7_9" srcActor="7_AddSubtract" srcPort="p_out3" dstActor="9_MultiplyDivide" dstPort="p_in3"/>
+	  <channel name="channel_9_1" srcActor="9_MultiplyDivide" srcPort="p_out4" dstActor="1_SampleDelay" dstPort="p_in2"/>
+	  <channel name="channel_9_8" srcActor="9_MultiplyDivide" srcPort="p_out5" dstActor="8_SequenceScope" dstPort="p_in1"/>
+	  <channel name="self_loop_of_1_SampleDelay" srcActor="1_SampleDelay" srcPort="pOut" dstActor="1_SampleDelay" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_2_SliderSource" srcActor="2_SliderSource" srcPort="pOut" dstActor="2_SliderSource" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_3_Const2" srcActor="3_Const2" srcPort="pOut" dstActor="3_Const2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_4_Const" srcActor="4_Const" srcPort="pOut" dstActor="4_Const" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_5_Sleep" srcActor="5_Sleep" srcPort="pOut" dstActor="5_Sleep" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_6_MultiplyDivide2" srcActor="6_MultiplyDivide2" srcPort="pOut" dstActor="6_MultiplyDivide2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_7_AddSubtract" srcActor="7_AddSubtract" srcPort="pOut" dstActor="7_AddSubtract" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_8_SequenceScope" srcActor="8_SequenceScope" srcPort="pOut" dstActor="8_SequenceScope" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_9_MultiplyDivide" srcActor="9_MultiplyDivide" srcPort="pOut" dstActor="9_MultiplyDivide" dstPort="pIn" initialTokens="1"/>
+	</sdf>
+	<sdfProperties>
+	  <actorProperties actor="1_SampleDelay">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="2_SliderSource">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="3_Const2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="4_Const">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="5_Sleep">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="6_MultiplyDivide2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="7_AddSubtract">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="8_SequenceScope">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="9_MultiplyDivide">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <channelProperties channel="channel_1_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_7">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_7">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_9">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_9">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_7_9">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_9_1">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_9_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_1_SampleDelay">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_2_SliderSource">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_3_Const2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_4_Const">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_5_Sleep">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_6_MultiplyDivide2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_7_AddSubtract">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_8_SequenceScope">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_9_MultiplyDivide">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <graphProperties>
+		<timeConstraints>
+		  <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	  </graphProperties>
+	</sdfProperties>
+  </applicationGraph>
+</sdf3>

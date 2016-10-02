@@ -1,0 +1,1418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="Serpent">
+	<sdf name="Serpent" type="Serpent">
+	  <actor name="1_FileReader__2_192" type="1_FileReader__2_192">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="2_Permute__10_193" type="2_Permute__10_193">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="3_WEIGHTED_ROUND_ROBIN(128,0)" type="3_WEIGHTED_ROUND_ROBIN(128,0)">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="4_WEIGHTED_ROUND_ROBIN(1,1)" type="4_WEIGHTED_ROUND_ROBIN(1,1)">
+		<port name="p_out1" type="out" rate="2"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="5_Identity__13_196" type="5_Identity__13_196">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="6_AnonFilter_a0__67_198" type="6_AnonFilter_a0__67_198">
+		<port name="p_out1" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="7_Xor__74_199" type="7_Xor__74_199">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="8_Sbox__81_200" type="8_Sbox__81_200">
+		<port name="p_in1" type="in" rate="4"/>
+		<port name="p_out2" type="out" rate="4"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="9_rawL__85_201" type="9_rawL__85_201">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="10_WEIGHTED_ROUND_ROBIN(128,0)" type="10_WEIGHTED_ROUND_ROBIN(128,0)">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="11_WEIGHTED_ROUND_ROBIN(1,1)" type="11_WEIGHTED_ROUND_ROBIN(1,1)">
+		<port name="p_out1" type="out" rate="2"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="12_Identity__88_204" type="12_Identity__88_204">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="13_AnonFilter_a0__142_206" type="13_AnonFilter_a0__142_206">
+		<port name="p_out1" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="14_Xor__149_207" type="14_Xor__149_207">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="15_Sbox__156_208" type="15_Sbox__156_208">
+		<port name="p_in1" type="in" rate="4"/>
+		<port name="p_out2" type="out" rate="4"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="16_rawL__160_209" type="16_rawL__160_209">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="17_WEIGHTED_ROUND_ROBIN(128,0)" type="17_WEIGHTED_ROUND_ROBIN(128,0)">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="18_WEIGHTED_ROUND_ROBIN(1,1)" type="18_WEIGHTED_ROUND_ROBIN(1,1)">
+		<port name="p_out1" type="out" rate="2"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="19_Identity__163_212" type="19_Identity__163_212">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="20_AnonFilter_a0__217_214" type="20_AnonFilter_a0__217_214">
+		<port name="p_out1" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="21_Xor__224_215" type="21_Xor__224_215">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="22_Sbox__231_216" type="22_Sbox__231_216">
+		<port name="p_in1" type="in" rate="4"/>
+		<port name="p_out2" type="out" rate="4"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="23_rawL__235_217" type="23_rawL__235_217">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="24_WEIGHTED_ROUND_ROBIN(128,0)" type="24_WEIGHTED_ROUND_ROBIN(128,0)">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="25_WEIGHTED_ROUND_ROBIN(1,1)" type="25_WEIGHTED_ROUND_ROBIN(1,1)">
+		<port name="p_out1" type="out" rate="2"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="26_Identity__238_220" type="26_Identity__238_220">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="27_AnonFilter_a0__292_222" type="27_AnonFilter_a0__292_222">
+		<port name="p_out1" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="28_Xor__299_223" type="28_Xor__299_223">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="29_Sbox__306_224" type="29_Sbox__306_224">
+		<port name="p_in1" type="in" rate="4"/>
+		<port name="p_out2" type="out" rate="4"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="30_rawL__310_225" type="30_rawL__310_225">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="31_WEIGHTED_ROUND_ROBIN(128,0)" type="31_WEIGHTED_ROUND_ROBIN(128,0)">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="32_WEIGHTED_ROUND_ROBIN(1,1)" type="32_WEIGHTED_ROUND_ROBIN(1,1)">
+		<port name="p_out1" type="out" rate="2"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="33_Identity__313_228" type="33_Identity__313_228">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="34_AnonFilter_a0__367_230" type="34_AnonFilter_a0__367_230">
+		<port name="p_out1" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="35_Xor__374_231" type="35_Xor__374_231">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="36_Sbox__381_232" type="36_Sbox__381_232">
+		<port name="p_in1" type="in" rate="4"/>
+		<port name="p_out2" type="out" rate="4"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="37_rawL__385_233" type="37_rawL__385_233">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="38_WEIGHTED_ROUND_ROBIN(128,0)" type="38_WEIGHTED_ROUND_ROBIN(128,0)">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="39_WEIGHTED_ROUND_ROBIN(1,1)" type="39_WEIGHTED_ROUND_ROBIN(1,1)">
+		<port name="p_out1" type="out" rate="2"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="40_Identity__388_236" type="40_Identity__388_236">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="41_AnonFilter_a0__442_238" type="41_AnonFilter_a0__442_238">
+		<port name="p_out1" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="42_Xor__449_239" type="42_Xor__449_239">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="43_Sbox__456_240" type="43_Sbox__456_240">
+		<port name="p_in1" type="in" rate="4"/>
+		<port name="p_out2" type="out" rate="4"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="44_rawL__460_241" type="44_rawL__460_241">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="45_WEIGHTED_ROUND_ROBIN(128,0)" type="45_WEIGHTED_ROUND_ROBIN(128,0)">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="46_WEIGHTED_ROUND_ROBIN(1,1)" type="46_WEIGHTED_ROUND_ROBIN(1,1)">
+		<port name="p_out1" type="out" rate="2"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="47_Identity__463_244" type="47_Identity__463_244">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="48_AnonFilter_a0__517_246" type="48_AnonFilter_a0__517_246">
+		<port name="p_out1" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="49_Xor__524_247" type="49_Xor__524_247">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="50_Sbox__531_248" type="50_Sbox__531_248">
+		<port name="p_in1" type="in" rate="4"/>
+		<port name="p_out2" type="out" rate="4"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="51_rawL__535_249" type="51_rawL__535_249">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="52_WEIGHTED_ROUND_ROBIN(128,0)" type="52_WEIGHTED_ROUND_ROBIN(128,0)">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="53_WEIGHTED_ROUND_ROBIN(1,1)" type="53_WEIGHTED_ROUND_ROBIN(1,1)">
+		<port name="p_out1" type="out" rate="2"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="54_Identity__538_252" type="54_Identity__538_252">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="55_AnonFilter_a0__592_254" type="55_AnonFilter_a0__592_254">
+		<port name="p_out1" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="56_Xor__599_255" type="56_Xor__599_255">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="57_Sbox__606_256" type="57_Sbox__606_256">
+		<port name="p_in1" type="in" rate="4"/>
+		<port name="p_out2" type="out" rate="4"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="58_WEIGHTED_ROUND_ROBIN(128,0)" type="58_WEIGHTED_ROUND_ROBIN(128,0)">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="59_WEIGHTED_ROUND_ROBIN(1,1)" type="59_WEIGHTED_ROUND_ROBIN(1,1)">
+		<port name="p_out1" type="out" rate="2"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="60_Identity__609_258" type="60_Identity__609_258">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="61_AnonFilter_a0__663_260" type="61_AnonFilter_a0__663_260">
+		<port name="p_out1" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="62_Xor__670_261" type="62_Xor__670_261">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="63_Permute__678_262" type="63_Permute__678_262">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="64_FileWriter__681_263" type="64_FileWriter__681_263">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <channel name="channel_1_2" srcActor="1_FileReader__2_192" srcPort="p_out1" dstActor="2_Permute__10_193" dstPort="p_in1"/>
+	  <channel name="channel_2_3" srcActor="2_Permute__10_193" srcPort="p_out2" dstActor="3_WEIGHTED_ROUND_ROBIN(128,0)" dstPort="p_in1"/>
+	  <channel name="channel_3_5" srcActor="3_WEIGHTED_ROUND_ROBIN(128,0)" srcPort="p_out2" dstActor="5_Identity__13_196" dstPort="p_in1"/>
+	  <channel name="channel_4_7" srcActor="4_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="p_out1" dstActor="7_Xor__74_199" dstPort="p_in1"/>
+	  <channel name="channel_5_4" srcActor="5_Identity__13_196" srcPort="p_out2" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in2"/>
+	  <channel name="channel_6_4" srcActor="6_AnonFilter_a0__67_198" srcPort="p_out1" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in3"/>
+	  <channel name="channel_7_8" srcActor="7_Xor__74_199" srcPort="p_out2" dstActor="8_Sbox__81_200" dstPort="p_in1"/>
+	  <channel name="channel_8_9" srcActor="8_Sbox__81_200" srcPort="p_out2" dstActor="9_rawL__85_201" dstPort="p_in1"/>
+	  <channel name="channel_9_10" srcActor="9_rawL__85_201" srcPort="p_out2" dstActor="10_WEIGHTED_ROUND_ROBIN(128,0)" dstPort="p_in1"/>
+	  <channel name="channel_10_12" srcActor="10_WEIGHTED_ROUND_ROBIN(128,0)" srcPort="p_out2" dstActor="12_Identity__88_204" dstPort="p_in1"/>
+	  <channel name="channel_11_14" srcActor="11_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="p_out1" dstActor="14_Xor__149_207" dstPort="p_in1"/>
+	  <channel name="channel_12_11" srcActor="12_Identity__88_204" srcPort="p_out2" dstActor="11_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in2"/>
+	  <channel name="channel_13_11" srcActor="13_AnonFilter_a0__142_206" srcPort="p_out1" dstActor="11_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in3"/>
+	  <channel name="channel_14_15" srcActor="14_Xor__149_207" srcPort="p_out2" dstActor="15_Sbox__156_208" dstPort="p_in1"/>
+	  <channel name="channel_15_16" srcActor="15_Sbox__156_208" srcPort="p_out2" dstActor="16_rawL__160_209" dstPort="p_in1"/>
+	  <channel name="channel_16_17" srcActor="16_rawL__160_209" srcPort="p_out2" dstActor="17_WEIGHTED_ROUND_ROBIN(128,0)" dstPort="p_in1"/>
+	  <channel name="channel_17_19" srcActor="17_WEIGHTED_ROUND_ROBIN(128,0)" srcPort="p_out2" dstActor="19_Identity__163_212" dstPort="p_in1"/>
+	  <channel name="channel_18_21" srcActor="18_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="p_out1" dstActor="21_Xor__224_215" dstPort="p_in1"/>
+	  <channel name="channel_19_18" srcActor="19_Identity__163_212" srcPort="p_out2" dstActor="18_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in2"/>
+	  <channel name="channel_20_18" srcActor="20_AnonFilter_a0__217_214" srcPort="p_out1" dstActor="18_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in3"/>
+	  <channel name="channel_21_22" srcActor="21_Xor__224_215" srcPort="p_out2" dstActor="22_Sbox__231_216" dstPort="p_in1"/>
+	  <channel name="channel_22_23" srcActor="22_Sbox__231_216" srcPort="p_out2" dstActor="23_rawL__235_217" dstPort="p_in1"/>
+	  <channel name="channel_23_24" srcActor="23_rawL__235_217" srcPort="p_out2" dstActor="24_WEIGHTED_ROUND_ROBIN(128,0)" dstPort="p_in1"/>
+	  <channel name="channel_24_26" srcActor="24_WEIGHTED_ROUND_ROBIN(128,0)" srcPort="p_out2" dstActor="26_Identity__238_220" dstPort="p_in1"/>
+	  <channel name="channel_25_28" srcActor="25_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="p_out1" dstActor="28_Xor__299_223" dstPort="p_in1"/>
+	  <channel name="channel_26_25" srcActor="26_Identity__238_220" srcPort="p_out2" dstActor="25_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in2"/>
+	  <channel name="channel_27_25" srcActor="27_AnonFilter_a0__292_222" srcPort="p_out1" dstActor="25_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in3"/>
+	  <channel name="channel_28_29" srcActor="28_Xor__299_223" srcPort="p_out2" dstActor="29_Sbox__306_224" dstPort="p_in1"/>
+	  <channel name="channel_29_30" srcActor="29_Sbox__306_224" srcPort="p_out2" dstActor="30_rawL__310_225" dstPort="p_in1"/>
+	  <channel name="channel_30_31" srcActor="30_rawL__310_225" srcPort="p_out2" dstActor="31_WEIGHTED_ROUND_ROBIN(128,0)" dstPort="p_in1"/>
+	  <channel name="channel_31_33" srcActor="31_WEIGHTED_ROUND_ROBIN(128,0)" srcPort="p_out2" dstActor="33_Identity__313_228" dstPort="p_in1"/>
+	  <channel name="channel_32_35" srcActor="32_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="p_out1" dstActor="35_Xor__374_231" dstPort="p_in1"/>
+	  <channel name="channel_33_32" srcActor="33_Identity__313_228" srcPort="p_out2" dstActor="32_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in2"/>
+	  <channel name="channel_34_32" srcActor="34_AnonFilter_a0__367_230" srcPort="p_out1" dstActor="32_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in3"/>
+	  <channel name="channel_35_36" srcActor="35_Xor__374_231" srcPort="p_out2" dstActor="36_Sbox__381_232" dstPort="p_in1"/>
+	  <channel name="channel_36_37" srcActor="36_Sbox__381_232" srcPort="p_out2" dstActor="37_rawL__385_233" dstPort="p_in1"/>
+	  <channel name="channel_37_38" srcActor="37_rawL__385_233" srcPort="p_out2" dstActor="38_WEIGHTED_ROUND_ROBIN(128,0)" dstPort="p_in1"/>
+	  <channel name="channel_38_40" srcActor="38_WEIGHTED_ROUND_ROBIN(128,0)" srcPort="p_out2" dstActor="40_Identity__388_236" dstPort="p_in1"/>
+	  <channel name="channel_39_42" srcActor="39_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="p_out1" dstActor="42_Xor__449_239" dstPort="p_in1"/>
+	  <channel name="channel_40_39" srcActor="40_Identity__388_236" srcPort="p_out2" dstActor="39_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in2"/>
+	  <channel name="channel_41_39" srcActor="41_AnonFilter_a0__442_238" srcPort="p_out1" dstActor="39_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in3"/>
+	  <channel name="channel_42_43" srcActor="42_Xor__449_239" srcPort="p_out2" dstActor="43_Sbox__456_240" dstPort="p_in1"/>
+	  <channel name="channel_43_44" srcActor="43_Sbox__456_240" srcPort="p_out2" dstActor="44_rawL__460_241" dstPort="p_in1"/>
+	  <channel name="channel_44_45" srcActor="44_rawL__460_241" srcPort="p_out2" dstActor="45_WEIGHTED_ROUND_ROBIN(128,0)" dstPort="p_in1"/>
+	  <channel name="channel_45_47" srcActor="45_WEIGHTED_ROUND_ROBIN(128,0)" srcPort="p_out2" dstActor="47_Identity__463_244" dstPort="p_in1"/>
+	  <channel name="channel_46_49" srcActor="46_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="p_out1" dstActor="49_Xor__524_247" dstPort="p_in1"/>
+	  <channel name="channel_47_46" srcActor="47_Identity__463_244" srcPort="p_out2" dstActor="46_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in2"/>
+	  <channel name="channel_48_46" srcActor="48_AnonFilter_a0__517_246" srcPort="p_out1" dstActor="46_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in3"/>
+	  <channel name="channel_49_50" srcActor="49_Xor__524_247" srcPort="p_out2" dstActor="50_Sbox__531_248" dstPort="p_in1"/>
+	  <channel name="channel_50_51" srcActor="50_Sbox__531_248" srcPort="p_out2" dstActor="51_rawL__535_249" dstPort="p_in1"/>
+	  <channel name="channel_51_52" srcActor="51_rawL__535_249" srcPort="p_out2" dstActor="52_WEIGHTED_ROUND_ROBIN(128,0)" dstPort="p_in1"/>
+	  <channel name="channel_52_54" srcActor="52_WEIGHTED_ROUND_ROBIN(128,0)" srcPort="p_out2" dstActor="54_Identity__538_252" dstPort="p_in1"/>
+	  <channel name="channel_53_56" srcActor="53_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="p_out1" dstActor="56_Xor__599_255" dstPort="p_in1"/>
+	  <channel name="channel_54_53" srcActor="54_Identity__538_252" srcPort="p_out2" dstActor="53_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in2"/>
+	  <channel name="channel_55_53" srcActor="55_AnonFilter_a0__592_254" srcPort="p_out1" dstActor="53_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in3"/>
+	  <channel name="channel_56_57" srcActor="56_Xor__599_255" srcPort="p_out2" dstActor="57_Sbox__606_256" dstPort="p_in1"/>
+	  <channel name="channel_57_58" srcActor="57_Sbox__606_256" srcPort="p_out2" dstActor="58_WEIGHTED_ROUND_ROBIN(128,0)" dstPort="p_in1"/>
+	  <channel name="channel_58_60" srcActor="58_WEIGHTED_ROUND_ROBIN(128,0)" srcPort="p_out2" dstActor="60_Identity__609_258" dstPort="p_in1"/>
+	  <channel name="channel_59_62" srcActor="59_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="p_out1" dstActor="62_Xor__670_261" dstPort="p_in1"/>
+	  <channel name="channel_60_59" srcActor="60_Identity__609_258" srcPort="p_out2" dstActor="59_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in2"/>
+	  <channel name="channel_61_59" srcActor="61_AnonFilter_a0__663_260" srcPort="p_out1" dstActor="59_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in3"/>
+	  <channel name="channel_62_63" srcActor="62_Xor__670_261" srcPort="p_out2" dstActor="63_Permute__678_262" dstPort="p_in1"/>
+	  <channel name="channel_63_64" srcActor="63_Permute__678_262" srcPort="p_out2" dstActor="64_FileWriter__681_263" dstPort="p_in1"/>
+	  <channel name="self_loop_of_1_FileReader__2_192" srcActor="1_FileReader__2_192" srcPort="pOut" dstActor="1_FileReader__2_192" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_2_Permute__10_193" srcActor="2_Permute__10_193" srcPort="pOut" dstActor="2_Permute__10_193" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_3_WEIGHTED_ROUND_ROBIN(128,0)" srcActor="3_WEIGHTED_ROUND_ROBIN(128,0)" srcPort="pOut" dstActor="3_WEIGHTED_ROUND_ROBIN(128,0)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_4_WEIGHTED_ROUND_ROBIN(1,1)" srcActor="4_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="pOut" dstActor="4_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_5_Identity__13_196" srcActor="5_Identity__13_196" srcPort="pOut" dstActor="5_Identity__13_196" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_6_AnonFilter_a0__67_198" srcActor="6_AnonFilter_a0__67_198" srcPort="pOut" dstActor="6_AnonFilter_a0__67_198" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_7_Xor__74_199" srcActor="7_Xor__74_199" srcPort="pOut" dstActor="7_Xor__74_199" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_8_Sbox__81_200" srcActor="8_Sbox__81_200" srcPort="pOut" dstActor="8_Sbox__81_200" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_9_rawL__85_201" srcActor="9_rawL__85_201" srcPort="pOut" dstActor="9_rawL__85_201" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_10_WEIGHTED_ROUND_ROBIN(128,0)" srcActor="10_WEIGHTED_ROUND_ROBIN(128,0)" srcPort="pOut" dstActor="10_WEIGHTED_ROUND_ROBIN(128,0)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_11_WEIGHTED_ROUND_ROBIN(1,1)" srcActor="11_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="pOut" dstActor="11_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_12_Identity__88_204" srcActor="12_Identity__88_204" srcPort="pOut" dstActor="12_Identity__88_204" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_13_AnonFilter_a0__142_206" srcActor="13_AnonFilter_a0__142_206" srcPort="pOut" dstActor="13_AnonFilter_a0__142_206" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_14_Xor__149_207" srcActor="14_Xor__149_207" srcPort="pOut" dstActor="14_Xor__149_207" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_15_Sbox__156_208" srcActor="15_Sbox__156_208" srcPort="pOut" dstActor="15_Sbox__156_208" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_16_rawL__160_209" srcActor="16_rawL__160_209" srcPort="pOut" dstActor="16_rawL__160_209" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_17_WEIGHTED_ROUND_ROBIN(128,0)" srcActor="17_WEIGHTED_ROUND_ROBIN(128,0)" srcPort="pOut" dstActor="17_WEIGHTED_ROUND_ROBIN(128,0)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_18_WEIGHTED_ROUND_ROBIN(1,1)" srcActor="18_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="pOut" dstActor="18_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_19_Identity__163_212" srcActor="19_Identity__163_212" srcPort="pOut" dstActor="19_Identity__163_212" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_20_AnonFilter_a0__217_214" srcActor="20_AnonFilter_a0__217_214" srcPort="pOut" dstActor="20_AnonFilter_a0__217_214" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_21_Xor__224_215" srcActor="21_Xor__224_215" srcPort="pOut" dstActor="21_Xor__224_215" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_22_Sbox__231_216" srcActor="22_Sbox__231_216" srcPort="pOut" dstActor="22_Sbox__231_216" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_23_rawL__235_217" srcActor="23_rawL__235_217" srcPort="pOut" dstActor="23_rawL__235_217" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_24_WEIGHTED_ROUND_ROBIN(128,0)" srcActor="24_WEIGHTED_ROUND_ROBIN(128,0)" srcPort="pOut" dstActor="24_WEIGHTED_ROUND_ROBIN(128,0)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_25_WEIGHTED_ROUND_ROBIN(1,1)" srcActor="25_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="pOut" dstActor="25_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_26_Identity__238_220" srcActor="26_Identity__238_220" srcPort="pOut" dstActor="26_Identity__238_220" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_27_AnonFilter_a0__292_222" srcActor="27_AnonFilter_a0__292_222" srcPort="pOut" dstActor="27_AnonFilter_a0__292_222" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_28_Xor__299_223" srcActor="28_Xor__299_223" srcPort="pOut" dstActor="28_Xor__299_223" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_29_Sbox__306_224" srcActor="29_Sbox__306_224" srcPort="pOut" dstActor="29_Sbox__306_224" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_30_rawL__310_225" srcActor="30_rawL__310_225" srcPort="pOut" dstActor="30_rawL__310_225" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_31_WEIGHTED_ROUND_ROBIN(128,0)" srcActor="31_WEIGHTED_ROUND_ROBIN(128,0)" srcPort="pOut" dstActor="31_WEIGHTED_ROUND_ROBIN(128,0)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_32_WEIGHTED_ROUND_ROBIN(1,1)" srcActor="32_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="pOut" dstActor="32_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_33_Identity__313_228" srcActor="33_Identity__313_228" srcPort="pOut" dstActor="33_Identity__313_228" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_34_AnonFilter_a0__367_230" srcActor="34_AnonFilter_a0__367_230" srcPort="pOut" dstActor="34_AnonFilter_a0__367_230" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_35_Xor__374_231" srcActor="35_Xor__374_231" srcPort="pOut" dstActor="35_Xor__374_231" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_36_Sbox__381_232" srcActor="36_Sbox__381_232" srcPort="pOut" dstActor="36_Sbox__381_232" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_37_rawL__385_233" srcActor="37_rawL__385_233" srcPort="pOut" dstActor="37_rawL__385_233" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_38_WEIGHTED_ROUND_ROBIN(128,0)" srcActor="38_WEIGHTED_ROUND_ROBIN(128,0)" srcPort="pOut" dstActor="38_WEIGHTED_ROUND_ROBIN(128,0)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_39_WEIGHTED_ROUND_ROBIN(1,1)" srcActor="39_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="pOut" dstActor="39_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_40_Identity__388_236" srcActor="40_Identity__388_236" srcPort="pOut" dstActor="40_Identity__388_236" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_41_AnonFilter_a0__442_238" srcActor="41_AnonFilter_a0__442_238" srcPort="pOut" dstActor="41_AnonFilter_a0__442_238" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_42_Xor__449_239" srcActor="42_Xor__449_239" srcPort="pOut" dstActor="42_Xor__449_239" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_43_Sbox__456_240" srcActor="43_Sbox__456_240" srcPort="pOut" dstActor="43_Sbox__456_240" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_44_rawL__460_241" srcActor="44_rawL__460_241" srcPort="pOut" dstActor="44_rawL__460_241" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_45_WEIGHTED_ROUND_ROBIN(128,0)" srcActor="45_WEIGHTED_ROUND_ROBIN(128,0)" srcPort="pOut" dstActor="45_WEIGHTED_ROUND_ROBIN(128,0)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_46_WEIGHTED_ROUND_ROBIN(1,1)" srcActor="46_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="pOut" dstActor="46_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_47_Identity__463_244" srcActor="47_Identity__463_244" srcPort="pOut" dstActor="47_Identity__463_244" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_48_AnonFilter_a0__517_246" srcActor="48_AnonFilter_a0__517_246" srcPort="pOut" dstActor="48_AnonFilter_a0__517_246" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_49_Xor__524_247" srcActor="49_Xor__524_247" srcPort="pOut" dstActor="49_Xor__524_247" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_50_Sbox__531_248" srcActor="50_Sbox__531_248" srcPort="pOut" dstActor="50_Sbox__531_248" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_51_rawL__535_249" srcActor="51_rawL__535_249" srcPort="pOut" dstActor="51_rawL__535_249" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_52_WEIGHTED_ROUND_ROBIN(128,0)" srcActor="52_WEIGHTED_ROUND_ROBIN(128,0)" srcPort="pOut" dstActor="52_WEIGHTED_ROUND_ROBIN(128,0)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_53_WEIGHTED_ROUND_ROBIN(1,1)" srcActor="53_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="pOut" dstActor="53_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_54_Identity__538_252" srcActor="54_Identity__538_252" srcPort="pOut" dstActor="54_Identity__538_252" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_55_AnonFilter_a0__592_254" srcActor="55_AnonFilter_a0__592_254" srcPort="pOut" dstActor="55_AnonFilter_a0__592_254" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_56_Xor__599_255" srcActor="56_Xor__599_255" srcPort="pOut" dstActor="56_Xor__599_255" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_57_Sbox__606_256" srcActor="57_Sbox__606_256" srcPort="pOut" dstActor="57_Sbox__606_256" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_58_WEIGHTED_ROUND_ROBIN(128,0)" srcActor="58_WEIGHTED_ROUND_ROBIN(128,0)" srcPort="pOut" dstActor="58_WEIGHTED_ROUND_ROBIN(128,0)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_59_WEIGHTED_ROUND_ROBIN(1,1)" srcActor="59_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="pOut" dstActor="59_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_60_Identity__609_258" srcActor="60_Identity__609_258" srcPort="pOut" dstActor="60_Identity__609_258" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_61_AnonFilter_a0__663_260" srcActor="61_AnonFilter_a0__663_260" srcPort="pOut" dstActor="61_AnonFilter_a0__663_260" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_62_Xor__670_261" srcActor="62_Xor__670_261" srcPort="pOut" dstActor="62_Xor__670_261" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_63_Permute__678_262" srcActor="63_Permute__678_262" srcPort="pOut" dstActor="63_Permute__678_262" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_64_FileWriter__681_263" srcActor="64_FileWriter__681_263" srcPort="pOut" dstActor="64_FileWriter__681_263" dstPort="pIn" initialTokens="1"/>
+	</sdf>
+	<sdfProperties>
+	  <actorProperties actor="1_FileReader__2_192">
+		<processor type="arm" default="true">
+		  <executionTime time="0"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="2_Permute__10_193">
+		<processor type="arm" default="true">
+		  <executionTime time="1920"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="3_WEIGHTED_ROUND_ROBIN(128,0)">
+		<processor type="arm" default="true">
+		  <executionTime time="768"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="4_WEIGHTED_ROUND_ROBIN(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="5_Identity__13_196">
+		<processor type="arm" default="true">
+		  <executionTime time="6"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="6_AnonFilter_a0__67_198">
+		<processor type="arm" default="true">
+		  <executionTime time="896"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="7_Xor__74_199">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="8_Sbox__81_200">
+		<processor type="arm" default="true">
+		  <executionTime time="40"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="9_rawL__85_201">
+		<processor type="arm" default="true">
+		  <executionTime time="3336"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="10_WEIGHTED_ROUND_ROBIN(128,0)">
+		<processor type="arm" default="true">
+		  <executionTime time="768"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="11_WEIGHTED_ROUND_ROBIN(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="12_Identity__88_204">
+		<processor type="arm" default="true">
+		  <executionTime time="6"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="13_AnonFilter_a0__142_206">
+		<processor type="arm" default="true">
+		  <executionTime time="896"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="14_Xor__149_207">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="15_Sbox__156_208">
+		<processor type="arm" default="true">
+		  <executionTime time="40"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="16_rawL__160_209">
+		<processor type="arm" default="true">
+		  <executionTime time="3336"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="17_WEIGHTED_ROUND_ROBIN(128,0)">
+		<processor type="arm" default="true">
+		  <executionTime time="768"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="18_WEIGHTED_ROUND_ROBIN(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="19_Identity__163_212">
+		<processor type="arm" default="true">
+		  <executionTime time="6"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="20_AnonFilter_a0__217_214">
+		<processor type="arm" default="true">
+		  <executionTime time="896"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="21_Xor__224_215">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="22_Sbox__231_216">
+		<processor type="arm" default="true">
+		  <executionTime time="40"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="23_rawL__235_217">
+		<processor type="arm" default="true">
+		  <executionTime time="3336"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="24_WEIGHTED_ROUND_ROBIN(128,0)">
+		<processor type="arm" default="true">
+		  <executionTime time="768"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="25_WEIGHTED_ROUND_ROBIN(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="26_Identity__238_220">
+		<processor type="arm" default="true">
+		  <executionTime time="6"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="27_AnonFilter_a0__292_222">
+		<processor type="arm" default="true">
+		  <executionTime time="896"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="28_Xor__299_223">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="29_Sbox__306_224">
+		<processor type="arm" default="true">
+		  <executionTime time="40"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="30_rawL__310_225">
+		<processor type="arm" default="true">
+		  <executionTime time="3336"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="31_WEIGHTED_ROUND_ROBIN(128,0)">
+		<processor type="arm" default="true">
+		  <executionTime time="768"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="32_WEIGHTED_ROUND_ROBIN(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="33_Identity__313_228">
+		<processor type="arm" default="true">
+		  <executionTime time="6"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="34_AnonFilter_a0__367_230">
+		<processor type="arm" default="true">
+		  <executionTime time="896"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="35_Xor__374_231">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="36_Sbox__381_232">
+		<processor type="arm" default="true">
+		  <executionTime time="40"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="37_rawL__385_233">
+		<processor type="arm" default="true">
+		  <executionTime time="3336"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="38_WEIGHTED_ROUND_ROBIN(128,0)">
+		<processor type="arm" default="true">
+		  <executionTime time="768"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="39_WEIGHTED_ROUND_ROBIN(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="40_Identity__388_236">
+		<processor type="arm" default="true">
+		  <executionTime time="6"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="41_AnonFilter_a0__442_238">
+		<processor type="arm" default="true">
+		  <executionTime time="896"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="42_Xor__449_239">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="43_Sbox__456_240">
+		<processor type="arm" default="true">
+		  <executionTime time="40"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="44_rawL__460_241">
+		<processor type="arm" default="true">
+		  <executionTime time="3336"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="45_WEIGHTED_ROUND_ROBIN(128,0)">
+		<processor type="arm" default="true">
+		  <executionTime time="768"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="46_WEIGHTED_ROUND_ROBIN(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="47_Identity__463_244">
+		<processor type="arm" default="true">
+		  <executionTime time="6"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="48_AnonFilter_a0__517_246">
+		<processor type="arm" default="true">
+		  <executionTime time="896"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="49_Xor__524_247">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="50_Sbox__531_248">
+		<processor type="arm" default="true">
+		  <executionTime time="40"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="51_rawL__535_249">
+		<processor type="arm" default="true">
+		  <executionTime time="3336"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="52_WEIGHTED_ROUND_ROBIN(128,0)">
+		<processor type="arm" default="true">
+		  <executionTime time="768"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="53_WEIGHTED_ROUND_ROBIN(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="54_Identity__538_252">
+		<processor type="arm" default="true">
+		  <executionTime time="6"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="55_AnonFilter_a0__592_254">
+		<processor type="arm" default="true">
+		  <executionTime time="896"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="56_Xor__599_255">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="57_Sbox__606_256">
+		<processor type="arm" default="true">
+		  <executionTime time="40"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="58_WEIGHTED_ROUND_ROBIN(128,0)">
+		<processor type="arm" default="true">
+		  <executionTime time="768"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="59_WEIGHTED_ROUND_ROBIN(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="60_Identity__609_258">
+		<processor type="arm" default="true">
+		  <executionTime time="6"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="61_AnonFilter_a0__663_260">
+		<processor type="arm" default="true">
+		  <executionTime time="896"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="62_Xor__670_261">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="63_Permute__678_262">
+		<processor type="arm" default="true">
+		  <executionTime time="1920"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="64_FileWriter__681_263">
+		<processor type="arm" default="true">
+		  <executionTime time="0"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <channelProperties channel="channel_1_2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_7">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_7_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_8_9">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_9_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_10_12">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_11_14">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_12_11">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_13_11">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_14_15">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_15_16">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_16_17">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_17_19">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_18_21">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_19_18">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_20_18">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_22_23">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_23_24">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_24_26">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_25_28">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_26_25">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_27_25">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_28_29">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_29_30">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_30_31">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_31_33">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_32_35">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_33_32">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_34_32">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_35_36">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_36_37">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_37_38">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_38_40">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_39_42">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_40_39">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_41_39">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_42_43">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_43_44">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_44_45">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_45_47">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_46_49">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_47_46">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_48_46">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_49_50">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_50_51">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_51_52">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_52_54">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_53_56">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_54_53">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_55_53">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_56_57">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_57_58">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_58_60">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_59_62">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_60_59">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_61_59">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_62_63">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_63_64">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_1_FileReader__2_192">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_2_Permute__10_193">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_3_WEIGHTED_ROUND_ROBIN(128,0)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_4_WEIGHTED_ROUND_ROBIN(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_5_Identity__13_196">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_6_AnonFilter_a0__67_198">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_7_Xor__74_199">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_8_Sbox__81_200">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_9_rawL__85_201">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_10_WEIGHTED_ROUND_ROBIN(128,0)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_11_WEIGHTED_ROUND_ROBIN(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_12_Identity__88_204">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_13_AnonFilter_a0__142_206">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_14_Xor__149_207">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_15_Sbox__156_208">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_16_rawL__160_209">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_17_WEIGHTED_ROUND_ROBIN(128,0)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_18_WEIGHTED_ROUND_ROBIN(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_19_Identity__163_212">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_20_AnonFilter_a0__217_214">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_21_Xor__224_215">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_22_Sbox__231_216">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_23_rawL__235_217">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_24_WEIGHTED_ROUND_ROBIN(128,0)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_25_WEIGHTED_ROUND_ROBIN(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_26_Identity__238_220">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_27_AnonFilter_a0__292_222">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_28_Xor__299_223">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_29_Sbox__306_224">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_30_rawL__310_225">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_31_WEIGHTED_ROUND_ROBIN(128,0)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_32_WEIGHTED_ROUND_ROBIN(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_33_Identity__313_228">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_34_AnonFilter_a0__367_230">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_35_Xor__374_231">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_36_Sbox__381_232">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_37_rawL__385_233">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_38_WEIGHTED_ROUND_ROBIN(128,0)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_39_WEIGHTED_ROUND_ROBIN(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_40_Identity__388_236">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_41_AnonFilter_a0__442_238">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_42_Xor__449_239">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_43_Sbox__456_240">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_44_rawL__460_241">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_45_WEIGHTED_ROUND_ROBIN(128,0)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_46_WEIGHTED_ROUND_ROBIN(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_47_Identity__463_244">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_48_AnonFilter_a0__517_246">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_49_Xor__524_247">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_50_Sbox__531_248">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_51_rawL__535_249">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_52_WEIGHTED_ROUND_ROBIN(128,0)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_53_WEIGHTED_ROUND_ROBIN(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_54_Identity__538_252">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_55_AnonFilter_a0__592_254">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_56_Xor__599_255">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_57_Sbox__606_256">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_58_WEIGHTED_ROUND_ROBIN(128,0)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_59_WEIGHTED_ROUND_ROBIN(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_60_Identity__609_258">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_61_AnonFilter_a0__663_260">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_62_Xor__670_261">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_63_Permute__678_262">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_64_FileWriter__681_263">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <graphProperties>
+		<timeConstraints>
+		  <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	  </graphProperties>
+	</sdfProperties>
+  </applicationGraph>
+</sdf3>

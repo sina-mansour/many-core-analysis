@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="ApplyFFT">
+	<sdf name="ApplyFFT" type="ApplyFFT">
+	  <actor name="1_SineWave" type="1_SineWave">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="2_NoiseSource" type="2_NoiseSource">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="3_Expression" type="3_Expression">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port name="p_out4" type="out" rate="1"/>
+		<port name="p_out5" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="4_FFT" type="4_FFT">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="5_SequenceToArray" type="5_SequenceToArray">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="6_ApplyFunctionOverSequence" type="6_ApplyFunctionOverSequence">
+		<port name="p_in1" type="in" rate="256"/>
+		<port name="p_out2" type="out" rate="256"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="7_AbsoluteValue" type="7_AbsoluteValue">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="8_ApplyFunction" type="8_ApplyFunction">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="9_SequencePlotter" type="9_SequencePlotter">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="10_ArrayPlotter" type="10_ArrayPlotter">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="11_SequencePlotter" type="11_SequencePlotter">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <channel name="channel_1_3" srcActor="1_SineWave" srcPort="p_out1" dstActor="3_Expression" dstPort="p_in1"/>
+	  <channel name="channel_2_3" srcActor="2_NoiseSource" srcPort="p_out1" dstActor="3_Expression" dstPort="p_in2"/>
+	  <channel name="channel_3_4" srcActor="3_Expression" srcPort="p_out3" dstActor="4_FFT" dstPort="p_in1"/>
+	  <channel name="channel_3_5" srcActor="3_Expression" srcPort="p_out4" dstActor="5_SequenceToArray" dstPort="p_in1"/>
+	  <channel name="channel_3_6" srcActor="3_Expression" srcPort="p_out5" dstActor="6_ApplyFunctionOverSequence" dstPort="p_in1"/>
+	  <channel name="channel_4_7" srcActor="4_FFT" srcPort="p_out2" dstActor="7_AbsoluteValue" dstPort="p_in1"/>
+	  <channel name="channel_5_8" srcActor="5_SequenceToArray" srcPort="p_out2" dstActor="8_ApplyFunction" dstPort="p_in1"/>
+	  <channel name="channel_6_11" srcActor="6_ApplyFunctionOverSequence" srcPort="p_out2" dstActor="11_SequencePlotter" dstPort="p_in1"/>
+	  <channel name="channel_7_9" srcActor="7_AbsoluteValue" srcPort="p_out2" dstActor="9_SequencePlotter" dstPort="p_in1"/>
+	  <channel name="channel_8_10" srcActor="8_ApplyFunction" srcPort="p_out2" dstActor="10_ArrayPlotter" dstPort="p_in1"/>
+	  <channel name="self_loop_of_1_SineWave" srcActor="1_SineWave" srcPort="pOut" dstActor="1_SineWave" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_2_NoiseSource" srcActor="2_NoiseSource" srcPort="pOut" dstActor="2_NoiseSource" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_3_Expression" srcActor="3_Expression" srcPort="pOut" dstActor="3_Expression" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_4_FFT" srcActor="4_FFT" srcPort="pOut" dstActor="4_FFT" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_5_SequenceToArray" srcActor="5_SequenceToArray" srcPort="pOut" dstActor="5_SequenceToArray" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_6_ApplyFunctionOverSequence" srcActor="6_ApplyFunctionOverSequence" srcPort="pOut" dstActor="6_ApplyFunctionOverSequence" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_7_AbsoluteValue" srcActor="7_AbsoluteValue" srcPort="pOut" dstActor="7_AbsoluteValue" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_8_ApplyFunction" srcActor="8_ApplyFunction" srcPort="pOut" dstActor="8_ApplyFunction" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_9_SequencePlotter" srcActor="9_SequencePlotter" srcPort="pOut" dstActor="9_SequencePlotter" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_10_ArrayPlotter" srcActor="10_ArrayPlotter" srcPort="pOut" dstActor="10_ArrayPlotter" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_11_SequencePlotter" srcActor="11_SequencePlotter" srcPort="pOut" dstActor="11_SequencePlotter" dstPort="pIn" initialTokens="1"/>
+	</sdf>
+	<sdfProperties>
+	  <actorProperties actor="1_SineWave">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="2_NoiseSource">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="3_Expression">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="4_FFT">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="5_SequenceToArray">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="6_ApplyFunctionOverSequence">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="7_AbsoluteValue">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="8_ApplyFunction">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="9_SequencePlotter">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="10_ArrayPlotter">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="11_SequencePlotter">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <channelProperties channel="channel_1_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_7">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_11">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_7_9">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_8_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_1_SineWave">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_2_NoiseSource">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_3_Expression">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_4_FFT">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_5_SequenceToArray">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_6_ApplyFunctionOverSequence">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_7_AbsoluteValue">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_8_ApplyFunction">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_9_SequencePlotter">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_10_ArrayPlotter">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_11_SequencePlotter">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <graphProperties>
+		<timeConstraints>
+		  <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	  </graphProperties>
+	</sdfProperties>
+  </applicationGraph>
+</sdf3>

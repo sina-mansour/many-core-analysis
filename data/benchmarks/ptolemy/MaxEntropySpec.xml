@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="MaxEntropySpec">
+	<sdf name="MaxEntropySpec" type="MaxEntropySpec">
+	  <actor name="1_SineWave" type="1_SineWave">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="2_SineWave2" type="2_SineWave2">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="3_SineWave3" type="3_SineWave3">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="4_Gaussian" type="4_Gaussian">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="5_AddSubtract" type="5_AddSubtract">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port name="p_out4" type="out" rate="1"/>
+		<port name="p_out5" type="out" rate="1"/>
+		<port name="p_out6" type="out" rate="1"/>
+		<port name="p_in7" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="6_IIR" type="6_IIR">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="7_Spectrum" type="7_Spectrum">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="8_SmoothedPeriodogram" type="8_SmoothedPeriodogram">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="9_MaximumEntropySpectrum" type="9_MaximumEntropySpectrum">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="10_SequencePlotter" type="10_SequencePlotter">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <channel name="channel_1_5" srcActor="1_SineWave" srcPort="p_out1" dstActor="5_AddSubtract" dstPort="p_in1"/>
+	  <channel name="channel_2_5" srcActor="2_SineWave2" srcPort="p_out1" dstActor="5_AddSubtract" dstPort="p_in2"/>
+	  <channel name="channel_3_5" srcActor="3_SineWave3" srcPort="p_out1" dstActor="5_AddSubtract" dstPort="p_in3"/>
+	  <channel name="channel_4_6" srcActor="4_Gaussian" srcPort="p_out1" dstActor="6_IIR" dstPort="p_in1"/>
+	  <channel name="channel_5_7" srcActor="5_AddSubtract" srcPort="p_out4" dstActor="7_Spectrum" dstPort="p_in1"/>
+	  <channel name="channel_5_8" srcActor="5_AddSubtract" srcPort="p_out5" dstActor="8_SmoothedPeriodogram" dstPort="p_in1"/>
+	  <channel name="channel_5_9" srcActor="5_AddSubtract" srcPort="p_out6" dstActor="9_MaximumEntropySpectrum" dstPort="p_in1"/>
+	  <channel name="channel_6_5" srcActor="6_IIR" srcPort="p_out2" dstActor="5_AddSubtract" dstPort="p_in7"/>
+	  <channel name="channel_7_10" srcActor="7_Spectrum" srcPort="p_out2" dstActor="10_SequencePlotter" dstPort="p_in1"/>
+	  <channel name="channel_8_10" srcActor="8_SmoothedPeriodogram" srcPort="p_out2" dstActor="10_SequencePlotter" dstPort="p_in2"/>
+	  <channel name="channel_9_10" srcActor="9_MaximumEntropySpectrum" srcPort="p_out2" dstActor="10_SequencePlotter" dstPort="p_in3"/>
+	  <channel name="self_loop_of_1_SineWave" srcActor="1_SineWave" srcPort="pOut" dstActor="1_SineWave" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_2_SineWave2" srcActor="2_SineWave2" srcPort="pOut" dstActor="2_SineWave2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_3_SineWave3" srcActor="3_SineWave3" srcPort="pOut" dstActor="3_SineWave3" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_4_Gaussian" srcActor="4_Gaussian" srcPort="pOut" dstActor="4_Gaussian" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_5_AddSubtract" srcActor="5_AddSubtract" srcPort="pOut" dstActor="5_AddSubtract" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_6_IIR" srcActor="6_IIR" srcPort="pOut" dstActor="6_IIR" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_7_Spectrum" srcActor="7_Spectrum" srcPort="pOut" dstActor="7_Spectrum" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_8_SmoothedPeriodogram" srcActor="8_SmoothedPeriodogram" srcPort="pOut" dstActor="8_SmoothedPeriodogram" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_9_MaximumEntropySpectrum" srcActor="9_MaximumEntropySpectrum" srcPort="pOut" dstActor="9_MaximumEntropySpectrum" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_10_SequencePlotter" srcActor="10_SequencePlotter" srcPort="pOut" dstActor="10_SequencePlotter" dstPort="pIn" initialTokens="1"/>
+	</sdf>
+	<sdfProperties>
+	  <actorProperties actor="1_SineWave">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="2_SineWave2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="3_SineWave3">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="4_Gaussian">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="5_AddSubtract">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="6_IIR">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="7_Spectrum">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="8_SmoothedPeriodogram">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="9_MaximumEntropySpectrum">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="10_SequencePlotter">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <channelProperties channel="channel_1_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_7">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_9">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_7_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_8_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_9_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_1_SineWave">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_2_SineWave2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_3_SineWave3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_4_Gaussian">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_5_AddSubtract">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_6_IIR">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_7_Spectrum">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_8_SmoothedPeriodogram">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_9_MaximumEntropySpectrum">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_10_SequencePlotter">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <graphProperties>
+		<timeConstraints>
+		  <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	  </graphProperties>
+	</sdfProperties>
+  </applicationGraph>
+</sdf3>

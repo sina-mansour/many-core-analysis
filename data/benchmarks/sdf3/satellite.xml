@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="satellite">
+	<sdf name="satellite" type="satellite">
+	  <actor name="1_a" type="1_a">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="2_b" type="2_b">
+		<port name="p_in1" type="in" rate="4"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="3_c" type="3_c">
+		<port name="p_in1" type="in" rate="11"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="10"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="4_d" type="4_d">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="5_e" type="5_e">
+		<port name="p_in1" type="in" rate="4"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="6_f" type="6_f">
+		<port name="p_in1" type="in" rate="11"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="10"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="7_g" type="7_g">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="8_h" type="8_h">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="11"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="9_i" type="9_i">
+		<port name="p_in1" type="in" rate="11"/>
+		<port name="p_out2" type="out" rate="10"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="10_j" type="10_j">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="11_k" type="11_k">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="12_l" type="12_l">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="11"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="13_m" type="13_m">
+		<port name="p_in1" type="in" rate="11"/>
+		<port name="p_out2" type="out" rate="10"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="14_n" type="14_n">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="15_p" type="15_p">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port name="p_out4" type="out" rate="1"/>
+		<port name="p_in5" type="in" rate="1"/>
+		<port name="p_in6" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="16_q" type="16_q">
+		<port name="p_in1" type="in" rate="240"/>
+		<port name="p_out2" type="out" rate="240"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="17_r" type="17_r">
+		<port name="p_in1" type="in" rate="240"/>
+		<port name="p_out2" type="out" rate="240"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="18_s" type="18_s">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="19_t" type="19_t">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="20_u" type="20_u">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="21_v" type="21_v">
+		<port name="p_in1" type="in" rate="240"/>
+		<port name="p_out2" type="out" rate="240"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="22_w" type="22_w">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <channel name="channel_1_2" srcActor="1_a" srcPort="p_out1" dstActor="2_b" dstPort="p_in1"/>
+	  <channel name="channel_2_3" srcActor="2_b" srcPort="p_out2" dstActor="3_c" dstPort="p_in1"/>
+	  <channel name="channel_3_7" srcActor="3_c" srcPort="p_out2" dstActor="7_g" dstPort="p_in1"/>
+	  <channel name="channel_3_15" srcActor="3_c" srcPort="p_out3" dstActor="15_p" dstPort="p_in1"/>
+	  <channel name="channel_4_5" srcActor="4_d" srcPort="p_out1" dstActor="5_e" dstPort="p_in1"/>
+	  <channel name="channel_5_6" srcActor="5_e" srcPort="p_out2" dstActor="6_f" dstPort="p_in1"/>
+	  <channel name="channel_6_11" srcActor="6_f" srcPort="p_out2" dstActor="11_k" dstPort="p_in1"/>
+	  <channel name="channel_6_15" srcActor="6_f" srcPort="p_out3" dstActor="15_p" dstPort="p_in2"/>
+	  <channel name="channel_7_8" srcActor="7_g" srcPort="p_out2" dstActor="8_h" dstPort="p_in1"/>
+	  <channel name="channel_8_9" srcActor="8_h" srcPort="p_out2" dstActor="9_i" dstPort="p_in1"/>
+	  <channel name="channel_9_10" srcActor="9_i" srcPort="p_out2" dstActor="10_j" dstPort="p_in1"/>
+	  <channel name="channel_11_12" srcActor="11_k" srcPort="p_out2" dstActor="12_l" dstPort="p_in1"/>
+	  <channel name="channel_12_13" srcActor="12_l" srcPort="p_out2" dstActor="13_m" dstPort="p_in1"/>
+	  <channel name="channel_13_14" srcActor="13_m" srcPort="p_out2" dstActor="14_n" dstPort="p_in1"/>
+	  <channel name="channel_15_16" srcActor="15_p" srcPort="p_out3" dstActor="16_q" dstPort="p_in1"/>
+	  <channel name="channel_15_17" srcActor="15_p" srcPort="p_out4" dstActor="17_r" dstPort="p_in1"/>
+	  <channel name="channel_16_22" srcActor="16_q" srcPort="p_out2" dstActor="22_w" dstPort="p_in1"/>
+	  <channel name="channel_17_22" srcActor="17_r" srcPort="p_out2" dstActor="22_w" dstPort="p_in2"/>
+	  <channel name="channel_14_15" srcActor="14_n" srcPort="p_out2" dstActor="15_p" dstPort="p_in5"/>
+	  <channel name="channel_14_18" srcActor="14_n" srcPort="p_out3" dstActor="18_s" dstPort="p_in1"/>
+	  <channel name="channel_18_20" srcActor="18_s" srcPort="p_out2" dstActor="20_u" dstPort="p_in1"/>
+	  <channel name="channel_10_15" srcActor="10_j" srcPort="p_out2" dstActor="15_p" dstPort="p_in6"/>
+	  <channel name="channel_10_19" srcActor="10_j" srcPort="p_out3" dstActor="19_t" dstPort="p_in1"/>
+	  <channel name="channel_19_20" srcActor="19_t" srcPort="p_out2" dstActor="20_u" dstPort="p_in2"/>
+	  <channel name="channel_20_21" srcActor="20_u" srcPort="p_out3" dstActor="21_v" dstPort="p_in1"/>
+	  <channel name="channel_21_22" srcActor="21_v" srcPort="p_out2" dstActor="22_w" dstPort="p_in3"/>
+	  <channel name="self_loop_of_1_a" srcActor="1_a" srcPort="pOut" dstActor="1_a" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_2_b" srcActor="2_b" srcPort="pOut" dstActor="2_b" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_3_c" srcActor="3_c" srcPort="pOut" dstActor="3_c" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_4_d" srcActor="4_d" srcPort="pOut" dstActor="4_d" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_5_e" srcActor="5_e" srcPort="pOut" dstActor="5_e" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_6_f" srcActor="6_f" srcPort="pOut" dstActor="6_f" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_7_g" srcActor="7_g" srcPort="pOut" dstActor="7_g" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_8_h" srcActor="8_h" srcPort="pOut" dstActor="8_h" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_9_i" srcActor="9_i" srcPort="pOut" dstActor="9_i" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_10_j" srcActor="10_j" srcPort="pOut" dstActor="10_j" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_11_k" srcActor="11_k" srcPort="pOut" dstActor="11_k" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_12_l" srcActor="12_l" srcPort="pOut" dstActor="12_l" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_13_m" srcActor="13_m" srcPort="pOut" dstActor="13_m" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_14_n" srcActor="14_n" srcPort="pOut" dstActor="14_n" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_15_p" srcActor="15_p" srcPort="pOut" dstActor="15_p" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_16_q" srcActor="16_q" srcPort="pOut" dstActor="16_q" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_17_r" srcActor="17_r" srcPort="pOut" dstActor="17_r" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_18_s" srcActor="18_s" srcPort="pOut" dstActor="18_s" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_19_t" srcActor="19_t" srcPort="pOut" dstActor="19_t" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_20_u" srcActor="20_u" srcPort="pOut" dstActor="20_u" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_21_v" srcActor="21_v" srcPort="pOut" dstActor="21_v" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_22_w" srcActor="22_w" srcPort="pOut" dstActor="22_w" dstPort="pIn" initialTokens="1"/>
+	</sdf>
+	<sdfProperties>
+	  <actorProperties actor="1_a">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="2_b">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="3_c">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="4_d">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="5_e">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="6_f">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="7_g">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="8_h">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="9_i">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="10_j">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="11_k">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="12_l">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="13_m">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="14_n">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="15_p">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="16_q">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="17_r">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="18_s">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="19_t">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="20_u">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="21_v">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="22_w">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <channelProperties channel="channel_1_2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_7">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_15">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_11">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_15">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_7_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_8_9">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_9_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_11_12">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_12_13">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_13_14">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_15_16">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_15_17">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_16_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_17_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_14_15">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_14_18">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_18_20">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_10_15">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_10_19">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_19_20">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_20_21">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_1_a">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_2_b">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_3_c">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_4_d">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_5_e">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_6_f">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_7_g">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_8_h">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_9_i">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_10_j">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_11_k">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_12_l">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_13_m">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_14_n">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_15_p">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_16_q">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_17_r">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_18_s">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_19_t">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_20_u">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_21_v">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_22_w">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <graphProperties>
+		<timeConstraints>
+		  <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	  </graphProperties>
+	</sdfProperties>
+  </applicationGraph>
+</sdf3>

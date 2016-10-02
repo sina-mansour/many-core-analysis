@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="Array">
+	<sdf name="Array" type="Array">
+	  <actor name="1_Uniform" type="1_Uniform">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="2_SequenceToArray" type="2_SequenceToArray">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port name="p_out4" type="out" rate="1"/>
+		<port name="p_out5" type="out" rate="1"/>
+		<port name="p_out6" type="out" rate="1"/>
+		<port name="p_out7" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="3_ArrayMaximum" type="3_ArrayMaximum">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="4_ArrayMinimum" type="4_ArrayMinimum">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="5_ArraySort" type="5_ArraySort">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port name="p_out4" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="6_ArraySort2" type="6_ArraySort2">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="7_ArrayAverage" type="7_ArrayAverage">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="8_ArrayPlotter" type="8_ArrayPlotter">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="9_MaximumValue" type="9_MaximumValue">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="10_MinimumValue" type="10_MinimumValue">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="11_MinimumIndex" type="11_MinimumIndex">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="12_ArrayElement" type="12_ArrayElement">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="13_Const" type="13_Const">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="14_AverageValue" type="14_AverageValue">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="15_MinimumValue2" type="15_MinimumValue2">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="16_ArrayExtract" type="16_ArrayExtract">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="17_ArrayPlotter2" type="17_ArrayPlotter2">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <channel name="channel_1_2" srcActor="1_Uniform" srcPort="p_out1" dstActor="2_SequenceToArray" dstPort="p_in1"/>
+	  <channel name="channel_2_3" srcActor="2_SequenceToArray" srcPort="p_out2" dstActor="3_ArrayMaximum" dstPort="p_in1"/>
+	  <channel name="channel_2_4" srcActor="2_SequenceToArray" srcPort="p_out3" dstActor="4_ArrayMinimum" dstPort="p_in1"/>
+	  <channel name="channel_2_5" srcActor="2_SequenceToArray" srcPort="p_out4" dstActor="5_ArraySort" dstPort="p_in1"/>
+	  <channel name="channel_2_6" srcActor="2_SequenceToArray" srcPort="p_out5" dstActor="6_ArraySort2" dstPort="p_in1"/>
+	  <channel name="channel_2_7" srcActor="2_SequenceToArray" srcPort="p_out6" dstActor="7_ArrayAverage" dstPort="p_in1"/>
+	  <channel name="channel_2_8" srcActor="2_SequenceToArray" srcPort="p_out7" dstActor="8_ArrayPlotter" dstPort="p_in1"/>
+	  <channel name="channel_3_9" srcActor="3_ArrayMaximum" srcPort="p_out2" dstActor="9_MaximumValue" dstPort="p_in1"/>
+	  <channel name="channel_4_10" srcActor="4_ArrayMinimum" srcPort="p_out2" dstActor="10_MinimumValue" dstPort="p_in1"/>
+	  <channel name="channel_4_11" srcActor="4_ArrayMinimum" srcPort="p_out3" dstActor="11_MinimumIndex" dstPort="p_in1"/>
+	  <channel name="channel_5_8" srcActor="5_ArraySort" srcPort="p_out2" dstActor="8_ArrayPlotter" dstPort="p_in2"/>
+	  <channel name="channel_5_12" srcActor="5_ArraySort" srcPort="p_out3" dstActor="12_ArrayElement" dstPort="p_in1"/>
+	  <channel name="channel_5_16" srcActor="5_ArraySort" srcPort="p_out4" dstActor="16_ArrayExtract" dstPort="p_in1"/>
+	  <channel name="channel_6_8" srcActor="6_ArraySort2" srcPort="p_out2" dstActor="8_ArrayPlotter" dstPort="p_in3"/>
+	  <channel name="channel_7_14" srcActor="7_ArrayAverage" srcPort="p_out2" dstActor="14_AverageValue" dstPort="p_in1"/>
+	  <channel name="channel_12_15" srcActor="12_ArrayElement" srcPort="p_out2" dstActor="15_MinimumValue2" dstPort="p_in1"/>
+	  <channel name="channel_13_16" srcActor="13_Const" srcPort="p_out1" dstActor="16_ArrayExtract" dstPort="p_in2"/>
+	  <channel name="channel_16_17" srcActor="16_ArrayExtract" srcPort="p_out3" dstActor="17_ArrayPlotter2" dstPort="p_in1"/>
+	  <channel name="self_loop_of_1_Uniform" srcActor="1_Uniform" srcPort="pOut" dstActor="1_Uniform" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_2_SequenceToArray" srcActor="2_SequenceToArray" srcPort="pOut" dstActor="2_SequenceToArray" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_3_ArrayMaximum" srcActor="3_ArrayMaximum" srcPort="pOut" dstActor="3_ArrayMaximum" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_4_ArrayMinimum" srcActor="4_ArrayMinimum" srcPort="pOut" dstActor="4_ArrayMinimum" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_5_ArraySort" srcActor="5_ArraySort" srcPort="pOut" dstActor="5_ArraySort" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_6_ArraySort2" srcActor="6_ArraySort2" srcPort="pOut" dstActor="6_ArraySort2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_7_ArrayAverage" srcActor="7_ArrayAverage" srcPort="pOut" dstActor="7_ArrayAverage" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_8_ArrayPlotter" srcActor="8_ArrayPlotter" srcPort="pOut" dstActor="8_ArrayPlotter" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_9_MaximumValue" srcActor="9_MaximumValue" srcPort="pOut" dstActor="9_MaximumValue" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_10_MinimumValue" srcActor="10_MinimumValue" srcPort="pOut" dstActor="10_MinimumValue" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_11_MinimumIndex" srcActor="11_MinimumIndex" srcPort="pOut" dstActor="11_MinimumIndex" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_12_ArrayElement" srcActor="12_ArrayElement" srcPort="pOut" dstActor="12_ArrayElement" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_13_Const" srcActor="13_Const" srcPort="pOut" dstActor="13_Const" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_14_AverageValue" srcActor="14_AverageValue" srcPort="pOut" dstActor="14_AverageValue" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_15_MinimumValue2" srcActor="15_MinimumValue2" srcPort="pOut" dstActor="15_MinimumValue2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_16_ArrayExtract" srcActor="16_ArrayExtract" srcPort="pOut" dstActor="16_ArrayExtract" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_17_ArrayPlotter2" srcActor="17_ArrayPlotter2" srcPort="pOut" dstActor="17_ArrayPlotter2" dstPort="pIn" initialTokens="1"/>
+	</sdf>
+	<sdfProperties>
+	  <actorProperties actor="1_Uniform">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="2_SequenceToArray">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="3_ArrayMaximum">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="4_ArrayMinimum">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="5_ArraySort">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="6_ArraySort2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="7_ArrayAverage">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="8_ArrayPlotter">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="9_MaximumValue">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="10_MinimumValue">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="11_MinimumIndex">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="12_ArrayElement">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="13_Const">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="14_AverageValue">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="15_MinimumValue2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="16_ArrayExtract">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="17_ArrayPlotter2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <channelProperties channel="channel_1_2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_7">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_9">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_11">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_12">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_16">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_7_14">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_12_15">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_13_16">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_16_17">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_1_Uniform">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_2_SequenceToArray">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_3_ArrayMaximum">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_4_ArrayMinimum">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_5_ArraySort">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_6_ArraySort2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_7_ArrayAverage">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_8_ArrayPlotter">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_9_MaximumValue">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_10_MinimumValue">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_11_MinimumIndex">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_12_ArrayElement">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_13_Const">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_14_AverageValue">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_15_MinimumValue2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_16_ArrayExtract">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_17_ArrayPlotter2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <graphProperties>
+		<timeConstraints>
+		  <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	  </graphProperties>
+	</sdfProperties>
+  </applicationGraph>
+</sdf3>

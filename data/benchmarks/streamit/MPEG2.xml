@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="MPEG2">
+	<sdf name="MPEG2" type="MPEG2">
+	  <actor name="1_FileReader__98_225" type="1_FileReader__98_225">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="2_WEIGHTED_ROUND_ROBIN(384,16,3)" type="2_WEIGHTED_ROUND_ROBIN(384,16,3)">
+		<port name="p_in1" type="in" rate="403"/>
+		<port name="p_out2" type="out" rate="384"/>
+		<port name="p_out3" type="out" rate="16"/>
+		<port name="p_out4" type="out" rate="3"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="3_WEIGHTED_ROUND_ROBIN(64,8,3)" type="3_WEIGHTED_ROUND_ROBIN(64,8,3)">
+		<port name="p_out1" type="out" rate="75"/>
+		<port name="p_in2" type="in" rate="64"/>
+		<port name="p_in3" type="in" rate="8"/>
+		<port name="p_in4" type="in" rate="3"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="4_ZigZagUnordering__105_228" type="4_ZigZagUnordering__105_228">
+		<port name="p_in1" type="in" rate="64"/>
+		<port name="p_out2" type="out" rate="64"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="5_DUPLICATE(1,1)" type="5_DUPLICATE(1,1)">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="6_WEIGHTED_ROUND_ROBIN(64,64)" type="6_WEIGHTED_ROUND_ROBIN(64,64)">
+		<port name="p_out1" type="out" rate="128"/>
+		<port name="p_in2" type="in" rate="64"/>
+		<port name="p_in3" type="in" rate="64"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="7_WEIGHTED_ROUND_ROBIN(1,63)" type="7_WEIGHTED_ROUND_ROBIN(1,63)">
+		<port name="p_in1" type="in" rate="64"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="63"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="8_WEIGHTED_ROUND_ROBIN(1,63)" type="8_WEIGHTED_ROUND_ROBIN(1,63)">
+		<port name="p_out1" type="out" rate="64"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_in3" type="in" rate="63"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="9_InverseQuantization_DC_Intra_Coeff__109_232" type="9_InverseQuantization_DC_Intra_Coeff__109_232">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="10_InverseQuantization_AC_Coeff__121_233" type="10_InverseQuantization_AC_Coeff__121_233">
+		<port name="p_in1" type="in" rate="63"/>
+		<port name="p_out2" type="out" rate="63"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="11_InverseQuantization_AC_Coeff__133_234" type="11_InverseQuantization_AC_Coeff__133_234">
+		<port name="p_in1" type="in" rate="64"/>
+		<port name="p_out2" type="out" rate="64"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="12_InverseQuantizationJoinerSubstitute__138_235" type="12_InverseQuantizationJoinerSubstitute__138_235">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="64"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="13_Saturation__144_237" type="13_Saturation__144_237">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="14_MismatchControl__150_238" type="14_MismatchControl__150_238">
+		<port name="p_in1" type="in" rate="64"/>
+		<port name="p_out2" type="out" rate="64"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="15_iDCT8x8_1D_row_fast__164_241" type="15_iDCT8x8_1D_row_fast__164_241">
+		<port name="p_in1" type="in" rate="8"/>
+		<port name="p_out2" type="out" rate="8"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="16_Pre_CollapsedDataParallel_1__170_308" type="16_Pre_CollapsedDataParallel_1__170_308">
+		<port name="p_in1" type="in" rate="64"/>
+		<port name="p_out2" type="out" rate="64"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="17_iDCT8x8_1D_col_fast_fine__184_249" type="17_iDCT8x8_1D_col_fast_fine__184_249">
+		<port name="p_in1" type="in" rate="8"/>
+		<port name="p_out2" type="out" rate="8"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="18_Post_CollapsedDataParallel_2__190_309" type="18_Post_CollapsedDataParallel_2__190_309">
+		<port name="p_in1" type="in" rate="64"/>
+		<port name="p_out2" type="out" rate="64"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="19_BoundedSaturation__201_258" type="19_BoundedSaturation__201_258">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="20_MotionVectorDecode__222_260" type="20_MotionVectorDecode__222_260">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="8"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="21_Repeat__231_261" type="21_Repeat__231_261">
+		<port name="p_in1" type="in" rate="8"/>
+		<port name="p_out2" type="out" rate="48"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="22_Repeat__240_262" type="22_Repeat__240_262">
+		<port name="p_in1" type="in" rate="3"/>
+		<port name="p_out2" type="out" rate="18"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="23_FileWriter__243_263" type="23_FileWriter__243_263">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <channel name="channel_1_2" srcActor="1_FileReader__98_225" srcPort="p_out1" dstActor="2_WEIGHTED_ROUND_ROBIN(384,16,3)" dstPort="p_in1"/>
+	  <channel name="channel_2_4" srcActor="2_WEIGHTED_ROUND_ROBIN(384,16,3)" srcPort="p_out2" dstActor="4_ZigZagUnordering__105_228" dstPort="p_in1"/>
+	  <channel name="channel_2_20" srcActor="2_WEIGHTED_ROUND_ROBIN(384,16,3)" srcPort="p_out3" dstActor="20_MotionVectorDecode__222_260" dstPort="p_in1"/>
+	  <channel name="channel_2_22" srcActor="2_WEIGHTED_ROUND_ROBIN(384,16,3)" srcPort="p_out4" dstActor="22_Repeat__240_262" dstPort="p_in1"/>
+	  <channel name="channel_3_23" srcActor="3_WEIGHTED_ROUND_ROBIN(64,8,3)" srcPort="p_out1" dstActor="23_FileWriter__243_263" dstPort="p_in1"/>
+	  <channel name="channel_4_5" srcActor="4_ZigZagUnordering__105_228" srcPort="p_out2" dstActor="5_DUPLICATE(1,1)" dstPort="p_in1"/>
+	  <channel name="channel_5_7" srcActor="5_DUPLICATE(1,1)" srcPort="p_out2" dstActor="7_WEIGHTED_ROUND_ROBIN(1,63)" dstPort="p_in1"/>
+	  <channel name="channel_5_11" srcActor="5_DUPLICATE(1,1)" srcPort="p_out3" dstActor="11_InverseQuantization_AC_Coeff__133_234" dstPort="p_in1"/>
+	  <channel name="channel_6_12" srcActor="6_WEIGHTED_ROUND_ROBIN(64,64)" srcPort="p_out1" dstActor="12_InverseQuantizationJoinerSubstitute__138_235" dstPort="p_in1"/>
+	  <channel name="channel_7_9" srcActor="7_WEIGHTED_ROUND_ROBIN(1,63)" srcPort="p_out2" dstActor="9_InverseQuantization_DC_Intra_Coeff__109_232" dstPort="p_in1"/>
+	  <channel name="channel_7_10" srcActor="7_WEIGHTED_ROUND_ROBIN(1,63)" srcPort="p_out3" dstActor="10_InverseQuantization_AC_Coeff__121_233" dstPort="p_in1"/>
+	  <channel name="channel_8_6" srcActor="8_WEIGHTED_ROUND_ROBIN(1,63)" srcPort="p_out1" dstActor="6_WEIGHTED_ROUND_ROBIN(64,64)" dstPort="p_in2"/>
+	  <channel name="channel_9_8" srcActor="9_InverseQuantization_DC_Intra_Coeff__109_232" srcPort="p_out2" dstActor="8_WEIGHTED_ROUND_ROBIN(1,63)" dstPort="p_in2"/>
+	  <channel name="channel_10_8" srcActor="10_InverseQuantization_AC_Coeff__121_233" srcPort="p_out2" dstActor="8_WEIGHTED_ROUND_ROBIN(1,63)" dstPort="p_in3"/>
+	  <channel name="channel_11_6" srcActor="11_InverseQuantization_AC_Coeff__133_234" srcPort="p_out2" dstActor="6_WEIGHTED_ROUND_ROBIN(64,64)" dstPort="p_in3"/>
+	  <channel name="channel_12_13" srcActor="12_InverseQuantizationJoinerSubstitute__138_235" srcPort="p_out2" dstActor="13_Saturation__144_237" dstPort="p_in1"/>
+	  <channel name="channel_13_14" srcActor="13_Saturation__144_237" srcPort="p_out2" dstActor="14_MismatchControl__150_238" dstPort="p_in1"/>
+	  <channel name="channel_14_15" srcActor="14_MismatchControl__150_238" srcPort="p_out2" dstActor="15_iDCT8x8_1D_row_fast__164_241" dstPort="p_in1"/>
+	  <channel name="channel_15_16" srcActor="15_iDCT8x8_1D_row_fast__164_241" srcPort="p_out2" dstActor="16_Pre_CollapsedDataParallel_1__170_308" dstPort="p_in1"/>
+	  <channel name="channel_16_17" srcActor="16_Pre_CollapsedDataParallel_1__170_308" srcPort="p_out2" dstActor="17_iDCT8x8_1D_col_fast_fine__184_249" dstPort="p_in1"/>
+	  <channel name="channel_17_18" srcActor="17_iDCT8x8_1D_col_fast_fine__184_249" srcPort="p_out2" dstActor="18_Post_CollapsedDataParallel_2__190_309" dstPort="p_in1"/>
+	  <channel name="channel_18_19" srcActor="18_Post_CollapsedDataParallel_2__190_309" srcPort="p_out2" dstActor="19_BoundedSaturation__201_258" dstPort="p_in1"/>
+	  <channel name="channel_19_3" srcActor="19_BoundedSaturation__201_258" srcPort="p_out2" dstActor="3_WEIGHTED_ROUND_ROBIN(64,8,3)" dstPort="p_in2"/>
+	  <channel name="channel_20_21" srcActor="20_MotionVectorDecode__222_260" srcPort="p_out2" dstActor="21_Repeat__231_261" dstPort="p_in1"/>
+	  <channel name="channel_21_3" srcActor="21_Repeat__231_261" srcPort="p_out2" dstActor="3_WEIGHTED_ROUND_ROBIN(64,8,3)" dstPort="p_in3"/>
+	  <channel name="channel_22_3" srcActor="22_Repeat__240_262" srcPort="p_out2" dstActor="3_WEIGHTED_ROUND_ROBIN(64,8,3)" dstPort="p_in4"/>
+	  <channel name="self_loop_of_1_FileReader__98_225" srcActor="1_FileReader__98_225" srcPort="pOut" dstActor="1_FileReader__98_225" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_2_WEIGHTED_ROUND_ROBIN(384,16,3)" srcActor="2_WEIGHTED_ROUND_ROBIN(384,16,3)" srcPort="pOut" dstActor="2_WEIGHTED_ROUND_ROBIN(384,16,3)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_3_WEIGHTED_ROUND_ROBIN(64,8,3)" srcActor="3_WEIGHTED_ROUND_ROBIN(64,8,3)" srcPort="pOut" dstActor="3_WEIGHTED_ROUND_ROBIN(64,8,3)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_4_ZigZagUnordering__105_228" srcActor="4_ZigZagUnordering__105_228" srcPort="pOut" dstActor="4_ZigZagUnordering__105_228" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_5_DUPLICATE(1,1)" srcActor="5_DUPLICATE(1,1)" srcPort="pOut" dstActor="5_DUPLICATE(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_6_WEIGHTED_ROUND_ROBIN(64,64)" srcActor="6_WEIGHTED_ROUND_ROBIN(64,64)" srcPort="pOut" dstActor="6_WEIGHTED_ROUND_ROBIN(64,64)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_7_WEIGHTED_ROUND_ROBIN(1,63)" srcActor="7_WEIGHTED_ROUND_ROBIN(1,63)" srcPort="pOut" dstActor="7_WEIGHTED_ROUND_ROBIN(1,63)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_8_WEIGHTED_ROUND_ROBIN(1,63)" srcActor="8_WEIGHTED_ROUND_ROBIN(1,63)" srcPort="pOut" dstActor="8_WEIGHTED_ROUND_ROBIN(1,63)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_9_InverseQuantization_DC_Intra_Coeff__109_232" srcActor="9_InverseQuantization_DC_Intra_Coeff__109_232" srcPort="pOut" dstActor="9_InverseQuantization_DC_Intra_Coeff__109_232" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_10_InverseQuantization_AC_Coeff__121_233" srcActor="10_InverseQuantization_AC_Coeff__121_233" srcPort="pOut" dstActor="10_InverseQuantization_AC_Coeff__121_233" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_11_InverseQuantization_AC_Coeff__133_234" srcActor="11_InverseQuantization_AC_Coeff__133_234" srcPort="pOut" dstActor="11_InverseQuantization_AC_Coeff__133_234" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_12_InverseQuantizationJoinerSubstitute__138_235" srcActor="12_InverseQuantizationJoinerSubstitute__138_235" srcPort="pOut" dstActor="12_InverseQuantizationJoinerSubstitute__138_235" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_13_Saturation__144_237" srcActor="13_Saturation__144_237" srcPort="pOut" dstActor="13_Saturation__144_237" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_14_MismatchControl__150_238" srcActor="14_MismatchControl__150_238" srcPort="pOut" dstActor="14_MismatchControl__150_238" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_15_iDCT8x8_1D_row_fast__164_241" srcActor="15_iDCT8x8_1D_row_fast__164_241" srcPort="pOut" dstActor="15_iDCT8x8_1D_row_fast__164_241" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_16_Pre_CollapsedDataParallel_1__170_308" srcActor="16_Pre_CollapsedDataParallel_1__170_308" srcPort="pOut" dstActor="16_Pre_CollapsedDataParallel_1__170_308" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_17_iDCT8x8_1D_col_fast_fine__184_249" srcActor="17_iDCT8x8_1D_col_fast_fine__184_249" srcPort="pOut" dstActor="17_iDCT8x8_1D_col_fast_fine__184_249" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_18_Post_CollapsedDataParallel_2__190_309" srcActor="18_Post_CollapsedDataParallel_2__190_309" srcPort="pOut" dstActor="18_Post_CollapsedDataParallel_2__190_309" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_19_BoundedSaturation__201_258" srcActor="19_BoundedSaturation__201_258" srcPort="pOut" dstActor="19_BoundedSaturation__201_258" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_20_MotionVectorDecode__222_260" srcActor="20_MotionVectorDecode__222_260" srcPort="pOut" dstActor="20_MotionVectorDecode__222_260" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_21_Repeat__231_261" srcActor="21_Repeat__231_261" srcPort="pOut" dstActor="21_Repeat__231_261" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_22_Repeat__240_262" srcActor="22_Repeat__240_262" srcPort="pOut" dstActor="22_Repeat__240_262" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_23_FileWriter__243_263" srcActor="23_FileWriter__243_263" srcPort="pOut" dstActor="23_FileWriter__243_263" dstPort="pIn" initialTokens="1"/>
+	</sdf>
+	<sdfProperties>
+	  <actorProperties actor="1_FileReader__98_225">
+		<processor type="arm" default="true">
+		  <executionTime time="0"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="2_WEIGHTED_ROUND_ROBIN(384,16,3)">
+		<processor type="arm" default="true">
+		  <executionTime time="2418"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="3_WEIGHTED_ROUND_ROBIN(64,8,3)">
+		<processor type="arm" default="true">
+		  <executionTime time="450"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="4_ZigZagUnordering__105_228">
+		<processor type="arm" default="true">
+		  <executionTime time="768"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="5_DUPLICATE(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="9"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="6_WEIGHTED_ROUND_ROBIN(64,64)">
+		<processor type="arm" default="true">
+		  <executionTime time="768"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="7_WEIGHTED_ROUND_ROBIN(1,63)">
+		<processor type="arm" default="true">
+		  <executionTime time="384"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="8_WEIGHTED_ROUND_ROBIN(1,63)">
+		<processor type="arm" default="true">
+		  <executionTime time="384"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="9_InverseQuantization_DC_Intra_Coeff__109_232">
+		<processor type="arm" default="true">
+		  <executionTime time="7"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="10_InverseQuantization_AC_Coeff__121_233">
+		<processor type="arm" default="true">
+		  <executionTime time="1071"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="11_InverseQuantization_AC_Coeff__133_234">
+		<processor type="arm" default="true">
+		  <executionTime time="1280"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="12_InverseQuantizationJoinerSubstitute__138_235">
+		<processor type="arm" default="true">
+		  <executionTime time="832"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="13_Saturation__144_237">
+		<processor type="arm" default="true">
+		  <executionTime time="9"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="14_MismatchControl__150_238">
+		<processor type="arm" default="true">
+		  <executionTime time="579"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="15_iDCT8x8_1D_row_fast__164_241">
+		<processor type="arm" default="true">
+		  <executionTime time="138"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="16_Pre_CollapsedDataParallel_1__170_308">
+		<processor type="arm" default="true">
+		  <executionTime time="659"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="17_iDCT8x8_1D_col_fast_fine__184_249">
+		<processor type="arm" default="true">
+		  <executionTime time="143"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="18_Post_CollapsedDataParallel_2__190_309">
+		<processor type="arm" default="true">
+		  <executionTime time="723"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="19_BoundedSaturation__201_258">
+		<processor type="arm" default="true">
+		  <executionTime time="9"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="20_MotionVectorDecode__222_260">
+		<processor type="arm" default="true">
+		  <executionTime time="406"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="21_Repeat__231_261">
+		<processor type="arm" default="true">
+		  <executionTime time="292"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="22_Repeat__240_262">
+		<processor type="arm" default="true">
+		  <executionTime time="117"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="23_FileWriter__243_263">
+		<processor type="arm" default="true">
+		  <executionTime time="0"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <channelProperties channel="channel_1_2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_20">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_23">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_7">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_11">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_12">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_7_9">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_7_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_8_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_9_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_10_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_11_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_12_13">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_13_14">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_14_15">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_15_16">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_16_17">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_17_18">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_18_19">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_19_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_20_21">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_22_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_1_FileReader__98_225">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_2_WEIGHTED_ROUND_ROBIN(384,16,3)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_3_WEIGHTED_ROUND_ROBIN(64,8,3)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_4_ZigZagUnordering__105_228">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_5_DUPLICATE(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_6_WEIGHTED_ROUND_ROBIN(64,64)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_7_WEIGHTED_ROUND_ROBIN(1,63)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_8_WEIGHTED_ROUND_ROBIN(1,63)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_9_InverseQuantization_DC_Intra_Coeff__109_232">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_10_InverseQuantization_AC_Coeff__121_233">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_11_InverseQuantization_AC_Coeff__133_234">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_12_InverseQuantizationJoinerSubstitute__138_235">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_13_Saturation__144_237">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_14_MismatchControl__150_238">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_15_iDCT8x8_1D_row_fast__164_241">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_16_Pre_CollapsedDataParallel_1__170_308">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_17_iDCT8x8_1D_col_fast_fine__184_249">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_18_Post_CollapsedDataParallel_2__190_309">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_19_BoundedSaturation__201_258">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_20_MotionVectorDecode__222_260">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_21_Repeat__231_261">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_22_Repeat__240_262">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_23_FileWriter__243_263">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <graphProperties>
+		<timeConstraints>
+		  <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	  </graphProperties>
+	</sdfProperties>
+  </applicationGraph>
+</sdf3>

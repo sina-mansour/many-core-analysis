@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="crc">
+	<sdf name="crc" type="crc">
+	  <actor name="1_CrcInputFilter__2_108" type="1_CrcInputFilter__2_108">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="2_WEIGHTED_ROUND_ROBIN(1,1)" type="2_WEIGHTED_ROUND_ROBIN(1,1)">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="3_DUPLICATE(1,1)" type="3_DUPLICATE(1,1)">
+		<port name="p_out1" type="out" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="4_InitialAdditionFilter__8_111" type="4_InitialAdditionFilter__8_111">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="5_ShiftRegisterFilter__14_112" type="5_ShiftRegisterFilter__14_112">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="6_AdditionFilter__20_113" type="6_AdditionFilter__20_113">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="7_ShiftRegisterFilter__26_114" type="7_ShiftRegisterFilter__26_114">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="8_AdditionFilter__32_115" type="8_AdditionFilter__32_115">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="9_ShiftRegisterFilter__38_116" type="9_ShiftRegisterFilter__38_116">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="10_ShiftRegisterFilter__44_117" type="10_ShiftRegisterFilter__44_117">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="11_AdditionFilter__50_118" type="11_AdditionFilter__50_118">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="12_ShiftRegisterFilter__56_119" type="12_ShiftRegisterFilter__56_119">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="13_AdditionFilter__62_120" type="13_AdditionFilter__62_120">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="14_ShiftRegisterFilter__68_121" type="14_ShiftRegisterFilter__68_121">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="15_ShiftRegisterFilter__74_122" type="15_ShiftRegisterFilter__74_122">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="16_AdditionFilter__80_123" type="16_AdditionFilter__80_123">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="17_ShiftRegisterFilter__86_124" type="17_ShiftRegisterFilter__86_124">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="18_AdditionFilter__92_125" type="18_AdditionFilter__92_125">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="19_ShiftRegisterFilter__98_126" type="19_ShiftRegisterFilter__98_126">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="20_ShiftRegisterFilter__104_127" type="20_ShiftRegisterFilter__104_127">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="21_AdditionFilter__110_128" type="21_AdditionFilter__110_128">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="22_ShiftRegisterFilter__116_129" type="22_ShiftRegisterFilter__116_129">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="23_AdditionFilter__122_130" type="23_AdditionFilter__122_130">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="24_ShiftRegisterFilter__128_131" type="24_ShiftRegisterFilter__128_131">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="25_AdditionFilter__134_132" type="25_AdditionFilter__134_132">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="26_ShiftRegisterFilter__140_133" type="26_ShiftRegisterFilter__140_133">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="27_ShiftRegisterFilter__146_134" type="27_ShiftRegisterFilter__146_134">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="28_ShiftRegisterFilter__152_135" type="28_ShiftRegisterFilter__152_135">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="29_ShiftRegisterFilter__158_136" type="29_ShiftRegisterFilter__158_136">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="30_AdditionFilter__164_137" type="30_AdditionFilter__164_137">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="31_ShiftRegisterFilter__170_138" type="31_ShiftRegisterFilter__170_138">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="32_ShiftRegisterFilter__176_139" type="32_ShiftRegisterFilter__176_139">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="33_ShiftRegisterFilter__182_140" type="33_ShiftRegisterFilter__182_140">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="34_ShiftRegisterFilter__188_141" type="34_ShiftRegisterFilter__188_141">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="35_ShiftRegisterFilter__194_142" type="35_ShiftRegisterFilter__194_142">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="36_ShiftRegisterFilter__200_143" type="36_ShiftRegisterFilter__200_143">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="37_AdditionFilter__206_144" type="37_AdditionFilter__206_144">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="38_ShiftRegisterFilter__212_145" type="38_ShiftRegisterFilter__212_145">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="39_AdditionFilter__218_146" type="39_AdditionFilter__218_146">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="40_ShiftRegisterFilter__224_147" type="40_ShiftRegisterFilter__224_147">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="41_ShiftRegisterFilter__230_148" type="41_ShiftRegisterFilter__230_148">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="42_ShiftRegisterFilter__236_149" type="42_ShiftRegisterFilter__236_149">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="43_AdditionFilter__242_150" type="43_AdditionFilter__242_150">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="44_ShiftRegisterFilter__248_151" type="44_ShiftRegisterFilter__248_151">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="45_ShiftRegisterFilter__254_152" type="45_ShiftRegisterFilter__254_152">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="46_ShiftRegisterFilter__260_153" type="46_ShiftRegisterFilter__260_153">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="47_ShiftRegisterFilter__266_154" type="47_ShiftRegisterFilter__266_154">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="48_ShiftRegisterFilter__272_155" type="48_ShiftRegisterFilter__272_155">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="49_Identity__275_156" type="49_Identity__275_156">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="50_FeedbackEndFilter__279_157" type="50_FeedbackEndFilter__279_157">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="51_Identity__282_158" type="51_Identity__282_158">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="52_IntPrinter__285_159" type="52_IntPrinter__285_159">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <channel name="channel_1_2" srcActor="1_CrcInputFilter__2_108" srcPort="p_out1" dstActor="2_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in1"/>
+	  <channel name="channel_2_4" srcActor="2_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="p_out2" dstActor="4_InitialAdditionFilter__8_111" dstPort="p_in1"/>
+	  <channel name="channel_3_51" srcActor="3_DUPLICATE(1,1)" srcPort="p_out1" dstActor="51_Identity__282_158" dstPort="p_in1"/>
+	  <channel name="channel_3_52" srcActor="3_DUPLICATE(1,1)" srcPort="p_out2" dstActor="52_IntPrinter__285_159" dstPort="p_in1"/>
+	  <channel name="channel_4_5" srcActor="4_InitialAdditionFilter__8_111" srcPort="p_out2" dstActor="5_ShiftRegisterFilter__14_112" dstPort="p_in1"/>
+	  <channel name="channel_5_6" srcActor="5_ShiftRegisterFilter__14_112" srcPort="p_out2" dstActor="6_AdditionFilter__20_113" dstPort="p_in1"/>
+	  <channel name="channel_6_7" srcActor="6_AdditionFilter__20_113" srcPort="p_out2" dstActor="7_ShiftRegisterFilter__26_114" dstPort="p_in1"/>
+	  <channel name="channel_7_8" srcActor="7_ShiftRegisterFilter__26_114" srcPort="p_out2" dstActor="8_AdditionFilter__32_115" dstPort="p_in1"/>
+	  <channel name="channel_8_9" srcActor="8_AdditionFilter__32_115" srcPort="p_out2" dstActor="9_ShiftRegisterFilter__38_116" dstPort="p_in1"/>
+	  <channel name="channel_9_10" srcActor="9_ShiftRegisterFilter__38_116" srcPort="p_out2" dstActor="10_ShiftRegisterFilter__44_117" dstPort="p_in1"/>
+	  <channel name="channel_10_11" srcActor="10_ShiftRegisterFilter__44_117" srcPort="p_out2" dstActor="11_AdditionFilter__50_118" dstPort="p_in1"/>
+	  <channel name="channel_11_12" srcActor="11_AdditionFilter__50_118" srcPort="p_out2" dstActor="12_ShiftRegisterFilter__56_119" dstPort="p_in1"/>
+	  <channel name="channel_12_13" srcActor="12_ShiftRegisterFilter__56_119" srcPort="p_out2" dstActor="13_AdditionFilter__62_120" dstPort="p_in1"/>
+	  <channel name="channel_13_14" srcActor="13_AdditionFilter__62_120" srcPort="p_out2" dstActor="14_ShiftRegisterFilter__68_121" dstPort="p_in1"/>
+	  <channel name="channel_14_15" srcActor="14_ShiftRegisterFilter__68_121" srcPort="p_out2" dstActor="15_ShiftRegisterFilter__74_122" dstPort="p_in1"/>
+	  <channel name="channel_15_16" srcActor="15_ShiftRegisterFilter__74_122" srcPort="p_out2" dstActor="16_AdditionFilter__80_123" dstPort="p_in1"/>
+	  <channel name="channel_16_17" srcActor="16_AdditionFilter__80_123" srcPort="p_out2" dstActor="17_ShiftRegisterFilter__86_124" dstPort="p_in1"/>
+	  <channel name="channel_17_18" srcActor="17_ShiftRegisterFilter__86_124" srcPort="p_out2" dstActor="18_AdditionFilter__92_125" dstPort="p_in1"/>
+	  <channel name="channel_18_19" srcActor="18_AdditionFilter__92_125" srcPort="p_out2" dstActor="19_ShiftRegisterFilter__98_126" dstPort="p_in1"/>
+	  <channel name="channel_19_20" srcActor="19_ShiftRegisterFilter__98_126" srcPort="p_out2" dstActor="20_ShiftRegisterFilter__104_127" dstPort="p_in1"/>
+	  <channel name="channel_20_21" srcActor="20_ShiftRegisterFilter__104_127" srcPort="p_out2" dstActor="21_AdditionFilter__110_128" dstPort="p_in1"/>
+	  <channel name="channel_21_22" srcActor="21_AdditionFilter__110_128" srcPort="p_out2" dstActor="22_ShiftRegisterFilter__116_129" dstPort="p_in1"/>
+	  <channel name="channel_22_23" srcActor="22_ShiftRegisterFilter__116_129" srcPort="p_out2" dstActor="23_AdditionFilter__122_130" dstPort="p_in1"/>
+	  <channel name="channel_23_24" srcActor="23_AdditionFilter__122_130" srcPort="p_out2" dstActor="24_ShiftRegisterFilter__128_131" dstPort="p_in1"/>
+	  <channel name="channel_24_25" srcActor="24_ShiftRegisterFilter__128_131" srcPort="p_out2" dstActor="25_AdditionFilter__134_132" dstPort="p_in1"/>
+	  <channel name="channel_25_26" srcActor="25_AdditionFilter__134_132" srcPort="p_out2" dstActor="26_ShiftRegisterFilter__140_133" dstPort="p_in1"/>
+	  <channel name="channel_26_27" srcActor="26_ShiftRegisterFilter__140_133" srcPort="p_out2" dstActor="27_ShiftRegisterFilter__146_134" dstPort="p_in1"/>
+	  <channel name="channel_27_28" srcActor="27_ShiftRegisterFilter__146_134" srcPort="p_out2" dstActor="28_ShiftRegisterFilter__152_135" dstPort="p_in1"/>
+	  <channel name="channel_28_29" srcActor="28_ShiftRegisterFilter__152_135" srcPort="p_out2" dstActor="29_ShiftRegisterFilter__158_136" dstPort="p_in1"/>
+	  <channel name="channel_29_30" srcActor="29_ShiftRegisterFilter__158_136" srcPort="p_out2" dstActor="30_AdditionFilter__164_137" dstPort="p_in1"/>
+	  <channel name="channel_30_31" srcActor="30_AdditionFilter__164_137" srcPort="p_out2" dstActor="31_ShiftRegisterFilter__170_138" dstPort="p_in1"/>
+	  <channel name="channel_31_32" srcActor="31_ShiftRegisterFilter__170_138" srcPort="p_out2" dstActor="32_ShiftRegisterFilter__176_139" dstPort="p_in1"/>
+	  <channel name="channel_32_33" srcActor="32_ShiftRegisterFilter__176_139" srcPort="p_out2" dstActor="33_ShiftRegisterFilter__182_140" dstPort="p_in1"/>
+	  <channel name="channel_33_34" srcActor="33_ShiftRegisterFilter__182_140" srcPort="p_out2" dstActor="34_ShiftRegisterFilter__188_141" dstPort="p_in1"/>
+	  <channel name="channel_34_35" srcActor="34_ShiftRegisterFilter__188_141" srcPort="p_out2" dstActor="35_ShiftRegisterFilter__194_142" dstPort="p_in1"/>
+	  <channel name="channel_35_36" srcActor="35_ShiftRegisterFilter__194_142" srcPort="p_out2" dstActor="36_ShiftRegisterFilter__200_143" dstPort="p_in1"/>
+	  <channel name="channel_36_37" srcActor="36_ShiftRegisterFilter__200_143" srcPort="p_out2" dstActor="37_AdditionFilter__206_144" dstPort="p_in1"/>
+	  <channel name="channel_37_38" srcActor="37_AdditionFilter__206_144" srcPort="p_out2" dstActor="38_ShiftRegisterFilter__212_145" dstPort="p_in1"/>
+	  <channel name="channel_38_39" srcActor="38_ShiftRegisterFilter__212_145" srcPort="p_out2" dstActor="39_AdditionFilter__218_146" dstPort="p_in1"/>
+	  <channel name="channel_39_40" srcActor="39_AdditionFilter__218_146" srcPort="p_out2" dstActor="40_ShiftRegisterFilter__224_147" dstPort="p_in1"/>
+	  <channel name="channel_40_41" srcActor="40_ShiftRegisterFilter__224_147" srcPort="p_out2" dstActor="41_ShiftRegisterFilter__230_148" dstPort="p_in1"/>
+	  <channel name="channel_41_42" srcActor="41_ShiftRegisterFilter__230_148" srcPort="p_out2" dstActor="42_ShiftRegisterFilter__236_149" dstPort="p_in1"/>
+	  <channel name="channel_42_43" srcActor="42_ShiftRegisterFilter__236_149" srcPort="p_out2" dstActor="43_AdditionFilter__242_150" dstPort="p_in1"/>
+	  <channel name="channel_43_44" srcActor="43_AdditionFilter__242_150" srcPort="p_out2" dstActor="44_ShiftRegisterFilter__248_151" dstPort="p_in1"/>
+	  <channel name="channel_44_45" srcActor="44_ShiftRegisterFilter__248_151" srcPort="p_out2" dstActor="45_ShiftRegisterFilter__254_152" dstPort="p_in1"/>
+	  <channel name="channel_45_46" srcActor="45_ShiftRegisterFilter__254_152" srcPort="p_out2" dstActor="46_ShiftRegisterFilter__260_153" dstPort="p_in1"/>
+	  <channel name="channel_46_47" srcActor="46_ShiftRegisterFilter__260_153" srcPort="p_out2" dstActor="47_ShiftRegisterFilter__266_154" dstPort="p_in1"/>
+	  <channel name="channel_47_48" srcActor="47_ShiftRegisterFilter__266_154" srcPort="p_out2" dstActor="48_ShiftRegisterFilter__272_155" dstPort="p_in1"/>
+	  <channel name="channel_48_49" srcActor="48_ShiftRegisterFilter__272_155" srcPort="p_out2" dstActor="49_Identity__275_156" dstPort="p_in1"/>
+	  <channel name="channel_49_50" srcActor="49_Identity__275_156" srcPort="p_out2" dstActor="50_FeedbackEndFilter__279_157" dstPort="p_in1"/>
+	  <channel name="channel_50_3" srcActor="50_FeedbackEndFilter__279_157" srcPort="p_out2" dstActor="3_DUPLICATE(1,1)" dstPort="p_in3"/>
+	  <channel name="channel_51_2" srcActor="51_Identity__282_158" srcPort="p_out2" dstActor="2_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="p_in3" initialTokens="1"/>
+	  <channel name="self_loop_of_1_CrcInputFilter__2_108" srcActor="1_CrcInputFilter__2_108" srcPort="pOut" dstActor="1_CrcInputFilter__2_108" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_2_WEIGHTED_ROUND_ROBIN(1,1)" srcActor="2_WEIGHTED_ROUND_ROBIN(1,1)" srcPort="pOut" dstActor="2_WEIGHTED_ROUND_ROBIN(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_3_DUPLICATE(1,1)" srcActor="3_DUPLICATE(1,1)" srcPort="pOut" dstActor="3_DUPLICATE(1,1)" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_4_InitialAdditionFilter__8_111" srcActor="4_InitialAdditionFilter__8_111" srcPort="pOut" dstActor="4_InitialAdditionFilter__8_111" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_5_ShiftRegisterFilter__14_112" srcActor="5_ShiftRegisterFilter__14_112" srcPort="pOut" dstActor="5_ShiftRegisterFilter__14_112" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_6_AdditionFilter__20_113" srcActor="6_AdditionFilter__20_113" srcPort="pOut" dstActor="6_AdditionFilter__20_113" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_7_ShiftRegisterFilter__26_114" srcActor="7_ShiftRegisterFilter__26_114" srcPort="pOut" dstActor="7_ShiftRegisterFilter__26_114" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_8_AdditionFilter__32_115" srcActor="8_AdditionFilter__32_115" srcPort="pOut" dstActor="8_AdditionFilter__32_115" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_9_ShiftRegisterFilter__38_116" srcActor="9_ShiftRegisterFilter__38_116" srcPort="pOut" dstActor="9_ShiftRegisterFilter__38_116" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_10_ShiftRegisterFilter__44_117" srcActor="10_ShiftRegisterFilter__44_117" srcPort="pOut" dstActor="10_ShiftRegisterFilter__44_117" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_11_AdditionFilter__50_118" srcActor="11_AdditionFilter__50_118" srcPort="pOut" dstActor="11_AdditionFilter__50_118" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_12_ShiftRegisterFilter__56_119" srcActor="12_ShiftRegisterFilter__56_119" srcPort="pOut" dstActor="12_ShiftRegisterFilter__56_119" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_13_AdditionFilter__62_120" srcActor="13_AdditionFilter__62_120" srcPort="pOut" dstActor="13_AdditionFilter__62_120" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_14_ShiftRegisterFilter__68_121" srcActor="14_ShiftRegisterFilter__68_121" srcPort="pOut" dstActor="14_ShiftRegisterFilter__68_121" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_15_ShiftRegisterFilter__74_122" srcActor="15_ShiftRegisterFilter__74_122" srcPort="pOut" dstActor="15_ShiftRegisterFilter__74_122" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_16_AdditionFilter__80_123" srcActor="16_AdditionFilter__80_123" srcPort="pOut" dstActor="16_AdditionFilter__80_123" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_17_ShiftRegisterFilter__86_124" srcActor="17_ShiftRegisterFilter__86_124" srcPort="pOut" dstActor="17_ShiftRegisterFilter__86_124" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_18_AdditionFilter__92_125" srcActor="18_AdditionFilter__92_125" srcPort="pOut" dstActor="18_AdditionFilter__92_125" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_19_ShiftRegisterFilter__98_126" srcActor="19_ShiftRegisterFilter__98_126" srcPort="pOut" dstActor="19_ShiftRegisterFilter__98_126" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_20_ShiftRegisterFilter__104_127" srcActor="20_ShiftRegisterFilter__104_127" srcPort="pOut" dstActor="20_ShiftRegisterFilter__104_127" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_21_AdditionFilter__110_128" srcActor="21_AdditionFilter__110_128" srcPort="pOut" dstActor="21_AdditionFilter__110_128" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_22_ShiftRegisterFilter__116_129" srcActor="22_ShiftRegisterFilter__116_129" srcPort="pOut" dstActor="22_ShiftRegisterFilter__116_129" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_23_AdditionFilter__122_130" srcActor="23_AdditionFilter__122_130" srcPort="pOut" dstActor="23_AdditionFilter__122_130" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_24_ShiftRegisterFilter__128_131" srcActor="24_ShiftRegisterFilter__128_131" srcPort="pOut" dstActor="24_ShiftRegisterFilter__128_131" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_25_AdditionFilter__134_132" srcActor="25_AdditionFilter__134_132" srcPort="pOut" dstActor="25_AdditionFilter__134_132" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_26_ShiftRegisterFilter__140_133" srcActor="26_ShiftRegisterFilter__140_133" srcPort="pOut" dstActor="26_ShiftRegisterFilter__140_133" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_27_ShiftRegisterFilter__146_134" srcActor="27_ShiftRegisterFilter__146_134" srcPort="pOut" dstActor="27_ShiftRegisterFilter__146_134" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_28_ShiftRegisterFilter__152_135" srcActor="28_ShiftRegisterFilter__152_135" srcPort="pOut" dstActor="28_ShiftRegisterFilter__152_135" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_29_ShiftRegisterFilter__158_136" srcActor="29_ShiftRegisterFilter__158_136" srcPort="pOut" dstActor="29_ShiftRegisterFilter__158_136" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_30_AdditionFilter__164_137" srcActor="30_AdditionFilter__164_137" srcPort="pOut" dstActor="30_AdditionFilter__164_137" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_31_ShiftRegisterFilter__170_138" srcActor="31_ShiftRegisterFilter__170_138" srcPort="pOut" dstActor="31_ShiftRegisterFilter__170_138" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_32_ShiftRegisterFilter__176_139" srcActor="32_ShiftRegisterFilter__176_139" srcPort="pOut" dstActor="32_ShiftRegisterFilter__176_139" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_33_ShiftRegisterFilter__182_140" srcActor="33_ShiftRegisterFilter__182_140" srcPort="pOut" dstActor="33_ShiftRegisterFilter__182_140" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_34_ShiftRegisterFilter__188_141" srcActor="34_ShiftRegisterFilter__188_141" srcPort="pOut" dstActor="34_ShiftRegisterFilter__188_141" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_35_ShiftRegisterFilter__194_142" srcActor="35_ShiftRegisterFilter__194_142" srcPort="pOut" dstActor="35_ShiftRegisterFilter__194_142" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_36_ShiftRegisterFilter__200_143" srcActor="36_ShiftRegisterFilter__200_143" srcPort="pOut" dstActor="36_ShiftRegisterFilter__200_143" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_37_AdditionFilter__206_144" srcActor="37_AdditionFilter__206_144" srcPort="pOut" dstActor="37_AdditionFilter__206_144" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_38_ShiftRegisterFilter__212_145" srcActor="38_ShiftRegisterFilter__212_145" srcPort="pOut" dstActor="38_ShiftRegisterFilter__212_145" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_39_AdditionFilter__218_146" srcActor="39_AdditionFilter__218_146" srcPort="pOut" dstActor="39_AdditionFilter__218_146" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_40_ShiftRegisterFilter__224_147" srcActor="40_ShiftRegisterFilter__224_147" srcPort="pOut" dstActor="40_ShiftRegisterFilter__224_147" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_41_ShiftRegisterFilter__230_148" srcActor="41_ShiftRegisterFilter__230_148" srcPort="pOut" dstActor="41_ShiftRegisterFilter__230_148" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_42_ShiftRegisterFilter__236_149" srcActor="42_ShiftRegisterFilter__236_149" srcPort="pOut" dstActor="42_ShiftRegisterFilter__236_149" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_43_AdditionFilter__242_150" srcActor="43_AdditionFilter__242_150" srcPort="pOut" dstActor="43_AdditionFilter__242_150" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_44_ShiftRegisterFilter__248_151" srcActor="44_ShiftRegisterFilter__248_151" srcPort="pOut" dstActor="44_ShiftRegisterFilter__248_151" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_45_ShiftRegisterFilter__254_152" srcActor="45_ShiftRegisterFilter__254_152" srcPort="pOut" dstActor="45_ShiftRegisterFilter__254_152" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_46_ShiftRegisterFilter__260_153" srcActor="46_ShiftRegisterFilter__260_153" srcPort="pOut" dstActor="46_ShiftRegisterFilter__260_153" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_47_ShiftRegisterFilter__266_154" srcActor="47_ShiftRegisterFilter__266_154" srcPort="pOut" dstActor="47_ShiftRegisterFilter__266_154" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_48_ShiftRegisterFilter__272_155" srcActor="48_ShiftRegisterFilter__272_155" srcPort="pOut" dstActor="48_ShiftRegisterFilter__272_155" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_49_Identity__275_156" srcActor="49_Identity__275_156" srcPort="pOut" dstActor="49_Identity__275_156" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_50_FeedbackEndFilter__279_157" srcActor="50_FeedbackEndFilter__279_157" srcPort="pOut" dstActor="50_FeedbackEndFilter__279_157" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_51_Identity__282_158" srcActor="51_Identity__282_158" srcPort="pOut" dstActor="51_Identity__282_158" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_52_IntPrinter__285_159" srcActor="52_IntPrinter__285_159" srcPort="pOut" dstActor="52_IntPrinter__285_159" dstPort="pIn" initialTokens="1"/>
+	</sdf>
+	<sdfProperties>
+	  <actorProperties actor="1_CrcInputFilter__2_108">
+		<processor type="arm" default="true">
+		  <executionTime time="3"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="2_WEIGHTED_ROUND_ROBIN(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="3_DUPLICATE(1,1)">
+		<processor type="arm" default="true">
+		  <executionTime time="9"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="4_InitialAdditionFilter__8_111">
+		<processor type="arm" default="true">
+		  <executionTime time="20"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="5_ShiftRegisterFilter__14_112">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="6_AdditionFilter__20_113">
+		<processor type="arm" default="true">
+		  <executionTime time="20"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="7_ShiftRegisterFilter__26_114">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="8_AdditionFilter__32_115">
+		<processor type="arm" default="true">
+		  <executionTime time="20"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="9_ShiftRegisterFilter__38_116">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="10_ShiftRegisterFilter__44_117">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="11_AdditionFilter__50_118">
+		<processor type="arm" default="true">
+		  <executionTime time="20"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="12_ShiftRegisterFilter__56_119">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="13_AdditionFilter__62_120">
+		<processor type="arm" default="true">
+		  <executionTime time="20"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="14_ShiftRegisterFilter__68_121">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="15_ShiftRegisterFilter__74_122">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="16_AdditionFilter__80_123">
+		<processor type="arm" default="true">
+		  <executionTime time="20"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="17_ShiftRegisterFilter__86_124">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="18_AdditionFilter__92_125">
+		<processor type="arm" default="true">
+		  <executionTime time="20"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="19_ShiftRegisterFilter__98_126">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="20_ShiftRegisterFilter__104_127">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="21_AdditionFilter__110_128">
+		<processor type="arm" default="true">
+		  <executionTime time="20"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="22_ShiftRegisterFilter__116_129">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="23_AdditionFilter__122_130">
+		<processor type="arm" default="true">
+		  <executionTime time="20"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="24_ShiftRegisterFilter__128_131">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="25_AdditionFilter__134_132">
+		<processor type="arm" default="true">
+		  <executionTime time="20"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="26_ShiftRegisterFilter__140_133">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="27_ShiftRegisterFilter__146_134">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="28_ShiftRegisterFilter__152_135">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="29_ShiftRegisterFilter__158_136">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="30_AdditionFilter__164_137">
+		<processor type="arm" default="true">
+		  <executionTime time="20"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="31_ShiftRegisterFilter__170_138">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="32_ShiftRegisterFilter__176_139">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="33_ShiftRegisterFilter__182_140">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="34_ShiftRegisterFilter__188_141">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="35_ShiftRegisterFilter__194_142">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="36_ShiftRegisterFilter__200_143">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="37_AdditionFilter__206_144">
+		<processor type="arm" default="true">
+		  <executionTime time="20"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="38_ShiftRegisterFilter__212_145">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="39_AdditionFilter__218_146">
+		<processor type="arm" default="true">
+		  <executionTime time="20"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="40_ShiftRegisterFilter__224_147">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="41_ShiftRegisterFilter__230_148">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="42_ShiftRegisterFilter__236_149">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="43_AdditionFilter__242_150">
+		<processor type="arm" default="true">
+		  <executionTime time="20"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="44_ShiftRegisterFilter__248_151">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="45_ShiftRegisterFilter__254_152">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="46_ShiftRegisterFilter__260_153">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="47_ShiftRegisterFilter__266_154">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="48_ShiftRegisterFilter__272_155">
+		<processor type="arm" default="true">
+		  <executionTime time="12"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="49_Identity__275_156">
+		<processor type="arm" default="true">
+		  <executionTime time="6"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="50_FeedbackEndFilter__279_157">
+		<processor type="arm" default="true">
+		  <executionTime time="6"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="51_Identity__282_158">
+		<processor type="arm" default="true">
+		  <executionTime time="6"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="52_IntPrinter__285_159">
+		<processor type="arm" default="true">
+		  <executionTime time="6"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <channelProperties channel="channel_1_2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_51">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_52">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_7">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_7_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_8_9">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_9_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_10_11">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_11_12">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_12_13">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_13_14">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_14_15">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_15_16">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_16_17">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_17_18">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_18_19">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_19_20">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_20_21">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_22_23">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_23_24">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_24_25">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_25_26">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_26_27">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_27_28">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_28_29">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_29_30">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_30_31">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_31_32">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_32_33">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_33_34">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_34_35">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_35_36">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_36_37">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_37_38">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_38_39">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_39_40">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_40_41">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_41_42">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_42_43">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_43_44">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_44_45">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_45_46">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_46_47">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_47_48">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_48_49">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_49_50">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_50_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_51_2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_1_CrcInputFilter__2_108">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_2_WEIGHTED_ROUND_ROBIN(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_3_DUPLICATE(1,1)">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_4_InitialAdditionFilter__8_111">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_5_ShiftRegisterFilter__14_112">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_6_AdditionFilter__20_113">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_7_ShiftRegisterFilter__26_114">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_8_AdditionFilter__32_115">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_9_ShiftRegisterFilter__38_116">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_10_ShiftRegisterFilter__44_117">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_11_AdditionFilter__50_118">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_12_ShiftRegisterFilter__56_119">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_13_AdditionFilter__62_120">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_14_ShiftRegisterFilter__68_121">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_15_ShiftRegisterFilter__74_122">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_16_AdditionFilter__80_123">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_17_ShiftRegisterFilter__86_124">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_18_AdditionFilter__92_125">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_19_ShiftRegisterFilter__98_126">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_20_ShiftRegisterFilter__104_127">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_21_AdditionFilter__110_128">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_22_ShiftRegisterFilter__116_129">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_23_AdditionFilter__122_130">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_24_ShiftRegisterFilter__128_131">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_25_AdditionFilter__134_132">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_26_ShiftRegisterFilter__140_133">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_27_ShiftRegisterFilter__146_134">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_28_ShiftRegisterFilter__152_135">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_29_ShiftRegisterFilter__158_136">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_30_AdditionFilter__164_137">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_31_ShiftRegisterFilter__170_138">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_32_ShiftRegisterFilter__176_139">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_33_ShiftRegisterFilter__182_140">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_34_ShiftRegisterFilter__188_141">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_35_ShiftRegisterFilter__194_142">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_36_ShiftRegisterFilter__200_143">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_37_AdditionFilter__206_144">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_38_ShiftRegisterFilter__212_145">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_39_AdditionFilter__218_146">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_40_ShiftRegisterFilter__224_147">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_41_ShiftRegisterFilter__230_148">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_42_ShiftRegisterFilter__236_149">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_43_AdditionFilter__242_150">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_44_ShiftRegisterFilter__248_151">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_45_ShiftRegisterFilter__254_152">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_46_ShiftRegisterFilter__260_153">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_47_ShiftRegisterFilter__266_154">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_48_ShiftRegisterFilter__272_155">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_49_Identity__275_156">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_50_FeedbackEndFilter__279_157">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_51_Identity__282_158">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_52_IntPrinter__285_159">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <graphProperties>
+		<timeConstraints>
+		  <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	  </graphProperties>
+	</sdfProperties>
+  </applicationGraph>
+</sdf3>

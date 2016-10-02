@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="TrellisDecoder">
+	<sdf name="TrellisDecoder" type="TrellisDecoder">
+	  <actor name="1_Bernoulli" type="1_Bernoulli">
+		<port name="p_out1" type="out" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port name="p_out4" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="2_ConvolutionalCoder" type="2_ConvolutionalCoder">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="3_SampleDelay" type="3_SampleDelay">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="4_LineCoder2" type="4_LineCoder2">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="5_ComplexGaussian2" type="5_ComplexGaussian2">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="6_LineCoder" type="6_LineCoder">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="7_ComplexGaussian" type="7_ComplexGaussian">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="8_AddSubtract2" type="8_AddSubtract2">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="9_AddSubtract" type="9_AddSubtract">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="10_Slicer" type="10_Slicer">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="11_TerllisDecoder" type="11_TerllisDecoder">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="12_CountError2" type="12_CountError2">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port name="p_out4" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="13_CountError" type="13_CountError">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port name="p_out4" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="14_ErrorsOnUncodedChannel2" type="14_ErrorsOnUncodedChannel2">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="15_ErrorRateOnUncodedChannel2" type="15_ErrorRateOnUncodedChannel2">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="16_ErrorsOnUncodedChannel" type="16_ErrorsOnUncodedChannel">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="17_ErrorRateOnUncodedChannel" type="17_ErrorRateOnUncodedChannel">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <channel name="channel_1_2" srcActor="1_Bernoulli" srcPort="p_out1" dstActor="2_ConvolutionalCoder" dstPort="p_in1"/>
+	  <channel name="channel_1_3" srcActor="1_Bernoulli" srcPort="p_out2" dstActor="3_SampleDelay" dstPort="p_in1"/>
+	  <channel name="channel_1_4" srcActor="1_Bernoulli" srcPort="p_out3" dstActor="4_LineCoder2" dstPort="p_in1"/>
+	  <channel name="channel_1_12" srcActor="1_Bernoulli" srcPort="p_out4" dstActor="12_CountError2" dstPort="p_in1"/>
+	  <channel name="channel_2_6" srcActor="2_ConvolutionalCoder" srcPort="p_out2" dstActor="6_LineCoder" dstPort="p_in1"/>
+	  <channel name="channel_3_13" srcActor="3_SampleDelay" srcPort="p_out2" dstActor="13_CountError" dstPort="p_in1"/>
+	  <channel name="channel_4_8" srcActor="4_LineCoder2" srcPort="p_out2" dstActor="8_AddSubtract2" dstPort="p_in1"/>
+	  <channel name="channel_5_8" srcActor="5_ComplexGaussian2" srcPort="p_out1" dstActor="8_AddSubtract2" dstPort="p_in2"/>
+	  <channel name="channel_6_9" srcActor="6_LineCoder" srcPort="p_out2" dstActor="9_AddSubtract" dstPort="p_in1"/>
+	  <channel name="channel_7_9" srcActor="7_ComplexGaussian" srcPort="p_out1" dstActor="9_AddSubtract" dstPort="p_in2"/>
+	  <channel name="channel_8_10" srcActor="8_AddSubtract2" srcPort="p_out3" dstActor="10_Slicer" dstPort="p_in1"/>
+	  <channel name="channel_9_11" srcActor="9_AddSubtract" srcPort="p_out3" dstActor="11_TerllisDecoder" dstPort="p_in1"/>
+	  <channel name="channel_10_12" srcActor="10_Slicer" srcPort="p_out2" dstActor="12_CountError2" dstPort="p_in2"/>
+	  <channel name="channel_11_13" srcActor="11_TerllisDecoder" srcPort="p_out2" dstActor="13_CountError" dstPort="p_in2"/>
+	  <channel name="channel_12_14" srcActor="12_CountError2" srcPort="p_out3" dstActor="14_ErrorsOnUncodedChannel2" dstPort="p_in1"/>
+	  <channel name="channel_12_15" srcActor="12_CountError2" srcPort="p_out4" dstActor="15_ErrorRateOnUncodedChannel2" dstPort="p_in1"/>
+	  <channel name="channel_13_16" srcActor="13_CountError" srcPort="p_out3" dstActor="16_ErrorsOnUncodedChannel" dstPort="p_in1"/>
+	  <channel name="channel_13_17" srcActor="13_CountError" srcPort="p_out4" dstActor="17_ErrorRateOnUncodedChannel" dstPort="p_in1"/>
+	  <channel name="self_loop_of_1_Bernoulli" srcActor="1_Bernoulli" srcPort="pOut" dstActor="1_Bernoulli" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_2_ConvolutionalCoder" srcActor="2_ConvolutionalCoder" srcPort="pOut" dstActor="2_ConvolutionalCoder" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_3_SampleDelay" srcActor="3_SampleDelay" srcPort="pOut" dstActor="3_SampleDelay" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_4_LineCoder2" srcActor="4_LineCoder2" srcPort="pOut" dstActor="4_LineCoder2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_5_ComplexGaussian2" srcActor="5_ComplexGaussian2" srcPort="pOut" dstActor="5_ComplexGaussian2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_6_LineCoder" srcActor="6_LineCoder" srcPort="pOut" dstActor="6_LineCoder" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_7_ComplexGaussian" srcActor="7_ComplexGaussian" srcPort="pOut" dstActor="7_ComplexGaussian" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_8_AddSubtract2" srcActor="8_AddSubtract2" srcPort="pOut" dstActor="8_AddSubtract2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_9_AddSubtract" srcActor="9_AddSubtract" srcPort="pOut" dstActor="9_AddSubtract" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_10_Slicer" srcActor="10_Slicer" srcPort="pOut" dstActor="10_Slicer" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_11_TerllisDecoder" srcActor="11_TerllisDecoder" srcPort="pOut" dstActor="11_TerllisDecoder" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_12_CountError2" srcActor="12_CountError2" srcPort="pOut" dstActor="12_CountError2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_13_CountError" srcActor="13_CountError" srcPort="pOut" dstActor="13_CountError" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_14_ErrorsOnUncodedChannel2" srcActor="14_ErrorsOnUncodedChannel2" srcPort="pOut" dstActor="14_ErrorsOnUncodedChannel2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_15_ErrorRateOnUncodedChannel2" srcActor="15_ErrorRateOnUncodedChannel2" srcPort="pOut" dstActor="15_ErrorRateOnUncodedChannel2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_16_ErrorsOnUncodedChannel" srcActor="16_ErrorsOnUncodedChannel" srcPort="pOut" dstActor="16_ErrorsOnUncodedChannel" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_17_ErrorRateOnUncodedChannel" srcActor="17_ErrorRateOnUncodedChannel" srcPort="pOut" dstActor="17_ErrorRateOnUncodedChannel" dstPort="pIn" initialTokens="1"/>
+	</sdf>
+	<sdfProperties>
+	  <actorProperties actor="1_Bernoulli">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="2_ConvolutionalCoder">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="3_SampleDelay">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="4_LineCoder2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="5_ComplexGaussian2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="6_LineCoder">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="7_ComplexGaussian">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="8_AddSubtract2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="9_AddSubtract">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="10_Slicer">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="11_TerllisDecoder">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="12_CountError2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="13_CountError">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="14_ErrorsOnUncodedChannel2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="15_ErrorRateOnUncodedChannel2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="16_ErrorsOnUncodedChannel">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="17_ErrorRateOnUncodedChannel">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <channelProperties channel="channel_1_2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_1_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_1_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_1_12">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_13">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_9">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_7_9">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_8_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_9_11">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_10_12">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_11_13">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_12_14">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_12_15">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_13_16">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_13_17">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_1_Bernoulli">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_2_ConvolutionalCoder">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_3_SampleDelay">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_4_LineCoder2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_5_ComplexGaussian2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_6_LineCoder">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_7_ComplexGaussian">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_8_AddSubtract2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_9_AddSubtract">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_10_Slicer">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_11_TerllisDecoder">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_12_CountError2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_13_CountError">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_14_ErrorsOnUncodedChannel2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_15_ErrorRateOnUncodedChannel2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_16_ErrorsOnUncodedChannel">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_17_ErrorRateOnUncodedChannel">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <graphProperties>
+		<timeConstraints>
+		  <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	  </graphProperties>
+	</sdfProperties>
+  </applicationGraph>
+</sdf3>

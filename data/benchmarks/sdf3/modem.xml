@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="modem">
+	<sdf name="modem" type="modem">
+	  <actor name="1_fork1" type="1_fork1">
+		<port name="p_out1" type="out" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_in3" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="2_biq" type="2_biq">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="3_bi" type="3_bi">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="4_add" type="4_add">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_in2" type="in" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="5_ac" type="5_ac">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="6_fork2" type="6_fork2">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port name="p_out3" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="7_conj" type="7_conj">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="8_mul1" type="8_mul1">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port name="p_in3" type="in" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="9_in" type="9_in">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="10_filt" type="10_filt">
+		<port name="p_in1" type="in" rate="1"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="11_hil" type="11_hil">
+		<port name="p_in1" type="in" rate="8"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="12_eq" type="12_eq">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_in2" type="in" rate="4"/>
+		<port name="p_out3" type="out" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="13_mul2" type="13_mul2">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port name="p_in3" type="in" rate="2"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="14_deci" type="14_deci">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="2"/>
+		<port name="p_out3" type="out" rate="2"/>
+		<port name="p_out4" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="15_deco" type="15_deco">
+		<port name="p_in1" type="in" rate="2"/>
+		<port name="p_out2" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="16_out" type="16_out">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <channel name="channel_1_2" srcActor="1_fork1" srcPort="p_out1" dstActor="2_biq" dstPort="p_in1"/>
+	  <channel name="channel_1_3" srcActor="1_fork1" srcPort="p_out2" dstActor="3_bi" dstPort="p_in1"/>
+	  <channel name="channel_2_4" srcActor="2_biq" srcPort="p_out2" dstActor="4_add" dstPort="p_in1"/>
+	  <channel name="channel_3_4" srcActor="3_bi" srcPort="p_out2" dstActor="4_add" dstPort="p_in2"/>
+	  <channel name="channel_4_5" srcActor="4_add" srcPort="p_out3" dstActor="5_ac" dstPort="p_in1"/>
+	  <channel name="channel_5_6" srcActor="5_ac" srcPort="p_out2" dstActor="6_fork2" dstPort="p_in1"/>
+	  <channel name="channel_6_7" srcActor="6_fork2" srcPort="p_out2" dstActor="7_conj" dstPort="p_in1"/>
+	  <channel name="channel_6_8" srcActor="6_fork2" srcPort="p_out3" dstActor="8_mul1" dstPort="p_in1"/>
+	  <channel name="channel_7_13" srcActor="7_conj" srcPort="p_out2" dstActor="13_mul2" dstPort="p_in1"/>
+	  <channel name="channel_8_14" srcActor="8_mul1" srcPort="p_out2" dstActor="14_deci" dstPort="p_in1"/>
+	  <channel name="channel_13_12" srcActor="13_mul2" srcPort="p_out2" dstActor="12_eq" dstPort="p_in1" initialTokens="2"/>
+	  <channel name="channel_9_10" srcActor="9_in" srcPort="p_out1" dstActor="10_filt" dstPort="p_in1"/>
+	  <channel name="channel_10_11" srcActor="10_filt" srcPort="p_out2" dstActor="11_hil" dstPort="p_in1"/>
+	  <channel name="channel_11_12" srcActor="11_hil" srcPort="p_out2" dstActor="12_eq" dstPort="p_in2"/>
+	  <channel name="channel_12_8" srcActor="12_eq" srcPort="p_out3" dstActor="8_mul1" dstPort="p_in3"/>
+	  <channel name="channel_14_13" srcActor="14_deci" srcPort="p_out2" dstActor="13_mul2" dstPort="p_in3"/>
+	  <channel name="channel_14_15" srcActor="14_deci" srcPort="p_out3" dstActor="15_deco" dstPort="p_in1"/>
+	  <channel name="channel_15_16" srcActor="15_deco" srcPort="p_out2" dstActor="16_out" dstPort="p_in1"/>
+	  <channel name="channel_14_1" srcActor="14_deci" srcPort="p_out4" dstActor="1_fork1" dstPort="p_in3" initialTokens="1"/>
+	  <channel name="self_loop_of_1_fork1" srcActor="1_fork1" srcPort="pOut" dstActor="1_fork1" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_2_biq" srcActor="2_biq" srcPort="pOut" dstActor="2_biq" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_3_bi" srcActor="3_bi" srcPort="pOut" dstActor="3_bi" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_4_add" srcActor="4_add" srcPort="pOut" dstActor="4_add" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_5_ac" srcActor="5_ac" srcPort="pOut" dstActor="5_ac" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_6_fork2" srcActor="6_fork2" srcPort="pOut" dstActor="6_fork2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_7_conj" srcActor="7_conj" srcPort="pOut" dstActor="7_conj" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_8_mul1" srcActor="8_mul1" srcPort="pOut" dstActor="8_mul1" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_9_in" srcActor="9_in" srcPort="pOut" dstActor="9_in" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_10_filt" srcActor="10_filt" srcPort="pOut" dstActor="10_filt" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_11_hil" srcActor="11_hil" srcPort="pOut" dstActor="11_hil" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_12_eq" srcActor="12_eq" srcPort="pOut" dstActor="12_eq" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_13_mul2" srcActor="13_mul2" srcPort="pOut" dstActor="13_mul2" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_14_deci" srcActor="14_deci" srcPort="pOut" dstActor="14_deci" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_15_deco" srcActor="15_deco" srcPort="pOut" dstActor="15_deco" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_16_out" srcActor="16_out" srcPort="pOut" dstActor="16_out" dstPort="pIn" initialTokens="1"/>
+	</sdf>
+	<sdfProperties>
+	  <actorProperties actor="1_fork1">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="2_biq">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="3_bi">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="4_add">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="5_ac">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="6_fork2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="7_conj">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="8_mul1">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="9_in">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="10_filt">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="11_hil">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="12_eq">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="13_mul2">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="14_deci">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="15_deco">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="16_out">
+		<processor type="arm" default="true">
+		  <executionTime time="1"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <channelProperties channel="channel_1_2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_1_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_7">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_7_13">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_8_14">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_13_12">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_9_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_10_11">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_11_12">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_12_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_14_13">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_14_15">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_15_16">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_14_1">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_1_fork1">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_2_biq">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_3_bi">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_4_add">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_5_ac">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_6_fork2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_7_conj">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_8_mul1">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_9_in">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_10_filt">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_11_hil">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_12_eq">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_13_mul2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_14_deci">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_15_deco">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_16_out">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <graphProperties>
+		<timeConstraints>
+		  <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	  </graphProperties>
+	</sdfProperties>
+  </applicationGraph>
+</sdf3>

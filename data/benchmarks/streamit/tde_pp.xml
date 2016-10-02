@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name="tde_pp">
+	<sdf name="tde_pp" type="tde_pp">
+	  <actor name="1_FileReader__2_156" type="1_FileReader__2_156">
+		<port name="p_out1" type="out" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="2_Transpose__11_157" type="2_Transpose__11_157">
+		<port name="p_in1" type="in" rate="1080"/>
+		<port name="p_out2" type="out" rate="1080"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="3_Expand__19_159" type="3_Expand__19_159">
+		<port name="p_in1" type="in" rate="72"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="4_FFTReorderSimple__25_160" type="4_FFTReorderSimple__25_160">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="5_FFTReorderSimple__31_161" type="5_FFTReorderSimple__31_161">
+		<port name="p_in1" type="in" rate="64"/>
+		<port name="p_out2" type="out" rate="64"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="6_FFTReorderSimple__37_162" type="6_FFTReorderSimple__37_162">
+		<port name="p_in1" type="in" rate="32"/>
+		<port name="p_out2" type="out" rate="32"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="7_FFTReorderSimple__43_163" type="7_FFTReorderSimple__43_163">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="8_FFTReorderSimple__49_164" type="8_FFTReorderSimple__49_164">
+		<port name="p_in1" type="in" rate="8"/>
+		<port name="p_out2" type="out" rate="8"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="9_CombineDFT__72_165" type="9_CombineDFT__72_165">
+		<port name="p_in1" type="in" rate="4"/>
+		<port name="p_out2" type="out" rate="4"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="10_CombineDFT__95_166" type="10_CombineDFT__95_166">
+		<port name="p_in1" type="in" rate="8"/>
+		<port name="p_out2" type="out" rate="8"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="11_CombineDFT__118_167" type="11_CombineDFT__118_167">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="12_CombineDFT__141_168" type="12_CombineDFT__141_168">
+		<port name="p_in1" type="in" rate="32"/>
+		<port name="p_out2" type="out" rate="32"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="13_CombineDFT__164_169" type="13_CombineDFT__164_169">
+		<port name="p_in1" type="in" rate="64"/>
+		<port name="p_out2" type="out" rate="64"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="14_CombineDFT__187_170" type="14_CombineDFT__187_170">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="15_Multiply_by_float__193_171" type="15_Multiply_by_float__193_171">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="16_FFTReorderSimple__199_172" type="16_FFTReorderSimple__199_172">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="17_FFTReorderSimple__205_173" type="17_FFTReorderSimple__205_173">
+		<port name="p_in1" type="in" rate="64"/>
+		<port name="p_out2" type="out" rate="64"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="18_FFTReorderSimple__211_174" type="18_FFTReorderSimple__211_174">
+		<port name="p_in1" type="in" rate="32"/>
+		<port name="p_out2" type="out" rate="32"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="19_FFTReorderSimple__217_175" type="19_FFTReorderSimple__217_175">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="20_FFTReorderSimple__223_176" type="20_FFTReorderSimple__223_176">
+		<port name="p_in1" type="in" rate="8"/>
+		<port name="p_out2" type="out" rate="8"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="21_CombineIDFT__246_177" type="21_CombineIDFT__246_177">
+		<port name="p_in1" type="in" rate="4"/>
+		<port name="p_out2" type="out" rate="4"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="22_CombineIDFT__269_178" type="22_CombineIDFT__269_178">
+		<port name="p_in1" type="in" rate="8"/>
+		<port name="p_out2" type="out" rate="8"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="23_CombineIDFT__292_179" type="23_CombineIDFT__292_179">
+		<port name="p_in1" type="in" rate="16"/>
+		<port name="p_out2" type="out" rate="16"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="24_CombineIDFT__315_180" type="24_CombineIDFT__315_180">
+		<port name="p_in1" type="in" rate="32"/>
+		<port name="p_out2" type="out" rate="32"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="25_CombineIDFT__338_181" type="25_CombineIDFT__338_181">
+		<port name="p_in1" type="in" rate="64"/>
+		<port name="p_out2" type="out" rate="64"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="26_CombineIDFTFinal__362_182" type="26_CombineIDFTFinal__362_182">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="128"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="27_Contract__369_183" type="27_Contract__369_183">
+		<port name="p_in1" type="in" rate="128"/>
+		<port name="p_out2" type="out" rate="72"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="28_Transpose__378_184" type="28_Transpose__378_184">
+		<port name="p_in1" type="in" rate="1080"/>
+		<port name="p_out2" type="out" rate="1080"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <actor name="29_FileWriter__381_185" type="29_FileWriter__381_185">
+		<port name="p_in1" type="in" rate="1"/>
+		<port type="in" name="pIn" rate="1"/>
+		<port type="out" name="pOut" rate="1"/>
+	  </actor>
+	  <channel name="channel_1_2" srcActor="1_FileReader__2_156" srcPort="p_out1" dstActor="2_Transpose__11_157" dstPort="p_in1"/>
+	  <channel name="channel_2_3" srcActor="2_Transpose__11_157" srcPort="p_out2" dstActor="3_Expand__19_159" dstPort="p_in1"/>
+	  <channel name="channel_3_4" srcActor="3_Expand__19_159" srcPort="p_out2" dstActor="4_FFTReorderSimple__25_160" dstPort="p_in1"/>
+	  <channel name="channel_4_5" srcActor="4_FFTReorderSimple__25_160" srcPort="p_out2" dstActor="5_FFTReorderSimple__31_161" dstPort="p_in1"/>
+	  <channel name="channel_5_6" srcActor="5_FFTReorderSimple__31_161" srcPort="p_out2" dstActor="6_FFTReorderSimple__37_162" dstPort="p_in1"/>
+	  <channel name="channel_6_7" srcActor="6_FFTReorderSimple__37_162" srcPort="p_out2" dstActor="7_FFTReorderSimple__43_163" dstPort="p_in1"/>
+	  <channel name="channel_7_8" srcActor="7_FFTReorderSimple__43_163" srcPort="p_out2" dstActor="8_FFTReorderSimple__49_164" dstPort="p_in1"/>
+	  <channel name="channel_8_9" srcActor="8_FFTReorderSimple__49_164" srcPort="p_out2" dstActor="9_CombineDFT__72_165" dstPort="p_in1"/>
+	  <channel name="channel_9_10" srcActor="9_CombineDFT__72_165" srcPort="p_out2" dstActor="10_CombineDFT__95_166" dstPort="p_in1"/>
+	  <channel name="channel_10_11" srcActor="10_CombineDFT__95_166" srcPort="p_out2" dstActor="11_CombineDFT__118_167" dstPort="p_in1"/>
+	  <channel name="channel_11_12" srcActor="11_CombineDFT__118_167" srcPort="p_out2" dstActor="12_CombineDFT__141_168" dstPort="p_in1"/>
+	  <channel name="channel_12_13" srcActor="12_CombineDFT__141_168" srcPort="p_out2" dstActor="13_CombineDFT__164_169" dstPort="p_in1"/>
+	  <channel name="channel_13_14" srcActor="13_CombineDFT__164_169" srcPort="p_out2" dstActor="14_CombineDFT__187_170" dstPort="p_in1"/>
+	  <channel name="channel_14_15" srcActor="14_CombineDFT__187_170" srcPort="p_out2" dstActor="15_Multiply_by_float__193_171" dstPort="p_in1"/>
+	  <channel name="channel_15_16" srcActor="15_Multiply_by_float__193_171" srcPort="p_out2" dstActor="16_FFTReorderSimple__199_172" dstPort="p_in1"/>
+	  <channel name="channel_16_17" srcActor="16_FFTReorderSimple__199_172" srcPort="p_out2" dstActor="17_FFTReorderSimple__205_173" dstPort="p_in1"/>
+	  <channel name="channel_17_18" srcActor="17_FFTReorderSimple__205_173" srcPort="p_out2" dstActor="18_FFTReorderSimple__211_174" dstPort="p_in1"/>
+	  <channel name="channel_18_19" srcActor="18_FFTReorderSimple__211_174" srcPort="p_out2" dstActor="19_FFTReorderSimple__217_175" dstPort="p_in1"/>
+	  <channel name="channel_19_20" srcActor="19_FFTReorderSimple__217_175" srcPort="p_out2" dstActor="20_FFTReorderSimple__223_176" dstPort="p_in1"/>
+	  <channel name="channel_20_21" srcActor="20_FFTReorderSimple__223_176" srcPort="p_out2" dstActor="21_CombineIDFT__246_177" dstPort="p_in1"/>
+	  <channel name="channel_21_22" srcActor="21_CombineIDFT__246_177" srcPort="p_out2" dstActor="22_CombineIDFT__269_178" dstPort="p_in1"/>
+	  <channel name="channel_22_23" srcActor="22_CombineIDFT__269_178" srcPort="p_out2" dstActor="23_CombineIDFT__292_179" dstPort="p_in1"/>
+	  <channel name="channel_23_24" srcActor="23_CombineIDFT__292_179" srcPort="p_out2" dstActor="24_CombineIDFT__315_180" dstPort="p_in1"/>
+	  <channel name="channel_24_25" srcActor="24_CombineIDFT__315_180" srcPort="p_out2" dstActor="25_CombineIDFT__338_181" dstPort="p_in1"/>
+	  <channel name="channel_25_26" srcActor="25_CombineIDFT__338_181" srcPort="p_out2" dstActor="26_CombineIDFTFinal__362_182" dstPort="p_in1"/>
+	  <channel name="channel_26_27" srcActor="26_CombineIDFTFinal__362_182" srcPort="p_out2" dstActor="27_Contract__369_183" dstPort="p_in1"/>
+	  <channel name="channel_27_28" srcActor="27_Contract__369_183" srcPort="p_out2" dstActor="28_Transpose__378_184" dstPort="p_in1"/>
+	  <channel name="channel_28_29" srcActor="28_Transpose__378_184" srcPort="p_out2" dstActor="29_FileWriter__381_185" dstPort="p_in1"/>
+	  <channel name="self_loop_of_1_FileReader__2_156" srcActor="1_FileReader__2_156" srcPort="pOut" dstActor="1_FileReader__2_156" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_2_Transpose__11_157" srcActor="2_Transpose__11_157" srcPort="pOut" dstActor="2_Transpose__11_157" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_3_Expand__19_159" srcActor="3_Expand__19_159" srcPort="pOut" dstActor="3_Expand__19_159" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_4_FFTReorderSimple__25_160" srcActor="4_FFTReorderSimple__25_160" srcPort="pOut" dstActor="4_FFTReorderSimple__25_160" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_5_FFTReorderSimple__31_161" srcActor="5_FFTReorderSimple__31_161" srcPort="pOut" dstActor="5_FFTReorderSimple__31_161" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_6_FFTReorderSimple__37_162" srcActor="6_FFTReorderSimple__37_162" srcPort="pOut" dstActor="6_FFTReorderSimple__37_162" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_7_FFTReorderSimple__43_163" srcActor="7_FFTReorderSimple__43_163" srcPort="pOut" dstActor="7_FFTReorderSimple__43_163" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_8_FFTReorderSimple__49_164" srcActor="8_FFTReorderSimple__49_164" srcPort="pOut" dstActor="8_FFTReorderSimple__49_164" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_9_CombineDFT__72_165" srcActor="9_CombineDFT__72_165" srcPort="pOut" dstActor="9_CombineDFT__72_165" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_10_CombineDFT__95_166" srcActor="10_CombineDFT__95_166" srcPort="pOut" dstActor="10_CombineDFT__95_166" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_11_CombineDFT__118_167" srcActor="11_CombineDFT__118_167" srcPort="pOut" dstActor="11_CombineDFT__118_167" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_12_CombineDFT__141_168" srcActor="12_CombineDFT__141_168" srcPort="pOut" dstActor="12_CombineDFT__141_168" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_13_CombineDFT__164_169" srcActor="13_CombineDFT__164_169" srcPort="pOut" dstActor="13_CombineDFT__164_169" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_14_CombineDFT__187_170" srcActor="14_CombineDFT__187_170" srcPort="pOut" dstActor="14_CombineDFT__187_170" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_15_Multiply_by_float__193_171" srcActor="15_Multiply_by_float__193_171" srcPort="pOut" dstActor="15_Multiply_by_float__193_171" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_16_FFTReorderSimple__199_172" srcActor="16_FFTReorderSimple__199_172" srcPort="pOut" dstActor="16_FFTReorderSimple__199_172" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_17_FFTReorderSimple__205_173" srcActor="17_FFTReorderSimple__205_173" srcPort="pOut" dstActor="17_FFTReorderSimple__205_173" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_18_FFTReorderSimple__211_174" srcActor="18_FFTReorderSimple__211_174" srcPort="pOut" dstActor="18_FFTReorderSimple__211_174" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_19_FFTReorderSimple__217_175" srcActor="19_FFTReorderSimple__217_175" srcPort="pOut" dstActor="19_FFTReorderSimple__217_175" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_20_FFTReorderSimple__223_176" srcActor="20_FFTReorderSimple__223_176" srcPort="pOut" dstActor="20_FFTReorderSimple__223_176" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_21_CombineIDFT__246_177" srcActor="21_CombineIDFT__246_177" srcPort="pOut" dstActor="21_CombineIDFT__246_177" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_22_CombineIDFT__269_178" srcActor="22_CombineIDFT__269_178" srcPort="pOut" dstActor="22_CombineIDFT__269_178" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_23_CombineIDFT__292_179" srcActor="23_CombineIDFT__292_179" srcPort="pOut" dstActor="23_CombineIDFT__292_179" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_24_CombineIDFT__315_180" srcActor="24_CombineIDFT__315_180" srcPort="pOut" dstActor="24_CombineIDFT__315_180" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_25_CombineIDFT__338_181" srcActor="25_CombineIDFT__338_181" srcPort="pOut" dstActor="25_CombineIDFT__338_181" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_26_CombineIDFTFinal__362_182" srcActor="26_CombineIDFTFinal__362_182" srcPort="pOut" dstActor="26_CombineIDFTFinal__362_182" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_27_Contract__369_183" srcActor="27_Contract__369_183" srcPort="pOut" dstActor="27_Contract__369_183" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_28_Transpose__378_184" srcActor="28_Transpose__378_184" srcPort="pOut" dstActor="28_Transpose__378_184" dstPort="pIn" initialTokens="1"/>
+	  <channel name="self_loop_of_29_FileWriter__381_185" srcActor="29_FileWriter__381_185" srcPort="pOut" dstActor="29_FileWriter__381_185" dstPort="pIn" initialTokens="1"/>
+	</sdf>
+	<sdfProperties>
+	  <actorProperties actor="1_FileReader__2_156">
+		<processor type="arm" default="true">
+		  <executionTime time="0"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="2_Transpose__11_157">
+		<processor type="arm" default="true">
+		  <executionTime time="16884"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="3_Expand__19_159">
+		<processor type="arm" default="true">
+		  <executionTime time="856"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="4_FFTReorderSimple__25_160">
+		<processor type="arm" default="true">
+		  <executionTime time="1472"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="5_FFTReorderSimple__31_161">
+		<processor type="arm" default="true">
+		  <executionTime time="736"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="6_FFTReorderSimple__37_162">
+		<processor type="arm" default="true">
+		  <executionTime time="368"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="7_FFTReorderSimple__43_163">
+		<processor type="arm" default="true">
+		  <executionTime time="184"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="8_FFTReorderSimple__49_164">
+		<processor type="arm" default="true">
+		  <executionTime time="92"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="9_CombineDFT__72_165">
+		<processor type="arm" default="true">
+		  <executionTime time="77"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="10_CombineDFT__95_166">
+		<processor type="arm" default="true">
+		  <executionTime time="154"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="11_CombineDFT__118_167">
+		<processor type="arm" default="true">
+		  <executionTime time="308"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="12_CombineDFT__141_168">
+		<processor type="arm" default="true">
+		  <executionTime time="616"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="13_CombineDFT__164_169">
+		<processor type="arm" default="true">
+		  <executionTime time="1232"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="14_CombineDFT__187_170">
+		<processor type="arm" default="true">
+		  <executionTime time="2464"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="15_Multiply_by_float__193_171">
+		<processor type="arm" default="true">
+		  <executionTime time="1152"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="16_FFTReorderSimple__199_172">
+		<processor type="arm" default="true">
+		  <executionTime time="1472"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="17_FFTReorderSimple__205_173">
+		<processor type="arm" default="true">
+		  <executionTime time="736"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="18_FFTReorderSimple__211_174">
+		<processor type="arm" default="true">
+		  <executionTime time="368"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="19_FFTReorderSimple__217_175">
+		<processor type="arm" default="true">
+		  <executionTime time="184"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="20_FFTReorderSimple__223_176">
+		<processor type="arm" default="true">
+		  <executionTime time="92"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="21_CombineIDFT__246_177">
+		<processor type="arm" default="true">
+		  <executionTime time="79"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="22_CombineIDFT__269_178">
+		<processor type="arm" default="true">
+		  <executionTime time="158"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="23_CombineIDFT__292_179">
+		<processor type="arm" default="true">
+		  <executionTime time="316"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="24_CombineIDFT__315_180">
+		<processor type="arm" default="true">
+		  <executionTime time="632"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="25_CombineIDFT__338_181">
+		<processor type="arm" default="true">
+		  <executionTime time="1264"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="26_CombineIDFTFinal__362_182">
+		<processor type="arm" default="true">
+		  <executionTime time="2656"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="27_Contract__369_183">
+		<processor type="arm" default="true">
+		  <executionTime time="856"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="28_Transpose__378_184">
+		<processor type="arm" default="true">
+		  <executionTime time="16800"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <actorProperties actor="29_FileWriter__381_185">
+		<processor type="arm" default="true">
+		  <executionTime time="0"/>
+		  <memory>
+		      <stateSize max="316352"/>
+		  </memory>
+		</processor>
+	  </actorProperties>
+	  <channelProperties channel="channel_1_2">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_2_3">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_3_4">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_4_5">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_5_6">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_6_7">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_7_8">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_8_9">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_9_10">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_10_11">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_11_12">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_12_13">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_13_14">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_14_15">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_15_16">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_16_17">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_17_18">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_18_19">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_19_20">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_20_21">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_21_22">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_22_23">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_23_24">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_24_25">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_25_26">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_26_27">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_27_28">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="channel_28_29">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_1_FileReader__2_156">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_2_Transpose__11_157">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_3_Expand__19_159">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_4_FFTReorderSimple__25_160">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_5_FFTReorderSimple__31_161">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_6_FFTReorderSimple__37_162">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_7_FFTReorderSimple__43_163">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_8_FFTReorderSimple__49_164">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_9_CombineDFT__72_165">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_10_CombineDFT__95_166">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_11_CombineDFT__118_167">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_12_CombineDFT__141_168">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_13_CombineDFT__164_169">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_14_CombineDFT__187_170">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_15_Multiply_by_float__193_171">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_16_FFTReorderSimple__199_172">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_17_FFTReorderSimple__205_173">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_18_FFTReorderSimple__211_174">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_19_FFTReorderSimple__217_175">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_20_FFTReorderSimple__223_176">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_21_CombineIDFT__246_177">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_22_CombineIDFT__269_178">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_23_CombineIDFT__292_179">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_24_CombineIDFT__315_180">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_25_CombineIDFT__338_181">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_26_CombineIDFTFinal__362_182">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_27_Contract__369_183">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_28_Transpose__378_184">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <channelProperties channel="self_loop_of_29_FileWriter__381_185">
+		<tokenSize sz="304128"/>
+	  </channelProperties>
+	  <graphProperties>
+		<timeConstraints>
+		  <throughput>0.00000003</throughput> <!-- 15fps (iterations) with 500MHz clock -->
+		</timeConstraints>
+	  </graphProperties>
+	</sdfProperties>
+  </applicationGraph>
+</sdf3>
