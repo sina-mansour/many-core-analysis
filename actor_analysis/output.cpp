@@ -100,7 +100,8 @@ void Output::parseXml1(ifstream* inFile, Graph* inGraph, ofstream& outFile)
 
                     outFile << "            <port type=\""<<tmpP->getType()<<"\" name=\""<<tmpP->getPid()
 
-                    <<"\" rate=\""<<tmpP->getRate()<<"\" id=\""<<id<<"\"/>"<< endl;
+                    <<"\" rate=\""<<tmpP->getRate()<<"\" id=\""<<id<<"\" score=\""<<tmpP->getScore()<<"\"/>"<< endl;
+                    // <<"\" rate=\""<<tmpP->getRate()<<"\" id=\""<<id<<"\"/>"<< endl;
 
                 }
 

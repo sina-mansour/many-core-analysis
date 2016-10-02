@@ -1,6 +1,6 @@
 #include "scorer.h"
 
-#define NORMALIZE 1.0e5
+#define NORMALIZE 1.0e4
 
 // 'a_d' is:
 // Ascending sorter for consumption
@@ -65,19 +65,27 @@ void Scorer::simplePortScore(Port *port)
 {
     double score;
     int inRate, outRate;
+    int inExec, outExec;
     Channel* tmpC;
     tmpC = port->getChannel();
 
     inRate = tmpC->getSrcPort()->getRate();
     outRate = tmpC->getDstPort()->getRate();
 
+    inExec = tmpC->getSrcPort()->getOwner()->getExecTime();
+    outExec = tmpC->getDstPort()->getOwner()->getExecTime();
+
     if (port->getType().compare("in") == 0 && outRate!=0)
     {
         score = (double) inRate / outRate * consUD; //consumption score
+        // score = (double) (outExec * inRate) / (inExec * outRate) * consUD; // exec devision
+        // score = (double) (inExec * inRate) / (outExec * outRate) * consUD; // exec multiply
     }
     else if (port->getType().compare("out") == 0 && inRate!=0)
     {
         score = (double) outRate / inRate * prodUD; //production score
+        // score = (double) (inExec * outRate) / (outExec * inRate) * prodUD; // exec devision
+        // score = (double) (outExec * outRate) / (inExec * inRate) * prodUD; // exec multiply
     }
     else
     {
@@ -303,15 +311,10 @@ void Scorer::matrixGraphScore(Graph *graph)
     inMatrixDet = calculateDeterminant(inverseInPortsMatrix,actorCount);
     outMatrixDet = calculateDeterminant(inverseOutPortsMatrix,actorCount);
 
-    Actor* startNode = NULL;
-    Actor* finishNode = NULL;
-    int startNodeIndex = 0;
-    int finishNodeIndex = graph->getActorCount()-1;
-
 //    set start and finish node
 
-    startNode = graph->getIthActor(startNodeIndex);
-    finishNode = graph->getIthActor(finishNodeIndex);
+    // startNode = graph->getIthActor(startNodeIndex);
+    // finishNode = graph->getIthActor(finishNodeIndex);
 
 
     for (int i=0; i<actorCount; i++)
@@ -322,6 +325,11 @@ void Scorer::matrixGraphScore(Graph *graph)
 
         for (int portId=0; portId<portCount; portId++)
         {
+            Actor* startNode = NULL;
+            Actor* finishNode = NULL;
+            int startNodeIndex = 0;
+            int finishNodeIndex = graph->getActorCount()-1;
+
             if (tmpA->getIthPort(portId)->getType().compare("in")==0)
             {
                 Port* inPort = tmpA->getIthPort(portId);
@@ -335,7 +343,7 @@ void Scorer::matrixGraphScore(Graph *graph)
                         break;
                     }
                 }
-        double valueResult;
+        double valueResult = 0 ;
         for (int j=0; j<actorCount; j++)
         {
            Actor* tmpB;
@@ -368,7 +376,7 @@ void Scorer::matrixGraphScore(Graph *graph)
                         break;
                     }
                 }
-                double valueResult;
+                double valueResult = 0 ;
            for (int j=0; j<actorCount; j++)
            {
            Actor* tmpB;
@@ -479,7 +487,6 @@ double Scorer::calculateValueResult(double** inverse ,double **matrix, double de
     double valueResult = 0;
     valueResult += matrix[index][node];
     double cofac = calculateCofactorDeterminant(inverse,matSize,endPoint,node);
-    if(cofac<0 && (node+endPoint)%2==0)
     valueResult /= det;
     valueResult *= cofac;
     if ((node+endPoint)%2==1)
@@ -762,11 +769,6 @@ void Scorer::combinedGraphScore(Graph *graph)
     outMatrixDet = calculateDeterminant(inverseOutPortsMatrix,actorCount);
 
 
-    Actor* startNode = NULL;
-    Actor* finishNode = NULL;
-    int startNodeIndex = 0;
-    int finishNodeIndex = graph->getActorCount()-1;
-
 //    set start and finish node
 
 //    startNode = graph->getIthActor(startNodeIndex);
@@ -806,6 +808,11 @@ void Scorer::combinedGraphScore(Graph *graph)
 
         for (int portId=0; portId<portCount; portId++)
         {
+            Actor* startNode = NULL;
+            Actor* finishNode = NULL;
+            int startNodeIndex = 0;
+            int finishNodeIndex = graph->getActorCount()-1;
+
             if (tmpA->getIthPort(portId)->getType().compare("in")==0)
             {
                 Port* inPort = tmpA->getIthPort(portId);
@@ -819,7 +826,7 @@ void Scorer::combinedGraphScore(Graph *graph)
                         break;
                     }
                 }
-        double valueResult;
+        double valueResult = 0 ;
         for (int j=0; j<actorCount; j++)
         {
            Actor* tmpB;
@@ -858,7 +865,7 @@ void Scorer::combinedGraphScore(Graph *graph)
                         break;
                     }
                 }
-                double valueResult;
+                double valueResult = 0 ;
            for (int j=0; j<actorCount; j++)
            {
            Actor* tmpB;
@@ -905,7 +912,6 @@ double Scorer::calculateCombinedValueResult(double** inverse ,double **matrix, d
     double valueResult = 0;
     valueResult += matrix[index][node];
     double cofac = calculateCofactorDeterminant(inverse,matSize,endPoint,node);
-    if(cofac<0 && (node+endPoint)%2==0)
     valueResult /= det;
     valueResult *= cofac;
     if ((node+endPoint)%2==1)
